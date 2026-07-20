@@ -14,24 +14,33 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Z.ai Code Scaffold - AI-Powered Development",
-  description: "Modern Next.js scaffold optimized for AI-powered development with Z.ai. Built with TypeScript, Tailwind CSS, and shadcn/ui.",
-  keywords: ["Z.ai", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "AI development", "React"],
-  authors: [{ name: "Z.ai Team" }],
+  title: "VAG Parça | Volkswagen - Audi - Seat - Skoda Orijinal Yedek Parça",
+  description: "VAG Grubu orijinal yedek parçaları. Volkswagen, Audi, Seat, Skoda araçlarınız için güvenilir, kaliteli ve garantili yedek parça. Hızlı kargo, uygun fiyat!",
+  keywords: [
+    "VAG yedek parça", "Volkswagen yedek parça", "Audi yedek parça", 
+    "Seat yedek parça", "Skoda yedek parça", "orijinal yedek parça",
+    "oto yedek parça", "VW parça", "Audi parça", "fren balatası",
+    "amortisör", "motor parçası", "süspansiyon"
+  ],
+  authors: [{ name: "VAG Parça" }],
   icons: {
-    icon: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",
+    icon: "/favicon.ico",
   },
   openGraph: {
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
-    url: "https://chat.z.ai",
-    siteName: "Z.ai",
+    title: "VAG Parça | VAG Grubu Orijinal Yedek Parça",
+    description: "Volkswagen, Audi, Seat, Skoda orijinal yedek parçaları. Güvenilir alışveriş, hızlı teslimat.",
+    siteName: "VAG Parça",
     type: "website",
+    locale: "tr_TR",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
+    title: "VAG Parça | VAG Grubu Orijinal Yedek Parça",
+    description: "Volkswagen, Audi, Seat, Skoda orijinal yedek parçaları.",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -41,7 +50,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="tr" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
