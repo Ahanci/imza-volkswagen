@@ -114,7 +114,7 @@ export function TrustSection() {
             Neden Biz?
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-vag-navy mb-4">
-            Sabri Oto Farkı
+            İmza Volkswagen Farkı
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
             Binlerce müşterimizin güvendiği kalite ve hizmet anlayışımız

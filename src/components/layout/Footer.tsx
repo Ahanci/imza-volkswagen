@@ -75,7 +75,7 @@ export function Footer() {
                 <Car className="text-vag-navy" size={32} />
               </div>
               <div>
-                <h2 className="text-2xl font-bold text-white">SABRİ OTO</h2>
+                <h2 className="text-2xl font-bold text-white">İMZA VOLKSWAGEN</h2>
                 <p className="text-xs text-white/60">VAG Grubu Yedek Parça Uzmanı</p>
               </div>
             </Link>
@@ -91,9 +91,9 @@ export function Footer() {
                 <Phone size={16} className="text-green-400 flex-shrink-0" />
                 <span className="font-semibold text-lg">+90 532 123 45 67</span>
               </a>
-              <a href="mailto:info@sabrioto.com.tr" className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
+              <a href="mailto:info@imzavolkswagen.com.tr" className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
                 <Mail size={16} className="text-vag-blue flex-shrink-0" />
-                <span>info@sabrioto.com.tr</span>
+                <span>info@imzavolkswagen.com.tr</span>
               </a>
               <div className="flex items-start gap-3 text-white/80">
                 <MapPin size={16} className="text-vag-blue flex-shrink-0 mt-0.5" />
@@ -232,7 +232,7 @@ export function Footer() {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/50 text-sm text-center md:text-left">
-              © {new Date().getFullYear()} Sabri Oto. Tüm hakları saklıdır. | VAG Grubu Yedek Parça Uzmanı
+              © {new Date().getFullYear()} İmza Volkswagen. Tüm hakları saklıdır. | VAG Grubu Yedek Parça Uzmanı
             </p>
             
             <div className="flex flex-wrap justify-center gap-4 text-sm">

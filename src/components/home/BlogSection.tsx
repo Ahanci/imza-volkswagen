@@ -139,7 +139,7 @@ export function BlogSection() {
                       <div className="w-8 h-8 bg-vag-light rounded-full flex items-center justify-center">
                         <User size={14} className="text-vag-navy" />
                       </div>
-                      <span className="text-sm text-muted-foreground">Sabri Oto</span>
+                      <span className="text-sm text-muted-foreground">İmza Volkswagen</span>
                     </div>
                     <span className="text-xs text-muted-foreground">
                       {new Date(post.publishedAt).toLocaleDateString('tr-TR', { 

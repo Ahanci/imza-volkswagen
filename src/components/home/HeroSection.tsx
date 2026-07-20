@@ -11,7 +11,7 @@ export function HeroSection() {
       <div className="absolute inset-0">
         <img
           src="/images/hero-car.png"
-          alt="Lüks Porsche - Sabri Oto VAG Grubu Yedek Parça"
+          alt="Lüks Porsche - İmza Volkswagen VAG Grubu Yedek Parça"
           className="w-full h-full object-cover object-center"
         />
         {/* Dark Gradient Overlay */}
@@ -30,7 +30,7 @@ export function HeroSection() {
 
           {/* Company Name */}
           <p className="text-vag-blue font-semibold text-lg mb-2 tracking-wide uppercase">
-            SABRİ OTO
+            İMZA VOLKSWAGEN
           </p>
 
           {/* Main Title */}

@@ -90,7 +90,7 @@ export function Header() {
                 <Car className="text-white" size={32} />
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-vag-navy leading-tight tracking-tight">SABRİ OTO</h1>
+                <h1 className="text-2xl font-bold text-vag-navy leading-tight tracking-tight">İMZA VOLKSWAGEN</h1>
                 <p className="text-sm text-muted-foreground font-medium">VAG Grubu Yedek Parça Uzmanı</p>
               </div>
             </Link>
@@ -143,7 +143,7 @@ export function Header() {
                       <Car className="text-white" size={28} />
                     </div>
                     <div>
-                      <h2 className="text-xl font-bold text-vag-navy">SABRİ OTO</h2>
+                      <h2 className="text-xl font-bold text-vag-navy">İMZA VOLKSWAGEN</h2>
                       <p className="text-xs text-muted-foreground">VAG Parça Uzmanı</p>
                     </div>
                   </Link>
