@@ -42,6 +42,15 @@ const brands = [
     bgColor: '#3F9142',
     description: 'Octavia, Fabia, Superb, Karoq, Kamiq ve tüm Skoda modelleri için yedek parça',
     models: ['Octavia', 'Fabia', 'Superb', 'Karoq', 'Kamiq', 'Enyaq'],
+  },
+  {
+    name: 'Cupra',
+    slug: 'cupra',
+    logo: 'CU',
+    color: '#E5801B',
+    bgColor: '#E5801B',
+    description: 'Formentor, Leon, Ateca, Born ve sportif Cupra modelleri için performans yedek parça',
+    models: ['Formentor', 'Leon', 'Ateca', 'Born', 'Terramar'],
   }
 ]
 
@@ -58,12 +67,12 @@ export function BrandSection() {
             VAG Grubu Markaları
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            Volkswagen, Audi, Seat ve Skoda araçlarınız için geniş yedek parça portföyümüz
+            Volkswagen, Audi, Seat, Skoda ve Cupra araçlarınız için geniş yedek parça portföyümüz
           </p>
         </div>
 
         {/* Brands Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {brands.map((brand) => (
             <Link key={brand.slug} href={`/markalar/${brand.slug}`}>
               <Card className="group card-hover cursor-pointer border-2 hover:border-vag-blue/30 h-full overflow-hidden">

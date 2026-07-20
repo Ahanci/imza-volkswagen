@@ -39,7 +39,12 @@ const navItems = [
       { name: 'Audi', href: '/markalar/audi' },
       { name: 'Seat', href: '/markalar/seat' },
       { name: 'Skoda', href: '/markalar/skoda' },
+      { name: 'Cupra', href: '/markalar/cupra' },
     ]
+  },
+  { 
+    name: 'Ürünler', 
+    href: '/urunler',
   },
   { name: 'Kurumsal', href: '/kurumsal' },
   { name: 'Blog', href: '/blog' },
