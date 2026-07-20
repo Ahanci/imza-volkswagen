@@ -4,19 +4,13 @@ import React from 'react'
 import Link from 'next/link'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { ArrowRight, Clock, User, Tag } from 'lucide-react'
+import { ArrowRight, Clock, User } from 'lucide-react'
 
 interface BlogPost {
   id: string
   title: string
   excerpt: string
   slug: string
-  image: string
-  author: {
-    name: string
-    avatar?: string
-  }
   category: string
   tags: string[]
   publishedAt: string
@@ -29,8 +23,6 @@ const blogPosts: BlogPost[] = [
     title: 'VW Golf 7 Yedek Parça Rehberi: En Çok Değişen 10 Parça',
     excerpt: 'Volkswagen Golf 7 sahipleri için en sık değişen yedek parçaları, ömürlerini ve nasıl seçim yapmanız gerektiğini detaylıca inceledik.',
     slug: 'vw-golf-7-yedek-parca-rehberi',
-    image: '/images/blog/golf7-guide.jpg',
-    author: { name: 'VAG Uzman Ekibi' },
     category: 'Rehber',
     tags: ['Volkswagen', 'Golf', 'Bakım'],
     publishedAt: '2024-12-15',
@@ -38,11 +30,9 @@ const blogPosts: BlogPost[] = [
   },
   {
     id: '2',
-    title: 'Orijinal vs Muadil Yedek Parça: Farklar Ne? Hangisini Tercih Etmeli?',
+    title: 'Orijinal vs Muadil Yedek Parça: Farklar Ne?',
     excerpt: 'Orijinal ve muadil (aftermarket) yedek parçalar arasındaki farkları, avantajları ve dezavantajlarını karşılaştırdık.',
     slug: 'orijinal-vs-muadil-yedek-parca',
-    image: '/images/blog/original-vs-aftermarket.jpg',
-    author: { name: 'Teknik Ekip' },
     category: 'Bilgi',
     tags: ['Karşılaştırma', 'Kalite', 'Fiyat'],
     publishedAt: '2024-12-10',
@@ -51,10 +41,8 @@ const blogPosts: BlogPost[] = [
   {
     id: '3',
     title: 'Audi A3 Fren Sistemi Bakımı: Adım Adım Kılavuz',
-    excerpt: 'Audi A3 fren sisteminin bakımını kendiniz yapabilirsiniz. Gerekli parçalar, araçlar ve adım adım talimatlar bu yazımızda.',
+    excerpt: 'Audi A3 fren sisteminin bakımını kendiniz yapabilirsiniz. Gerekli parçalar ve adım adım talimatlar bu yazımızda.',
     slug: 'audi-a3-fren-sistemi-bakimi',
-    image: '/images/blog/audi-brake-maintenance.jpg',
-    author: { name: 'Servis Uzmanı' },
     category: 'Nasıl Yapılır',
     tags: ['Audi', 'A3', 'Fren', 'DIY'],
     publishedAt: '2024-12-05',
@@ -86,10 +74,10 @@ export function BlogSection() {
             </p>
           </div>
           <Link href="/blog">
-            <Button variant="outline" size="lg" className="border-vag-blue text-vag-blue hover:bg-vag-blue hover:text-white gap-2">
+            <button className="flex items-center gap-2 border border-vag-blue text-vag-blue hover:bg-vag-blue hover:text-white px-6 py-3 rounded-xl font-semibold transition-colors">
               Tüm Yazılar
               <ArrowRight size={18} />
-            </Button>
+            </button>
           </Link>
         </div>
 
@@ -98,16 +86,13 @@ export function BlogSection() {
           {blogPosts.map((post) => (
             <Link key={post.id} href={`/blog/${post.slug}`}>
               <Card className="group card-hover cursor-pointer border border-gray-100 overflow-hidden h-full flex flex-col">
-                {/* Image */}
+                {/* Image Placeholder */}
                 <div className="relative aspect-video bg-gradient-to-br from-vag-navy/5 to-vag-blue/10 overflow-hidden">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center p-6">
-                      <div className="w-16 h-16 mx-auto mb-3 bg-white rounded-xl shadow-md flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <svg className="w-8 h-8 text-vag-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
-                        </svg>
-                      </div>
-                      <p className="text-xs text-muted-foreground">Blog Görseli</p>
+                    <div className="w-16 h-16 bg-white rounded-xl shadow-md flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <svg className="w-8 h-8 text-vag-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                      </svg>
                     </div>
                   </div>
 
@@ -154,7 +139,7 @@ export function BlogSection() {
                       <div className="w-8 h-8 bg-vag-light rounded-full flex items-center justify-center">
                         <User size={14} className="text-vag-navy" />
                       </div>
-                      <span className="text-sm text-muted-foreground">{post.author.name}</span>
+                      <span className="text-sm text-muted-foreground">Sabri Oto</span>
                     </div>
                     <span className="text-xs text-muted-foreground">
                       {new Date(post.publishedAt).toLocaleDateString('tr-TR', { 

@@ -3,10 +3,9 @@ import { Footer } from '@/components/layout/Footer'
 import HeroSection from '@/components/home/HeroSection'
 import BrandSection from '@/components/home/BrandSection'
 import CategorySection from '@/components/home/CategorySection'
-import FeaturedProducts from '@/components/home/FeaturedProducts'
 import TrustSection from '@/components/home/TrustSection'
 import BlogSection from '@/components/home/BlogSection'
-import { ChatBot } from '@/components/home/ChatBot'
+import { FloatingCTA } from '@/components/home/FloatingCTA'
 
 export default function Home() {
   return (
@@ -16,19 +15,16 @@ export default function Home() {
       
       {/* Main Content */}
       <main className="flex-1">
-        {/* Hero Section */}
+        {/* Hero Section with Porsche Image */}
         <HeroSection />
         
-        {/* Brand Selection */}
+        {/* VAG Brands Section */}
         <BrandSection />
         
-        {/* Categories */}
+        {/* Services / Categories Section */}
         <CategorySection />
         
-        {/* Featured Products */}
-        <FeaturedProducts />
-        
-        {/* Trust Section / Why Us */}
+        {/* Why Us / Trust Section */}
         <TrustSection />
         
         {/* Blog Section */}
@@ -38,8 +34,8 @@ export default function Home() {
       {/* Footer */}
       <Footer />
       
-      {/* AI Chat Bot */}
-      <ChatBot />
+      {/* Floating WhatsApp & Call Buttons (Sticky) */}
+      <FloatingCTA />
     </div>
   )
 }

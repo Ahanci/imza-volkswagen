@@ -2,85 +2,92 @@
 
 import React from 'react'
 import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Search, ArrowRight, Shield, Truck, Award, RotateCcw } from 'lucide-react'
+import { ArrowRight, Phone, MessageCircle, Shield, Truck, Award, Clock } from 'lucide-react'
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden">
-      {/* Background */}
-      <div className="hero-gradient absolute inset-0" />
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30" />
-      
+    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0">
+        <img
+          src="/images/hero-car.png"
+          alt="Lüks Porsche - Sabri Oto VAG Grubu Yedek Parça"
+          className="w-full h-full object-cover object-center"
+        />
+        {/* Dark Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-vag-navy/95 via-vag-navy/80 to-vag-navy/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+      </div>
+
       {/* Content */}
-      <div className="relative container mx-auto px-4 py-16 md:py-24 lg:py-32">
-        <div className="max-w-4xl mx-auto text-center">
+      <div className="relative container mx-auto px-4 py-20 md:py-24">
+        <div className="max-w-2xl">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium mb-6 border border-white/20">
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-5 py-2.5 rounded-full text-sm font-medium mb-6 border border-white/20">
             <Award size={16} className="text-yellow-400" />
-            <span>Türkiye&apos;nin 1 Numaralı VAG Parça Tedarikçisi</span>
+            <span>20+ Yıllık Tecrübe • VAG Grubu Uzmanı</span>
           </div>
 
-          {/* Title */}
+          {/* Company Name */}
+          <p className="text-vag-blue font-semibold text-lg mb-2 tracking-wide uppercase">
+            SABRİ OTO
+          </p>
+
+          {/* Main Title */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             VAG Grubu İçin
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-300">
-              Orijinal Yedek Parça
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">
+              Premium Kalitede
             </span>
+            <br />
+            Yedek Parça Çözümleri
           </h1>
 
           {/* Subtitle */}
-          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Volkswagen, Audi, Seat ve Skoda araçlarınız için orijinal veya eşdeğer kalitede 
-            yedek parçalar. Hızlı teslimat, güvenilir hizmet.
+          <p className="text-lg md:text-xl text-white/80 mb-8 leading-relaxed max-w-xl">
+            Volkswagen, Audi, Seat ve Skoda araçlarınız için orijinal ve eşdeğer kalitede 
+            yedek parçalarla tanışın. Profesyonel hizmet, güvenilir çözümler.
           </p>
 
-          {/* Search Box */}
-          <div className="bg-white rounded-2xl p-3 shadow-2xl max-w-3xl mx-auto mb-8">
-            <div className="flex flex-col sm:flex-row gap-3">
-              <div className="relative flex-1">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-muted-foreground" size={20} />
-                <Input
-                  type="search"
-                  placeholder="OEM kodu, parça adı veya araç modeli girin..."
-                  className="pl-12 h-14 border-0 focus-visible:ring-2 focus-visible:ring-vag-blue text-base"
-                />
-              </div>
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 mb-12">
+            <a 
+              href="https://wa.me/905321234567?text=Merhaba,%20yedek%20par%C3%A7a%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button 
                 size="lg" 
-                className="bg-vag-red hover:bg-red-700 text-white px-8 h-14 text-base font-semibold btn-glow"
+                className="bg-green-500 hover:bg-green-600 text-white px-8 h-14 text-base font-semibold btn-glow gap-2 w-full sm:w-auto"
               >
-                Ürün Ara
-                <ArrowRight size={18} className="ml-2" />
+                <MessageCircle size={22} />
+                WhatsApp ile Yazın
               </Button>
-            </div>
-            
-            {/* Quick Links */}
-            <div className="flex flex-wrap items-center justify-center gap-2 mt-4 pt-4 border-t border-gray-100">
-              <span className="text-sm text-muted-foreground">Popüler:</span>
-              {['Fren Balatası', 'Amortisör', 'Yağ Filtresi', 'Debriyaj', 'Far Ampulü'].map((item) => (
-                <button
-                  key={item}
-                  className="text-sm px-3 py-1 bg-vag-light hover:bg-vag-blue hover:text-white rounded-full transition-colors"
-                >
-                  {item}
-                </button>
-              ))}
-            </div>
+            </a>
+            <a href="tel:+905321234567">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-white text-white hover:bg-white hover:text-vag-navy px-8 h-14 text-base font-semibold gap-2 w-full sm:w-auto"
+              >
+                <Phone size={20} />
+                Hemen Arayın
+              </Button>
+            </a>
           </div>
 
           {/* Trust Badges */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl">
             {[
               { icon: Shield, label: 'Orijinal Ürün', desc: '%100 Garantili' },
-              { icon: Truck, label: 'Hızlı Kargo', desc: 'Aynı gün kargo' },
-              { icon: Award, label: 'Uzman Destek', desc: 'Teknik yardım' },
-              { icon: RotateCcw, label: 'Kolay İade', desc: '14 gün iade' },
+              { icon: Truck, label: 'Hızlı Teslimat', desc: 'Aynı gün kargo' },
+              { icon: Award, label: 'Uzman Kadro', desc: 'Teknik destek' },
+              { icon: Clock, label: '20+ Yıl', desc: 'Tecrübe' },
             ].map((item) => (
               <div key={item.label} className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl p-3 border border-white/20">
                 <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <item.icon size={20} className="text-white" />
+                  <item.icon size={18} className="text-white" />
                 </div>
                 <div className="text-left">
                   <p className="text-white font-medium text-sm">{item.label}</p>
@@ -89,6 +96,22 @@ export function HeroSection() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Volkswagen Badge */}
+        <div className="hidden lg:block absolute bottom-8 right-8 bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 max-w-xs">
+          <div className="flex items-center gap-4 mb-3">
+            <div className="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center">
+              <span className="text-white font-bold text-xl">VW</span>
+            </div>
+            <div>
+              <p className="text-white font-bold">Volkswagen</p>
+              <p className="text-white/70 text-sm">Yetkili Tedarikçi</p>
+            </div>
+          </div>
+          <p className="text-white/80 text-sm leading-relaxed">
+            Volkswagen Türkiye onaylı yedek parça tedarikçisi olarak hizmetinizdeyiz.
+          </p>
         </div>
       </div>
 

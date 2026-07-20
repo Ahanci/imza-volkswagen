@@ -2,9 +2,8 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
-import { ArrowRight, ChevronRight } from 'lucide-react'
+import { ChevronRight } from 'lucide-react'
 
 const brands = [
   {
@@ -13,9 +12,8 @@ const brands = [
     logo: 'VW',
     color: '#001E50',
     bgColor: '#001E50',
-    description: 'Golf, Passat, Polo, Tiguan, Transporter ve daha fazlası',
-    models: ['Golf', 'Passat', 'Polo', 'Tiguan', 'T-Roc', 'Transporter'],
-    productCount: 12500
+    description: 'Golf, Passat, Polo, Tiguan, Transporter ve tüm VW modelleri için yedek parça',
+    models: ['Golf', 'Passat', 'Polo', 'Tiguan', 'T-Roc', 'Transporter', 'Caddy', 'Touran'],
   },
   {
     name: 'Audi',
@@ -23,9 +21,8 @@ const brands = [
     logo: 'AU',
     color: '#BB0A30',
     bgColor: '#BB0A30',
-    description: 'A3, A4, A6, Q3, Q5, Q7 ve premium modeller',
-    models: ['A3', 'A4', 'A5', 'A6', 'Q3', 'Q5', 'Q7'],
-    productCount: 9800
+    description: 'A3, A4, A6, Q3, Q5, Q7 ve premium Audi modelleri için yedek parça',
+    models: ['A3', 'A4', 'A5', 'A6', 'Q3', 'Q5', 'Q7', 'e-tron'],
   },
   {
     name: 'Seat',
@@ -34,9 +31,8 @@ const brands = [
     color: '#F0CD00',
     textColor: '#000000',
     bgColor: '#1E1E1E',
-    description: 'Leon, Ibiza, Ateca, Toledo ve sportif modeller',
-    models: ['Leon', 'Ibiza', 'Ateca', 'Toledo', 'Arona'],
-    productCount: 7200
+    description: 'Leon, Ibiza, Ateca, Toledo ve sportif Seat modelleri için yedek parça',
+    models: ['Leon', 'Ibiza', 'Ateca', 'Toledo', 'Arona', 'Cupra'],
   },
   {
     name: 'Skoda',
@@ -44,9 +40,8 @@ const brands = [
     logo: 'SK',
     color: '#4FBA2F',
     bgColor: '#3F9142',
-    description: 'Octavia, Fabia, Superb, Karoq, Kamiq ve daha fazlası',
+    description: 'Octavia, Fabia, Superb, Karoq, Kamiq ve tüm Skoda modelleri için yedek parça',
     models: ['Octavia', 'Fabia', 'Superb', 'Karoq', 'Kamiq', 'Enyaq'],
-    productCount: 8400
   }
 ]
 
@@ -57,13 +52,13 @@ export function BrandSection() {
         {/* Section Header */}
         <div className="text-center mb-12">
           <span className="inline-block text-vag-blue font-semibold text-sm uppercase tracking-wider mb-2">
-            Markalarımız
+            Markalar
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-vag-navy mb-4">
             VAG Grubu Markaları
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            Volkswagen, Audi, Seat ve Skoda araçlarınız için geniş ürün yelpazemizi keşfedin
+            Volkswagen, Audi, Seat ve Skoda araçlarınız için geniş yedek parça portföyümüz
           </p>
         </div>
 
@@ -90,13 +85,13 @@ export function BrandSection() {
                         {brand.name}
                       </h3>
                       <p className="text-sm text-muted-foreground">
-                        {brand.productCount.toLocaleString('tr-TR')}+ Ürün
+                        VAG Grubu
                       </p>
                     </div>
                   </div>
                   
                   {/* Description */}
-                  <p className="text-sm text-muted-foreground mb-3">
+                  <p className="text-sm text-muted-foreground mb-3 leading-relaxed">
                     {brand.description}
                   </p>
 
@@ -120,7 +115,7 @@ export function BrandSection() {
 
                 {/* Footer */}
                 <CardContent className="px-6 py-3 bg-vag-light/50 border-t flex items-center justify-between">
-                  <span className="text-sm font-medium text-vag-navy">Tüm Ürünleri Gör</span>
+                  <span className="text-sm font-medium text-vag-navy">Detaylı Bilgi</span>
                   <ChevronRight size={16} className="text-vag-blue group-hover:translate-x-1 transition-transform" />
                 </CardContent>
               </Card>
@@ -131,10 +126,10 @@ export function BrandSection() {
         {/* Bottom CTA */}
         <div className="text-center mt-10">
           <Link href="/markalar">
-            <Button variant="outline" size="lg" className="border-vag-blue text-vag-blue hover:bg-vag-blue hover:text-white">
+            <button className="inline-flex items-center gap-2 bg-vag-navy hover:bg-vag-blue text-white px-8 py-3 rounded-xl font-semibold transition-colors">
               Tüm Markaları Keşfet
-              <ArrowRight size={18} className="ml-2" />
-            </Button>
+              <ChevronRight size={18} />
+            </button>
           </Link>
         </div>
       </div>

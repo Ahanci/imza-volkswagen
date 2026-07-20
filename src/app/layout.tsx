@@ -14,29 +14,29 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "VAG Parça | Volkswagen - Audi - Seat - Skoda Orijinal Yedek Parça",
-  description: "VAG Grubu orijinal yedek parçaları. Volkswagen, Audi, Seat, Skoda araçlarınız için güvenilir, kaliteli ve garantili yedek parça. Hızlı kargo, uygun fiyat!",
+  title: "Sabri Oto | VAG Grubu Yedek Parça Uzmanı - Volkswagen Audi Seat Skoda",
+  description: "Sabri Oto - Volkswagen, Audi, Seat, Skoda yedek parça uzmanı. 20+ yıl tecrübe, orijinal kalite, güvenilir hizmet. Hemen arayın veya WhatsApp ile yazın!",
   keywords: [
-    "VAG yedek parça", "Volkswagen yedek parça", "Audi yedek parça", 
+    "Sabri Oto", "VAG yedek parça", "Volkswagen yedek parça", "Audi yedek parça", 
     "Seat yedek parça", "Skoda yedek parça", "orijinal yedek parça",
-    "oto yedek parça", "VW parça", "Audi parça", "fren balatası",
-    "amortisör", "motor parçası", "süspansiyon"
+    "oto yedek parça İstanbul", "VW parça", "Audi parça", "fren balatası",
+    "amortisör", "motor parçası", "süspansiyon parçaları"
   ],
-  authors: [{ name: "VAG Parça" }],
+  authors: [{ name: "Sabri Oto" }],
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "VAG Parça | VAG Grubu Orijinal Yedek Parça",
-    description: "Volkswagen, Audi, Seat, Skoda orijinal yedek parçaları. Güvenilir alışveriş, hızlı teslimat.",
-    siteName: "VAG Parça",
+    title: "Sabri Oto | VAG Grubu Yedek Parça Uzmanı",
+    description: "Volkswagen, Audi, Seat, Skoda orijinal yedek parçaları. 20+ yıl tecrübe, güvenilir hizmet.",
+    siteName: "Sabri Oto",
     type: "website",
     locale: "tr_TR",
   },
   twitter: {
     card: "summary_large_image",
-    title: "VAG Parça | VAG Grubu Orijinal Yedek Parça",
-    description: "Volkswagen, Audi, Seat, Skoda orijinal yedek parçaları.",
+    title: "Sabri Oto | VAG Grubu Yedek Parça Uzmanı",
+    description: "Volkswagen, Audi, Seat, Skoda orijinal yedek parçaları. Güvenilir alışveriş, hızlı teslimat.",
   },
   robots: {
     index: true,
