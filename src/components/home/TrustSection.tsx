@@ -11,7 +11,9 @@ import {
   CreditCard,
   CheckCircle,
   Star,
-  Users
+  Users,
+  Phone,
+  MessageCircle
 } from 'lucide-react'
 
 const advantages = [
@@ -189,7 +191,8 @@ export function TrustSection() {
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
               <a href="tel:+905321234567">
-                <button className="bg-white text-vag-navy hover:bg-gray-100 px-6 py-3 rounded-xl font-semibold transition-colors whitespace-nowrap flex items-center gap-2">
+                <button className="bg-vag-blue hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-bold transition-colors whitespace-nowrap flex items-center gap-2 shadow-lg">
+                  <Phone size={18} />
                   Hemen Ara
                 </button>
               </a>
@@ -198,7 +201,8 @@ export function TrustSection() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-semibold transition-colors whitespace-nowrap flex items-center gap-2">
+                <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-bold transition-colors whitespace-nowrap flex items-center gap-2 shadow-lg">
+                  <MessageCircle size={18} />
                   WhatsApp
                 </button>
               </a>

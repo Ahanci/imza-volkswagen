@@ -68,8 +68,7 @@ export function HeroSection() {
             <a href="tel:+905321234567">
               <Button 
                 size="lg" 
-                variant="outline" 
-                className="border-white text-white hover:bg-white hover:text-vag-navy px-8 h-14 text-base font-semibold gap-2 w-full sm:w-auto"
+                className="bg-vag-blue hover:bg-blue-700 text-white px-8 h-14 text-base font-bold gap-2 w-full sm:w-auto shadow-lg shadow-vag-blue/30"
               >
                 <Phone size={20} />
                 Hemen Arayın
