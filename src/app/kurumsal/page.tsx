@@ -101,7 +101,7 @@ export default function KurumsalPage() {
                     İletişime Geç
                   </button>
                 </Link>
-                <a href="tel:+9054349792013">
+                <a href="tel:+903123940525">
                   <button className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white px-6 py-3 rounded-xl font-bold transition-colors">
                     <Phone size={18} />
                     Hemen Ara
@@ -310,10 +310,10 @@ export default function KurumsalPage() {
                   <ArrowRight size={16} />
                 </button>
               </Link>
-              <a href="tel:+9054349792013">
+              <a href="tel:+903123940525">
                 <button className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white px-6 py-3 rounded-xl font-bold transition-colors">
                   <Phone size={18} />
-                  +90 543 979 20 13
+                  0312 394 05 25
                 </button>
               </a>
             </div>

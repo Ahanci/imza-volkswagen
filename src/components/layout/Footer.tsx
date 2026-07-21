@@ -3,12 +3,13 @@
 import React from 'react'
 import Link from 'next/link'
 import { Input } from '@/components/ui/input'
-import { 
-  Car, 
-  Phone, 
-  Mail, 
-  MapPin, 
+import {
+  Car,
+  Phone,
+  Mail,
+  MapPin,
   Clock,
+  MessageCircle,
   Facebook,
   Instagram,
   Youtube,
@@ -87,9 +88,13 @@ export function Footer() {
 
             {/* Contact Info */}
             <div className="space-y-3">
-              <a href="tel:+9054349792013" className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
-                <Phone size={16} className="text-green-400 flex-shrink-0" />
-                <span className="font-semibold text-lg">+90 543 979 20 13</span>
+              <a href="https://wa.me/9054349792013" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
+                <MessageCircle size={16} className="text-green-400 flex-shrink-0" />
+                <span className="font-semibold text-lg">WhatsApp: +90 543 979 20 13</span>
+              </a>
+              <a href="tel:+903123940525" className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
+                <Phone size={16} className="text-vag-blue flex-shrink-0" />
+                <span>Kurumsal: 0312 394 05 25</span>
               </a>
               <a href="mailto:info@imzavolkswagen.com.tr" className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
                 <Mail size={16} className="text-vag-blue flex-shrink-0" />

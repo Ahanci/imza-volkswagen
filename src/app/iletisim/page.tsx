@@ -64,19 +64,19 @@ export default function IletisimPage() {
                 </h2>
 
                 <div className="space-y-4">
-                  {/* Telefon */}
+                  {/* Kurumsal Telefon */}
                   <Card className="border-0 shadow-sm">
                     <CardContent className="p-5 flex items-start gap-4">
                       <div className="w-12 h-12 rounded-xl bg-vag-blue flex items-center justify-center flex-shrink-0">
                         <Phone size={22} className="text-vag-blue" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="font-semibold text-vag-navy mb-1">Telefon</h3>
-                        <a href="tel:+9054349792013" className="text-lg font-bold text-vag-blue hover:underline">
-                          +90 543 979 20 13
+                        <h3 className="font-semibold text-vag-navy mb-1">Kurumsal Telefon</h3>
+                        <a href="tel:+903123940525" className="text-lg font-bold text-vag-blue hover:underline">
+                          0312 394 05 25
                         </a>
                         <p className="text-sm text-muted-foreground mt-1">
-                          Pazartesi – Cumartesi: 09:00 – 18:00
+                          Pazartesi – Cumartesi: 09:00 – 18:00 (sabit hat)
                         </p>
                       </div>
                     </CardContent>
