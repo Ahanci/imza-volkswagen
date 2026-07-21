@@ -43,8 +43,12 @@ function extractFaqs(content: string): { question: string; answer: string }[] {
   return faqs
 }
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const slug = params.slug
+export default async function BlogPostPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}) {
+  const { slug } = await params
   const post = getBlogPostBySlug(slug)
 
   if (!post) {
