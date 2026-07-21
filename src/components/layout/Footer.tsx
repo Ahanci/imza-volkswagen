@@ -232,7 +232,7 @@ export function Footer() {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/50 text-sm text-center md:text-left">
-              © {new Date().getFullYear()} İmza Volkswagen. Tüm hakları saklıdır. | VAG Grubu Yedek Parça Uzmanı
+              © 2026 İmza Volkswagen. Tüm hakları saklıdır. | VAG Grubu Yedek Parça Uzmanı
             </p>
             
             <div className="flex flex-wrap justify-center gap-4 text-sm">
