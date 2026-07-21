@@ -30,7 +30,6 @@ const navItems = [
       { name: 'Filtre & Bakım Setleri', href: '/hizmetlerimiz/filtre' },
       { name: 'Şanzıman Parçaları', href: '/hizmetlerimiz/sanziman' },
       { name: 'Egzoz & Emisyon', href: '/hizmetlerimiz/egzoz' },
-      { name: 'Akü & Şarj Sistemi', href: '/hizmetlerimiz/aku' },
     ]
   },
   {
@@ -71,9 +70,9 @@ export function Header() {
       <div className="bg-vag-navy text-white py-2 hidden md:block">
         <div className="container mx-auto px-4 flex justify-between items-center text-sm">
           <div className="flex items-center gap-6">
-            <a href="tel:+905321234567" className="flex items-center gap-2 hover:text-vag-blue transition-colors">
+            <a href="tel:+9054349792013" className="flex items-center gap-2 hover:text-vag-blue transition-colors">
               <Phone size={14} />
-              <span>+90 532 123 45 67</span>
+              <span>+90 543 979 20 13</span>
             </a>
             <span className="text-white/70">|</span>
             <span>Pazartesi - Cumartesi: 09:00 - 18:00</span>
@@ -183,9 +182,9 @@ export function Header() {
 
                   {/* Contact Info in Mobile */}
                   <div className="border-t pt-4 mt-4 space-y-3">
-                    <a href="tel:+905321234567" className="flex items-center gap-3 p-3 bg-green-50 rounded-xl text-green-700 font-semibold">
+                    <a href="tel:+9054349792013" className="flex items-center gap-3 p-3 bg-green-50 rounded-xl text-green-700 font-semibold">
                       <Phone size={20} />
-                      +90 532 123 45 67
+                      +90 543 979 20 13
                     </a>
                     <p className="text-sm text-muted-foreground text-center">
                       Pazartesi - Cumartesi: 09:00 - 18:00

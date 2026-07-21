@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     "İmza Volkswagen", "VAG yedek parça", "Volkswagen yedek parça", "Audi yedek parça",
     "Seat yedek parça", "Skoda yedek parça", "orijinal yedek parça", "yan sanayi parça",
     "VW parça", "Audi parça", "fren balatası", "triger seti", "motor parçası",
-    "Ankara yedek parça", "Şaşmaz VW parça"
+    "Ankara yedek parça", "İvedik VW parça"
   ],
   authors: [{ name: "İmza Volkswagen", url: SITE_URL }],
   creator: "İmza Volkswagen",
@@ -90,13 +90,25 @@ const jsonLd = {
         "Orijinal (OEM) yedek parça",
         "Yan sanayi (OEE) yedek parça",
       ],
-      contactPoint: {
-        "@type": "ContactPoint",
-        telephone: "+90-532-123-45-67",
-        contactType: "customer service",
-        areaServed: "TR",
-        availableLanguage: ["Turkish"],
-      },
+      contactPoint: [
+        {
+          "@type": "ContactPoint",
+          telephone: "+90-543-979-20-13",
+          contactType: "customer service",
+          areaServed: "TR",
+          availableLanguage: ["Turkish"],
+          contactOption: "TollFree",
+          hoursAvailable: "Mo-Su 00:00-23:59",
+        },
+        {
+          "@type": "ContactPoint",
+          telephone: "+90-312-394-05-25",
+          contactType: "sales",
+          areaServed: "TR",
+          availableLanguage: ["Turkish"],
+          hoursAvailable: "Mo-Sa 09:00-18:00",
+        },
+      ],
       sameAs: [],
     },
     {
@@ -105,11 +117,11 @@ const jsonLd = {
       name: "İmza Volkswagen",
       image: `${SITE_URL}/images/hero-car.jpg`,
       url: SITE_URL,
-      telephone: "+90-532-123-45-67",
+      telephone: "+90-312-394-05-25",
       email: "info@imzavolkswagen.com.tr",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Ankara",
+        streetAddress: "İvedik Sanayi Bölgesi, Altındağ",
         addressLocality: "Ankara",
         addressRegion: "Ankara",
         postalCode: "06000",

@@ -13,9 +13,9 @@ import {
 export const metadata: Metadata = {
   title: 'İletişim | İmza Volkswagen - VAG Grubu Yedek Parça',
   description:
-    'İmza Volkswagen iletişim bilgileri: Ankara Şaşmaz sanayi bölgesinde VAG grubu yedek parça. Telefon, WhatsApp, e-posta, çalışma saatleri ve Google Maps konum.',
+    'İmza Volkswagen iletişim bilgileri: Ankara İvedik sanayi bölgesinde VAG grubu yedek parça. Telefon, WhatsApp, e-posta, çalışma saatleri ve Google Maps konum.',
   keywords: [
-    'İmza Volkswagen iletişim', 'Ankara VW parça', 'Şaşmaz VW parça',
+    'İmza Volkswagen iletişim', 'Ankara VW parça', 'İvedik VW parça',
     'VAG yedek parça telefon', 'VW yedek parça WhatsApp',
     'Ankara VAG yedek parça adres',
   ],
@@ -72,8 +72,8 @@ export default function IletisimPage() {
                       </div>
                       <div className="flex-1">
                         <h3 className="font-semibold text-vag-navy mb-1">Telefon</h3>
-                        <a href="tel:+905321234567" className="text-lg font-bold text-vag-blue hover:underline">
-                          +90 532 123 45 67
+                        <a href="tel:+9054349792013" className="text-lg font-bold text-vag-blue hover:underline">
+                          +90 543 979 20 13
                         </a>
                         <p className="text-sm text-muted-foreground mt-1">
                           Pazartesi – Cumartesi: 09:00 – 18:00
@@ -91,12 +91,12 @@ export default function IletisimPage() {
                       <div className="flex-1">
                         <h3 className="font-semibold text-vag-navy mb-1">WhatsApp</h3>
                         <a
-                          href="https://wa.me/905321234567?text=Merhaba,%20VAG%20yedek%20par%C3%A7a%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+                          href="https://wa.me/9054349792013?text=Merhaba,%20VAG%20yedek%20par%C3%A7a%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-lg font-bold text-green-600 hover:underline"
                         >
-                          +90 532 123 45 67
+                          +90 543 979 20 13
                         </a>
                         <p className="text-sm text-muted-foreground mt-1">
                           7/24 açık — fotoğraf gönderin, parçayı biz tespit edelim
@@ -135,7 +135,7 @@ export default function IletisimPage() {
                           İmza Volkswagen
                         </p>
                         <p className="text-sm text-muted-foreground leading-relaxed mt-1">
-                          Şaşmaz Sanayi Bölgesi<br />
+                          İvedik Sanayi Bölgesi<br />
                           06105 Altındağ / Ankara
                         </p>
                         <a
@@ -189,14 +189,14 @@ export default function IletisimPage() {
                 </h2>
                 <div className="rounded-2xl overflow-hidden shadow-md border border-gray-200 aspect-[4/3]">
                   <iframe
-                    src="https://www.google.com/maps?q=Şaşmaz+Sanayi+Ankara&output=embed"
+                    src="https://www.google.com/maps?q=İvedik+Sanayi+Ankara&output=embed"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="İmza Volkswagen - Şaşmaz Sanayi Ankara"
+                    title="İmza Volkswagen - İvedik Sanayi Ankara"
                   />
                 </div>
                 <div className="mt-4 grid grid-cols-2 gap-3 text-sm">
@@ -210,7 +210,7 @@ export default function IletisimPage() {
                   </div>
                 </div>
                 <a
-                  href="https://www.google.com/maps/dir/?api=1&destination=İmza+Volkswagen+Şaşmaz+Ankara"
+                  href="https://www.google.com/maps/dir/?api=1&destination=İmza+Volkswagen+İvedik+Ankara"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-4 block"
@@ -239,7 +239,7 @@ export default function IletisimPage() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <a
-                  href="https://wa.me/905321234567?text=Merhaba,%20teklif%20almak%20istiyorum.%20VIN%20numaram:%20"
+                  href="https://wa.me/9054349792013?text=Merhaba,%20teklif%20almak%20istiyorum.%20VIN%20numaram:%20"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

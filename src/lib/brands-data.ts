@@ -120,13 +120,13 @@ export const brands: Brand[] = [
     bgColor: '#001E50',
     description: 'Tüm Volkswagen modelleri için orijinal ve yan sanayi yedek parça',
     longDescription:
-      'Volkswagen, Alman mühendisliğin ve kalitenin simgesidir. İmza Volkswagen olarak, tüm Volkswagen modelleri — Golf, Passat, Polo, Tiguan, Transporter dahil — için orijinal kalitede yedek parçalar sunuyoruz. Ankara Şaşmaz stoklu, hızlı tedarik.',
+      'Volkswagen, Alman mühendisliğin ve kalitenin simgesidir. İmza Volkswagen olarak, tüm Volkswagen modelleri — Golf, Passat, Polo, Tiguan, Transporter dahil — için orijinal kalitede yedek parçalar sunuyoruz. Ankara İvedik stoklu, hızlı tedarik.',
     models: ['Golf (tüm nesiller)', 'Passat (B5/B6/B7/B8)', 'Polo (9N/6R/AW)', 'Tiguan (5N/BJ)', 'T-Roc', 'Transporter (T5/T6/T7)', 'Caddy', 'Touran', 'Sharan', 'ID. Serisi', 'Crafter'],
     history: '1937 yılında kurulan Volkswagen, "halkın arabası" anlamına gelmektedir. Yüzyılı aşkın tarihi boyunca otomotiv endüstrisinin en önemli markalarından biri olmuştur.',
     advantages: [
       'Orijinal VW parça + yan sanayi (Bosch, Mann, Mahle)',
       'Tüm VW model nesilleri için parça',
-      'Şaşmaz stoklu, aynı gün kargo',
+      'İvedik stoklu, aynı gün kargo',
       'Triger seti, fren balata, yağ filtresi stoklarımızda',
       'VIN ile doğru parça eşleşmesi',
       'Faturalı, garantili satış',
@@ -193,7 +193,7 @@ export const brands: Brand[] = [
       'Dizel (TDI) ve benzinli (TSI) motor parçaları',
       'LPG uyumlu parça seçenekleri',
       'Faturalı, garantili satış',
-      'Şaşmaz\'dan hızlı kargo',
+      'İvedik\'dan hızlı kargo',
     ],
     periyodikPaketleri: standartPaketler('1.0/1.2/1.4/1.5/2.0 TSI', 'Fren Balata Ön Seti', [
       { ad: 'LPG Enjektör Filtresi (LPG\'li araçlar için)', marka: 'OEM' },
@@ -230,7 +230,7 @@ export const brands: Brand[] = [
     bgColor: '#1A1A1A',
     description: 'Porsche araçlar için orijinal ve yan sanayi yedek parça',
     longDescription:
-      'Porsche, VAG Grubu\'nun premium spor otomobil markasıdır. Tüm Porsche modelleri — 911, Cayenne, Macan, Panamera, Taycan, Cayman, Boxster — için orijinal (OEM) ve yüksek kaliteli yan sanayi yedek parça tedariği yapıyoruz. Ankara Şaşmaz stoklu, hızlı kargo.',
+      'Porsche, VAG Grubu\'nun premium spor otomobil markasıdır. Tüm Porsche modelleri — 911, Cayenne, Macan, Panamera, Taycan, Cayman, Boxster — için orijinal (OEM) ve yüksek kaliteli yan sanayi yedek parça tedariği yapıyoruz. Ankara İvedik stoklu, hızlı kargo.',
     models: [
       '911 (991/992/996/997)',
       'Cayenne (9YA / 92A / 958)',

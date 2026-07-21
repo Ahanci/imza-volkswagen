@@ -13,9 +13,9 @@ import {
 import { brands, getAllBrands, type PeriyodikPaket } from '@/lib/brands-data'
 
 export const metadata: Metadata = {
-  title: 'VAG Periyodik Bakım Paketleri | İmza Volkswagen - Ankara Şaşmaz',
+  title: 'VAG Periyodik Bakım Paketleri | İmza Volkswagen - Ankara İvedik',
   description:
-    'VW, Audi, Seat, Skoda, Cupra, Porsche araçlarınız için periyodik bakım paketleri. Motor yağı, filtre, fren balata, triger seti — Ankara Şaşmaz stoklu, orijinal ve yan sanayi.',
+    'VW, Audi, Seat, Skoda, Cupra, Porsche araçlarınız için periyodik bakım paketleri. Motor yağı, filtre, fren balata, triger seti — Ankara İvedik stoklu, orijinal ve yan sanayi.',
   keywords: [
     'periyodik bakım paketi', 'VW periyodik bakım', 'Audi bakım paketi', 'Seat bakım',
     'Skoda periyodik bakım', 'VAG bakım paketi Ankara', 'fren balata paketi',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'VAG Periyodik Bakım Paketleri | İmza Volkswagen',
-    description: 'VW, Audi, Seat, Skoda, Cupra, Porsche için periyodik bakım paketleri. Ankara Şaşmaz stoklu.',
+    description: 'VW, Audi, Seat, Skoda, Cupra, Porsche için periyodik bakım paketleri. Ankara İvedik stoklu.',
     type: 'website',
   },
 }
@@ -48,7 +48,7 @@ export default function PeriyodikBakimPage() {
             <div className="max-w-4xl">
               <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm mb-6 border border-white/20">
                 <MapPin size={16} />
-                <span>Ankara Şaşmaz Stoklu • Aynı Gün Kargo</span>
+                <span>Ankara İvedik Stoklu • Aynı Gün Kargo</span>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
                 VAG Periyodik Bakım Paketleri
@@ -57,7 +57,7 @@ export default function PeriyodikBakimPage() {
                 Volkswagen, Audi, Seat, Skoda, Cupra ve Porsche araçlarınız için
                 <strong> 4 kategoride periyodik bakım paketi</strong>: Mini (15.000 km),
                 Standart (30.000 km), Geniş (60.000 km) ve Triger (90.000-120.000 km).
-                Tüm parçalar <strong>Ankara Şaşmaz stoklu</strong>, orijinal ve yan sanayi seçenekleriyle.
+                Tüm parçalar <strong>Ankara İvedik stoklu</strong>, orijinal ve yan sanayi seçenekleriyle.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a href="#paketler">
@@ -67,7 +67,7 @@ export default function PeriyodikBakimPage() {
                   </button>
                 </a>
                 <a
-                  href={`https://wa.me/905321234567?text=Merhaba, VAG periyodik bakım paketi hakkında teklif almak istiyorum.`}
+                  href={`https://wa.me/9054349792013?text=Merhaba, VAG periyodik bakım paketi hakkında teklif almak istiyorum.`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -87,7 +87,7 @@ export default function PeriyodikBakimPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
               <div className="flex flex-col items-center gap-1">
                 <MapPin size={20} className="text-yellow-400" />
-                <p className="text-sm font-semibold">Ankara Şaşmaz</p>
+                <p className="text-sm font-semibold">Ankara İvedik</p>
                 <p className="text-xs text-white/70">Stoktan teslim</p>
               </div>
               <div className="flex flex-col items-center gap-1">
@@ -237,7 +237,7 @@ export default function PeriyodikBakimPage() {
                   },
                   {
                     q: 'Fiyat teklifi nasıl alırım?',
-                    a: 'WhatsApp +90 532 123 45 67 üzerinden aracınızın markasını, modelini ve kilometresini gönderin, aynı gün içinde fiyat teklifi gönderelim.',
+                    a: 'WhatsApp +90 543 979 20 13 üzerinden aracınızın markasını, modelini ve kilometresini gönderin, aynı gün içinde fiyat teklifi gönderelim.',
                   },
                   {
                     q: 'Stokta yoksa ne kadar beklerim?',
@@ -274,7 +274,7 @@ export default function PeriyodikBakimPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="https://wa.me/905321234567?text=Merhaba, periyodik bakım paketi için teklif almak istiyorum. VIN:"
+                href="https://wa.me/9054349792013?text=Merhaba, periyodik bakım paketi için teklif almak istiyorum. VIN:"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -283,10 +283,10 @@ export default function PeriyodikBakimPage() {
                   WhatsApp Teklif Al
                 </Button>
               </a>
-              <a href="tel:+905321234567">
+              <a href="tel:+9054349792013">
                 <Button variant="outline" className="bg-white/10 hover:bg-white/20 border-white/20 text-white gap-2">
                   <Phone size={18} />
-                  +90 532 123 45 67
+                  +90 543 979 20 13
                 </Button>
               </a>
             </div>
@@ -339,7 +339,7 @@ function PeriyodikPaketCard({
         </ul>
         <div className="flex gap-2">
           <a
-            href={`https://wa.me/905321234567?text=${encodeURIComponent(brandName + ' ' + paket.ad + ' (' + paket.km + ') paketi için teklif almak istiyorum.')}`}
+            href={`https://wa.me/9054349792013?text=${encodeURIComponent(brandName + ' ' + paket.ad + ' (' + paket.km + ') paketi için teklif almak istiyorum.')}`}
             target="_blank"
             rel="noopener noreferrer"
             className="flex-1"
@@ -348,7 +348,7 @@ function PeriyodikPaketCard({
               WhatsApp
             </button>
           </a>
-          <a href="tel:+905321234567" className="flex-1">
+          <a href="tel:+9054349792013" className="flex-1">
             <button className="w-full inline-flex items-center justify-center gap-1 bg-vag-blue hover:bg-blue-700 text-white px-2 py-1.5 rounded-md text-xs font-semibold transition-colors">
               Ara
             </button>

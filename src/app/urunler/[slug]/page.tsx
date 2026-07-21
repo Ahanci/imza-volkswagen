@@ -134,13 +134,13 @@ export default function ProductDetailPage() {
 
                     {/* Action Buttons */}
                     <div className="flex flex-wrap gap-4 mb-8">
-                      <a href="https://wa.me/905321234567?text=Merhaba, bu ürün hakkında bilgi almak istiyorum: %0A%0A{encodeURIComponent(product.name)}" target="_blank" rel="noopener noreferrer">
+                      <a href="https://wa.me/9054349792013?text=Merhaba, bu ürün hakkında bilgi almak istiyorum: %0A%0A{encodeURIComponent(product.name)}" target="_blank" rel="noopener noreferrer">
                         <Button size="lg" className="bg-green-500 hover:bg-green-600 gap-2">
                           <MessageCircle size={20} />
                           WhatsApp ile Sor
                         </Button>
                       </a>
-                      <a href="tel:+905321234567">
+                      <a href="tel:+9054349792013">
                         <Button size="lg" className="bg-blue-500 hover:bg-blue-600 gap-2">
                           <Phone size={20} />
                           Hemen Ara
@@ -238,7 +238,7 @@ export default function ProductDetailPage() {
                     </p>
                     <div className="space-y-3">
                       <a 
-                        href={`https://wa.me/905321234567?text=Merhaba, ${product.name} için fiyat bilgisi almak istiyorum.`}
+                        href={`https://wa.me/9054349792013?text=Merhaba, ${product.name} için fiyat bilgisi almak istiyorum.`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="block w-full"
@@ -248,10 +248,10 @@ export default function ProductDetailPage() {
                           WhatsApp ile Yazın
                         </button>
                       </a>
-                      <a href="tel:+905321234567" className="block w-full">
+                      <a href="tel:+9054349792013" className="block w-full">
                         <button className="w-full inline-flex items-center justify-center gap-2 bg-white/20 hover:bg-white/30 text-white px-6 py-3 rounded-xl font-semibold transition-colors">
                           <Phone size={18} />
-                          +90 532 123 45 67
+                          +90 543 979 20 13
                         </button>
                       </a>
                     </div>

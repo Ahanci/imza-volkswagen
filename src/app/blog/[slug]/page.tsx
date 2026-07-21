@@ -239,7 +239,7 @@ export default async function BlogPostPage({
                       <div>
                         <h3 className="font-bold text-xl mb-1">Bu Yazıdaki Parçalar Bizde Var</h3>
                         <p className="text-white/80 text-sm leading-relaxed">
-                          <strong className="text-yellow-300">{post.category}</strong> kategorisindeki tüm parçalar İmza Volkswagen Ankara Şaşmaz stokunda.
+                          <strong className="text-yellow-300">{post.category}</strong> kategorisindeki tüm parçalar İmza Volkswagen Ankara İvedik stokunda.
                           Orijinal ve yan sanayi seçenekleri, faturalı ve garantili satış.
                         </p>
                       </div>
@@ -247,7 +247,7 @@ export default async function BlogPostPage({
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-5 text-sm">
                       <div className="bg-white/10 rounded-lg p-3 text-center">
                         <CheckCircle2 size={18} className="mx-auto mb-1 text-green-400" />
-                        <p className="text-xs">Şaşmaz Stok</p>
+                        <p className="text-xs">İvedik Stok</p>
                       </div>
                       <div className="bg-white/10 rounded-lg p-3 text-center">
                         <Shield size={18} className="mx-auto mb-1 text-yellow-400" />
@@ -264,7 +264,7 @@ export default async function BlogPostPage({
                     </div>
                     <div className="flex flex-wrap gap-3">
                       <a
-                        href={`https://wa.me/905321234567?text=${encodeURIComponent(`Merhaba, "${post.title}" yazısındaki parçalar için teklif almak istiyorum.`)}`}
+                        href={`https://wa.me/9054349792013?text=${encodeURIComponent(`Merhaba, "${post.title}" yazısındaki parçalar için teklif almak istiyorum.`)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex-1 min-w-[200px]"
@@ -274,7 +274,7 @@ export default async function BlogPostPage({
                           WhatsApp Teklif Al
                         </button>
                       </a>
-                      <a href="tel:+905321234567" className="flex-1 min-w-[160px]">
+                      <a href="tel:+9054349792013" className="flex-1 min-w-[160px]">
                         <button className="w-full inline-flex items-center justify-center gap-2 bg-white/20 hover:bg-white/30 text-white px-5 py-3 rounded-xl font-semibold transition-colors">
                           Hemen Ara
                         </button>
@@ -350,7 +350,7 @@ export default async function BlogPostPage({
                       WhatsApp'tan doğrudan ulaşın.
                     </p>
                     <a
-                      href="https://wa.me/905321234567"
+                      href="https://wa.me/9054349792013"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block"

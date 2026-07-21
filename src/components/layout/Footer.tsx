@@ -87,9 +87,9 @@ export function Footer() {
 
             {/* Contact Info */}
             <div className="space-y-3">
-              <a href="tel:+905321234567" className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
+              <a href="tel:+9054349792013" className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
                 <Phone size={16} className="text-green-400 flex-shrink-0" />
-                <span className="font-semibold text-lg">+90 532 123 45 67</span>
+                <span className="font-semibold text-lg">+90 543 979 20 13</span>
               </a>
               <a href="mailto:info@imzavolkswagen.com.tr" className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
                 <Mail size={16} className="text-vag-blue flex-shrink-0" />
@@ -194,7 +194,7 @@ export function Footer() {
             </p>
             
             <a 
-              href="https://wa.me/905321234567?text=Merhaba,%20bilgi%20almak%20istiyorum."
+              href="https://wa.me/9054349792013?text=Merhaba,%20bilgi%20almak%20istiyorum."
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded-xl font-semibold transition-colors mb-3"
@@ -203,7 +203,7 @@ export function Footer() {
             </a>
             
             <a 
-              href="tel:+905321234567"
+              href="tel:+9054349792013"
               className="block w-full bg-white/10 hover:bg-white/20 text-white text-center py-3 rounded-xl font-semibold transition-colors"
             >
               Hemen Arayın

@@ -63,7 +63,7 @@ export function HeroSection() {
 
           {/* Subtitle */}
           <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed max-w-xl">
-            <span className="font-semibold text-yellow-300">Ankara Şaşmaz</span>'da 20+ yıldır Volkswagen, Audi, Seat, Skoda, Cupra ve Porsche araçlarınız için
+            <span className="font-semibold text-yellow-300">Ankara İvedik</span>'da 20+ yıldır Volkswagen, Audi, Seat, Skoda, Cupra ve Porsche araçlarınız için
             <span className="font-semibold"> orijinal ve yan sanayi </span>
             yedek parça satışı. Profesyonel hizmet, güvenilir çözümler.
           </p>
@@ -71,7 +71,7 @@ export function HeroSection() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
             <a 
-              href="https://wa.me/905321234567?text=Merhaba,%20yedek%20par%C3%A7a%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+              href="https://wa.me/9054349792013?text=Merhaba,%20yedek%20par%C3%A7a%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -83,7 +83,7 @@ export function HeroSection() {
                 WhatsApp ile Yazın
               </Button>
             </a>
-            <a href="tel:+905321234567">
+            <a href="tel:+9054349792013">
               <Button 
                 size="lg" 
                 className="bg-vag-blue hover:bg-blue-700 text-white px-8 h-14 text-base font-bold gap-2 w-full sm:w-auto shadow-lg shadow-vag-blue/30"
@@ -100,7 +100,7 @@ export function HeroSection() {
               { icon: Shield, label: 'Orijinal + Yan Sanayi', desc: 'İkisi de stokta' },
               { icon: Truck, label: 'Ankara\'dan Kargo', desc: 'Aynı gün sevkiyat' },
               { icon: Award, label: '20+ Yıl Tecrübe', desc: 'VAG Grubu uzmanı' },
-              { icon: Clock, label: 'Şaşmaz Stok', desc: 'Hızlı erişim' },
+              { icon: Clock, label: 'İvedik Stok', desc: 'Hızlı erişim' },
             ].map((item) => (
               <div key={item.label} className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl p-3 border border-white/20">
                 <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">

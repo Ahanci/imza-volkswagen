@@ -318,7 +318,7 @@
 /* Print sayfası sonu: firma bilgisi */
 @media print {
   body::after {
-    content: "İmza Volkswagen — Ankara Şaşmaz — +90 532 123 45 67 — info@imzavolkswagen.com.tr";
+    content: "İmza Volkswagen — Ankara İvedik — +90 543 979 20 13 — info@imzavolkswagen.com.tr";
     display: block;
     position: fixed;
     bottom: 0;

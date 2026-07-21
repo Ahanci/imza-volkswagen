@@ -11,15 +11,15 @@ import { services, iconMap } from '@/lib/services-data'
 export const metadata: Metadata = {
   title: 'Hizmetlerimiz | İmza Volkswagen - VAG Grubu Yedek Parça',
   description:
-    'VAG grubu (VW, Audi, Seat, Skoda, Cupra, Porsche) yedek parça hizmetlerimiz: motor, fren, süspansiyon, elektrik, filtre, şanzıman, egzoz, akü. 8 kategoride orijinal ve yan sanayi parça.',
+    'VAG grubu (VW, Audi, Seat, Skoda, Cupra, Porsche) yedek parça hizmetlerimiz: motor, fren, süspansiyon, elektrik, filtre, şanzıman, egzoz. 7 kategoride orijinal ve yan sanayi parça. (Akü satışımız yoktur.)',
   keywords: [
     'VAG yedek parça', 'VW yedek parça', 'Audi yedek parça', 'Skoda yedek parça', 'Seat yedek parça',
-    'motor parçaları', 'fren balata', 'süspansiyon', 'elektrik', 'filtre', 'şanzıman', 'egzoz', 'akü',
+    'motor parçaları', 'fren balata', 'süspansiyon', 'elektrik', 'filtre', 'şanzıman', 'egzoz',
     'orijinal parça', 'yan sanayi parça', 'Ankara yedek parça',
   ],
   openGraph: {
     title: 'Hizmetlerimiz | İmza Volkswagen',
-    description: '8 kategoride VAG grubu yedek parça hizmeti. Motor, fren, süspansiyon, elektrik, filtre, şanzıman, egzoz, akü.',
+    description: '7 kategoride VAG grubu yedek parça hizmeti. Motor, fren, süspansiyon, elektrik, filtre, şanzıman, egzoz. (Akü satışımız yoktur.)',
     type: 'website',
   },
 }
@@ -35,16 +35,17 @@ export default function HizmetlerimizPage() {
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm mb-6 border border-white/20">
                 <Wrench size={16} />
-                <span>8 Hizmet Kategorisi • VAG Grubu Uzmanı</span>
+                <span>7 Hizmet Kategorisi • VAG Grubu Uzmanı</span>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
                 Yedek Parça Hizmetlerimiz
               </h1>
               <p className="text-xl text-white/90 leading-relaxed mb-8">
                 Volkswagen, Audi, Seat, Skoda, Cupra ve Porsche araçlarınız için
-                <strong> 8 kategoride </strong>
+                <strong> 7 kategoride </strong>
                 orijinal ve yüksek kaliteli yan sanayi yedek parça tedariği.
                 Her parça faturalı, garantili, VIN ile doğru eşleşme garantili.
+                <span className="block text-base text-white/70 mt-3">Not: Akü, lastik ve jant satışımız yoktur.</span>
               </p>
 
               {/* Trust Badges */}
@@ -70,7 +71,7 @@ export default function HizmetlerimizPage() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <span className="inline-block text-vag-blue font-semibold text-sm uppercase tracking-wider mb-2">
-                8 Kategori
+                7 Kategori
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-vag-navy mb-4">
                 Hizmet Verdiğimiz Tüm Parça Kategorileri
@@ -169,14 +170,14 @@ export default function HizmetlerimizPage() {
               doğru parçayı tespit edip size fiyat ve stok bilgisi versin.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="tel:+905321234567">
+              <a href="tel:+9054349792013">
                 <button className="inline-flex items-center gap-2 bg-vag-blue hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-bold transition-colors shadow-lg">
                   <Phone size={18} />
                   Hemen Ara
                 </button>
               </a>
               <a
-                href="https://wa.me/905321234567?text=Merhaba,%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+                href="https://wa.me/9054349792013?text=Merhaba,%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
                 target="_blank"
                 rel="noopener noreferrer"
               >

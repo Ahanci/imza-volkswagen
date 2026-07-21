@@ -17,7 +17,7 @@ export function FloatingCTA() {
     >
       {/* WhatsApp — sırayla: en altta */}
       <a
-        href="https://wa.me/905321234567?text=Merhaba,%20yedek%20par%C3%A7a%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+        href="https://wa.me/9054349792013?text=Merhaba,%20yedek%20par%C3%A7a%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
         target="_blank"
         rel="noopener noreferrer"
         aria-label="WhatsApp ile yaz"
@@ -32,7 +32,7 @@ export function FloatingCTA() {
 
       {/* Hemen Ara — en üstte */}
       <a
-        href="tel:+905321234567"
+        href="tel:+9054349792013"
         aria-label="Hemen ara"
         className="group flex items-center gap-2.5 bg-vag-blue hover:bg-blue-700 text-white rounded-full shadow-2xl hover:shadow-vag-blue/40 transition-all duration-300 hover:scale-105
                    w-12 h-12 md:w-auto md:h-auto md:px-5 md:py-3.5 md:min-w-[160px] justify-center"

@@ -246,14 +246,14 @@ export default async function ServiceDetailPage(
               Şase numaranızı paylaşın, doğru parçayı tespit edip size fiyat ve stok bilgisi verelim.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="tel:+905321234567">
+              <a href="tel:+9054349792013">
                 <button className="inline-flex items-center gap-2 bg-vag-blue hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-bold transition-colors shadow-lg">
                   <PhoneIcon size={18} />
-                  +90 532 123 45 67
+                  +90 543 979 20 13
                 </button>
               </a>
               <a
-                href={`https://wa.me/905321234567?text=Merhaba,%20${service.title}%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.`}
+                href={`https://wa.me/9054349792013?text=Merhaba,%20${service.title}%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.`}
                 target="_blank"
                 rel="noopener noreferrer"
               >

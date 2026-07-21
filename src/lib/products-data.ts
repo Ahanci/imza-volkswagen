@@ -318,33 +318,6 @@ export const products: Product[] = [
     oemNumbers: ['3Q0 820 411', '3Q0 820 411 A'],
     compatibleModels: ['Superb 3', 'Superb Combi', 'Passat B8']
   },
-  {
-    id: 'sk-003',
-    name: 'Skoda Fabia 4 Akü',
-    slug: 'skoda-fabia-4-aku',
-    brand: 'Skoda',
-    brandSlug: 'skoda',
-    category: 'Akü & Batarya',
-    categorySlug: 'aku',
-    description: 'Fabia NJ/MW için AGM start-stop akü. Yüksek krampir akımı, uzun cycle ömrü.',
-    features: [
-      'AGM (Absorbent Glass Mat) teknolojisi',
-      'Start-Stop uyumlu',
-      'Yüksek krampir akımı (CCA)',
-      'Bakımsız sealed tasarım',
-      'Vibration resistant'
-    ],
-    specifications: {
-      'Kapasite': '70 Ah',
-      'Gerilim': '12V',
-      'CCA': '760 A (EN)',
-      'Boyutlar': '278x175x190 mm',
-      'Tip': 'AGM Start-Stop',
-      'OE Numarası': '000 915 105 DL'
-    },
-    oemNumbers: ['000 915 105 DL', '000 915 105 FL'],
-    compatibleModels: ['Fabia 4', 'Polo 6R', 'Ibiza 6F', 'Arona']
-  },
   // CUPRA ÜRÜNLERİ
   {
     id: 'cu-001',
