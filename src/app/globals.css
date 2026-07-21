@@ -200,3 +200,134 @@
 .btn-glow:hover::before {
   left: 100%;
 }
+
+/* =============================================================
+   PRINT STYLES (Ctrl+P / Cmd+P için temiz çıktı)
+   Sayfayı yazdırırken sticky butonlar, banner'lar, animasyonlar gizlenir,
+   sadece içerik temiz şekilde çıkar.
+   ============================================================= */
+@media print {
+  /* Renkleri koru, ama yazıcı dostu */
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Layout düzeltmesi: header sticky değil, normal akış */
+  html,
+  body {
+    background: #fff !important;
+    font-size: 11pt;
+    line-height: 1.4;
+  }
+
+  /* Header'ı sade ama bilgi verici tut */
+  header {
+    position: static !important;
+    background: #fff !important;
+    border-bottom: 2px solid #1E3A5F !important;
+    box-shadow: none !important;
+    padding: 12pt 0 !important;
+  }
+
+  /* Top bar (telefon + saat) gizle */
+  header .bg-vag-navy.text-white.py-2 {
+    display: none !important;
+  }
+
+  /* Sticky butonlar (WhatsApp + Ara) gizle */
+  .fixed,
+  [class*="fixed"] {
+    display: none !important;
+  }
+
+  /* Footer basitleştir */
+  footer {
+    border-top: 1px solid #ccc !important;
+    page-break-inside: avoid;
+  }
+
+  /* Sayfa kırılma noktaları */
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  section {
+    page-break-inside: avoid;
+    padding: 12pt 0 !important;
+  }
+
+  h1, h2, h3, h4 {
+    page-break-after: avoid;
+    color: #1E3A5F !important;
+  }
+
+  /* Hero, gradient bölümleri sadeleştir */
+  .bg-gradient-to-br,
+  .bg-gradient-to-r {
+    background: #fff !important;
+  }
+
+  /* Görseller */
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  /* CTA butonları: sadece metin olarak görünür */
+  a[href]::after {
+    content: "";
+  }
+
+  /* Gizlenecek öğeler */
+  .no-print,
+  [class*="floating"],
+  [class*="sticky"] {
+    display: none !important;
+  }
+
+  /* Tablolar: çıktıda temiz */
+  table {
+    border-collapse: collapse !important;
+    page-break-inside: avoid;
+  }
+
+  th, td {
+    border: 1px solid #999 !important;
+    padding: 4pt 6pt !important;
+  }
+
+  /* URL'leri linklerin yanında göster */
+  a[href^="http"]:not([href^="#"])::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #666 !important;
+  }
+
+  /* Sayfa footer'ına firma bilgisi ekle (her print sayfasında görünür) */
+  @page {
+    margin: 1.5cm;
+  }
+}
+
+/* Print sayfası sonu: firma bilgisi */
+@media print {
+  body::after {
+    content: "İmza Volkswagen — Ankara Şaşmaz — +90 532 123 45 67 — info@imzavolkswagen.com.tr";
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 8pt;
+    color: #666;
+    padding: 4pt 0;
+    border-top: 1px solid #ccc;
+  }
+}
