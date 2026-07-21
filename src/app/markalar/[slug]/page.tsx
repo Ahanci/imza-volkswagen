@@ -9,16 +9,18 @@ import { ProductCard } from '@/components/products/ProductCard'
 import { getBrandBySlug, getAllBrands, brands as allBrands } from '@/lib/brands-data'
 import { getProductsByBrand } from '@/lib/products-data'
 import { FloatingCTA } from '@/components/home/FloatingCTA'
-import { 
-  ArrowLeft, 
-  Car, 
-  CheckCircle2, 
+import {
+  ArrowLeft,
+  Car,
+  CheckCircle2,
   Phone,
   MessageCircle,
   ChevronRight,
   Package,
   History,
-  Star
+  Star,
+  Wrench,
+  Award
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -103,18 +105,22 @@ export default function BrandPage() {
               </p>
 
               {/* Quick Stats */}
-              <div className="flex flex-wrap gap-6">
+              <div className="flex flex-wrap gap-3">
                 <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-xl">
-                  <Package size={20} />
-                  <span className="font-semibold">{brandProducts.length}+ Ürün</span>
+                  <CheckCircle2 size={18} />
+                  <span className="font-semibold text-sm">Orijinal + Yan Sanayi</span>
                 </div>
                 <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-xl">
-                  <Car size={20} />
-                  <span className="font-semibold">{brand.models.length} Model</span>
+                  <Star size={18} />
+                  <span className="font-semibold text-sm">Şaşmaz Stoklu</span>
                 </div>
                 <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-xl">
-                  <Star size={20} />
-                  <span className="font-semibold">Orijinal Kalite</span>
+                  <Car size={18} />
+                  <span className="font-semibold text-sm">Tüm {brand.name} Modelleri</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-xl">
+                  <Award size={18} />
+                  <span className="font-semibold text-sm">20+ Yıl VAG Uzmanı</span>
                 </div>
               </div>
             </div>
@@ -127,16 +133,90 @@ export default function BrandPage() {
             <div className="grid lg:grid-cols-3 gap-8">
               {/* Main Content - Left Column */}
               <div className="lg:col-span-2 space-y-8">
+                {/* Periyodik Bakım Paketleri — PARÇA SATIŞ ÖNE ÇIKAR */}
+                <Card className="border-2 border-vag-blue/20 shadow-md">
+                  <CardContent className="p-6 md:p-8">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-12 h-12 rounded-xl bg-vag-blue flex items-center justify-center">
+                        <Wrench size={24} className="text-white" />
+                      </div>
+                      <div>
+                        <h2 className="text-2xl font-bold text-vag-navy">
+                          {brand.name} Periyodik Bakım Paketleri
+                        </h2>
+                        <p className="text-sm text-muted-foreground">
+                          Ankara Şaşmaz stoklu — parçaları bizde, WhatsApp'tan teklif al
+                        </p>
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                      {brand.periyodikPaketleri.map((paket) => (
+                        <div
+                          key={paket.id}
+                          className="border-2 border-gray-100 hover:border-vag-blue/40 rounded-xl p-4 transition-colors bg-white"
+                        >
+                          <div className="flex items-center justify-between mb-2">
+                            <h3 className="font-bold text-vag-navy">{paket.ad}</h3>
+                            <Badge variant="secondary" className="text-xs">{paket.etiket}</Badge>
+                          </div>
+                          <p className="text-xs text-vag-blue font-semibold mb-3">{paket.km} • {paket.tahminiSure}</p>
+                          <p className="text-sm text-muted-foreground mb-3 leading-relaxed">
+                            {paket.aciklama}
+                          </p>
+                          <ul className="space-y-1.5 mb-4 text-xs">
+                            {paket.parcalar.slice(0, 5).map((parca, i) => (
+                              <li key={i} className="flex items-start gap-1.5 text-muted-foreground">
+                                <CheckCircle2 size={12} className="text-green-500 flex-shrink-0 mt-0.5" />
+                                <span><span className="font-medium text-vag-navy">{parca.ad}</span> — {parca.marka}</span>
+                              </li>
+                            ))}
+                            {paket.parcalar.length > 5 && (
+                              <li className="text-xs text-muted-foreground pl-4">
+                                +{paket.parcalar.length - 5} parça daha
+                              </li>
+                            )}
+                          </ul>
+                          <div className="flex gap-2">
+                            <a
+                              href={`https://wa.me/905321234567?text=Merhaba, ${encodeURIComponent(brand.name + ' ' + paket.ad)} paketi hakkında teklif almak istiyorum.`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex-1"
+                            >
+                              <button className="w-full inline-flex items-center justify-center gap-1.5 bg-green-500 hover:bg-green-600 text-white px-3 py-2 rounded-lg text-sm font-semibold transition-colors">
+                                <MessageCircle size={14} />
+                                WhatsApp Teklif
+                              </button>
+                            </a>
+                            <a href="tel:+905321234567" className="flex-1">
+                              <button className="w-full inline-flex items-center justify-center gap-1.5 bg-vag-blue hover:bg-blue-700 text-white px-3 py-2 rounded-lg text-sm font-semibold transition-colors">
+                                <Phone size={14} />
+                                Hemen Ara
+                              </button>
+                            </a>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="mt-4 p-3 bg-vag-light rounded-lg text-sm text-muted-foreground">
+                      💡 <strong>İpucu:</strong> Her paketin içeriği aracınızın motor tipi ve kilometresine göre özelleştirilir. WhatsApp'tan VIN numaranızı gönderin, doğru paketi kuralım.
+                    </div>
+                  </CardContent>
+                </Card>
+
                 {/* Models Section */}
                 <Card>
                   <CardContent className="p-6 md:p-8">
-                    <h2 className="text-2xl font-bold text-vag-navy mb-6 flex items-center gap-3">
+                    <h2 className="text-2xl font-bold text-vag-navy mb-2 flex items-center gap-3">
                       <Car size={24} className="text-vag-blue" />
-                      Desteklenen Modeller
+                      {brand.name} Modelleri
                     </h2>
+                    <p className="text-sm text-muted-foreground mb-6">
+                      Tüm {brand.name} modelleri için yedek parça tedariği yapıyoruz. Aşağıda başlıca modeller, listelenmemiş tüm jenerasyonlar için de stoklarımız mevcuttur.
+                    </p>
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
                       {brand.models.map((model) => (
-                        <div 
+                        <div
                           key={model}
                           className="flex items-center gap-2 p-3 bg-vag-light rounded-lg hover:bg-vag-blue/10 transition-colors"
                         >

@@ -28,6 +28,10 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: 'ClaudeBot', allow: '/' },                           // Anthropic
       { userAgent: 'Claude-Web', allow: '/' },                          // Claude web
       { userAgent: 'anthropic-ai', allow: '/' },                       // Anthropic alt
+      { userAgent: 'Claude-SearchBot', allow: '/' },                  // Anthropic search
+      { userAgent: 'Bytespider', allow: '/' },                       // ByteDance/TikTok AI
+      { userAgent: 'Amazonbot', allow: '/' },                        // Amazon AI
+      { userAgent: 'Diffbot', allow: '/' },                          // Diffbot crawler
       { userAgent: 'PerplexityBot', allow: '/' },                       // Perplexity
       { userAgent: 'Perplexity-User', allow: '/' },                     // Perplexity user
       { userAgent: 'Google-Extended', allow: '/' },                     // Gemini

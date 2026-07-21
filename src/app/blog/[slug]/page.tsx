@@ -7,6 +7,7 @@ import { getBlogPostBySlug, blogPosts } from '@/lib/blog-data'
 import { FloatingCTA } from '@/components/home/FloatingCTA'
 import {
   ArrowLeft,
+  ArrowRight,
   Calendar,
   Clock,
   Tag,
@@ -17,6 +18,11 @@ import {
   MessageCircle,
   Share2,
   CheckCircle2,
+  Package,
+  Shield,
+  Truck,
+  Wrench,
+  FileText,
 } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -223,32 +229,80 @@ export default async function BlogPostPage({
                   dangerouslySetInnerHTML={{ __html: `<p class="mb-4 text-gray-700 leading-relaxed">${formatContent(post.content)}</p>` }}
                 />
 
-                {/* CTA Box */}
+                {/* CTA Box — Parça Satışı */}
                 <Card className="mt-10 bg-gradient-to-br from-vag-navy to-vag-blue text-white overflow-hidden">
-                  <CardContent className="p-6 md:p-8 text-center">
-                    <h3 className="font-bold text-xl mb-3">Yedek Parça mı Arıyorsunuz?</h3>
-                    <p className="text-white/80 mb-6">
-                      Bu yazıda bahsedilen parçalar veya başka bir yedek parça için bizimle iletişime geçin.
-                    </p>
-                    <div className="flex flex-wrap justify-center gap-3">
+                  <CardContent className="p-6 md:p-8">
+                    <div className="flex items-start gap-4 mb-5">
+                      <div className="w-14 h-14 rounded-2xl bg-white/15 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
+                        <Package size={28} className="text-white" />
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-xl mb-1">Bu Yazıdaki Parçalar Bizde Var</h3>
+                        <p className="text-white/80 text-sm leading-relaxed">
+                          <strong className="text-yellow-300">{post.category}</strong> kategorisindeki tüm parçalar İmza Volkswagen Ankara Şaşmaz stokunda.
+                          Orijinal ve yan sanayi seçenekleri, faturalı ve garantili satış.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-5 text-sm">
+                      <div className="bg-white/10 rounded-lg p-3 text-center">
+                        <CheckCircle2 size={18} className="mx-auto mb-1 text-green-400" />
+                        <p className="text-xs">Şaşmaz Stok</p>
+                      </div>
+                      <div className="bg-white/10 rounded-lg p-3 text-center">
+                        <Shield size={18} className="mx-auto mb-1 text-yellow-400" />
+                        <p className="text-xs">Garantili</p>
+                      </div>
+                      <div className="bg-white/10 rounded-lg p-3 text-center">
+                        <FileText size={18} className="mx-auto mb-1 text-blue-300" />
+                        <p className="text-xs">Faturalı</p>
+                      </div>
+                      <div className="bg-white/10 rounded-lg p-3 text-center">
+                        <Truck size={18} className="mx-auto mb-1 text-orange-300" />
+                        <p className="text-xs">Aynı Gün Kargo</p>
+                      </div>
+                    </div>
+                    <div className="flex flex-wrap gap-3">
                       <a
-                        href={`https://wa.me/905321234567?text=Merhaba, ${encodeURIComponent(post.title)} yazısını okudum.`}
+                        href={`https://wa.me/905321234567?text=${encodeURIComponent(`Merhaba, "${post.title}" yazısındaki parçalar için teklif almak istiyorum.`)}`}
                         target="_blank"
                         rel="noopener noreferrer"
+                        className="flex-1 min-w-[200px]"
                       >
-                        <button className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-xl font-semibold transition-colors">
+                        <button className="w-full inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-xl font-semibold transition-colors">
                           <MessageCircle size={18} />
-                          WhatsApp
+                          WhatsApp Teklif Al
                         </button>
                       </a>
-                      <a href="tel:+905321234567">
-                        <button className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 text-white px-5 py-3 rounded-xl font-semibold transition-colors">
+                      <a href="tel:+905321234567" className="flex-1 min-w-[160px]">
+                        <button className="w-full inline-flex items-center justify-center gap-2 bg-white/20 hover:bg-white/30 text-white px-5 py-3 rounded-xl font-semibold transition-colors">
                           Hemen Ara
                         </button>
                       </a>
                     </div>
                   </CardContent>
                 </Card>
+
+                {/* İlgili Hizmetler */}
+                {post.categorySlug === 'parca-rehberi' && (
+                  <Card className="mt-6 border-0 shadow-sm">
+                    <CardContent className="p-5">
+                      <h3 className="font-bold text-vag-navy mb-3 flex items-center gap-2">
+                        <Wrench size={20} className="text-vag-blue" />
+                        İlgili Hizmet Kategorisi
+                      </h3>
+                      <p className="text-sm text-muted-foreground mb-3">
+                        Bu yazıdaki parçaların tümü <Link href="/hizmetlerimiz" className="text-vag-blue hover:underline">hizmet kategorilerimiz</Link> kapsamında stoklarımızdadır.
+                      </p>
+                      <Link href="/periyodik-bakim">
+                        <button className="inline-flex items-center gap-2 text-vag-blue hover:text-vag-navy font-semibold text-sm transition-colors">
+                          Periyodik Bakım Paketlerimizi İnceleyin
+                          <ArrowRight size={16} />
+                        </button>
+                      </Link>
+                    </CardContent>
+                  </Card>
+                )}
 
                 {/* FAQ Section (if any) */}
                 {faqs.length > 0 && (

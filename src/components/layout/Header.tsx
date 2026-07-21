@@ -19,20 +19,22 @@ import {
 
 const navItems = [
   { name: 'Ana Sayfa', href: '/' },
-  { 
-    name: 'Hizmetlerimiz', 
+  {
+    name: 'Hizmetlerimiz',
     href: '/hizmetlerimiz',
     children: [
       { name: 'Motor Parçaları', href: '/hizmetlerimiz/motor' },
       { name: 'Fren Sistemi', href: '/hizmetlerimiz/fren' },
       { name: 'Süspansiyon Sistemi', href: '/hizmetlerimiz/suspansiyon' },
-      { name: 'Elektrik Sistemi', href: '/hizmetlerizm/elektrik' },
+      { name: 'Elektrik Sistemi', href: '/hizmetlerimiz/elektrik' },
       { name: 'Filtre & Bakım Setleri', href: '/hizmetlerimiz/filtre' },
       { name: 'Şanzıman Parçaları', href: '/hizmetlerimiz/sanziman' },
+      { name: 'Egzoz & Emisyon', href: '/hizmetlerimiz/egzoz' },
+      { name: 'Akü & Şarj Sistemi', href: '/hizmetlerimiz/aku' },
     ]
   },
-  { 
-    name: 'Markalar', 
+  {
+    name: 'Markalar',
     href: '/markalar',
     children: [
       { name: 'Volkswagen', href: '/markalar/volkswagen' },
@@ -42,10 +44,8 @@ const navItems = [
       { name: 'Cupra', href: '/markalar/cupra' },
     ]
   },
-  { 
-    name: 'Ürünler', 
-    href: '/urunler',
-  },
+  { name: 'Periyodik Bakım', href: '/periyodik-bakim' },
+  { name: 'Ürünler', href: '/urunler' },
   { name: 'Kurumsal', href: '/kurumsal' },
   { name: 'Blog', href: '/blog' },
   { name: 'İletişim', href: '/iletisim' },

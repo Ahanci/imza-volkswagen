@@ -56,9 +56,10 @@ export function HeroSection() {
           />
 
           {/* Subtitle */}
-          <p className="text-lg md:text-xl text-white/80 mb-8 leading-relaxed max-w-xl">
-            Volkswagen, Audi, Seat ve Skoda araçlarınız için orijinal ve eşdeğer kalitede 
-            yedek parçalarla tanışın. Profesyonel hizmet, güvenilir çözümler.
+          <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed max-w-xl">
+            <span className="font-semibold text-yellow-300">Ankara Şaşmaz</span>'da 20+ yıldır Volkswagen, Audi, Seat ve Skoda araçlarınız için
+            <span className="font-semibold"> orijinal ve yan sanayi </span>
+            yedek parça satışı. Profesyonel hizmet, güvenilir çözümler.
           </p>
 
           {/* CTA Buttons */}
@@ -90,10 +91,10 @@ export function HeroSection() {
           {/* Trust Badges */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl">
             {[
-              { icon: Shield, label: 'Orijinal Ürün', desc: '%100 Garantili' },
-              { icon: Truck, label: 'Hızlı Teslimat', desc: 'Aynı gün kargo' },
-              { icon: Award, label: 'Uzman Kadro', desc: 'Teknik destek' },
-              { icon: Clock, label: '20+ Yıl', desc: 'Tecrübe' },
+              { icon: Shield, label: 'Orijinal + Yan Sanayi', desc: 'İkisi de stokta' },
+              { icon: Truck, label: 'Ankara\'dan Kargo', desc: 'Aynı gün sevkiyat' },
+              { icon: Award, label: '20+ Yıl Tecrübe', desc: 'VAG Grubu uzmanı' },
+              { icon: Clock, label: 'Şaşmaz Stok', desc: 'Hızlı erişim' },
             ].map((item) => (
               <div key={item.label} className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl p-3 border border-white/20">
                 <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
