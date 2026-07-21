@@ -116,11 +116,7 @@ export default async function BlogPostPage({
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Schema.org JSON-LD: Article + FAQPage (AEO için kritik) */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <pre style={{position:'fixed',top:0,right:0,background:'#f0f0f0',padding:4,fontSize:10,zIndex:9999,maxWidth:300}}>JSON-LD length: {JSON.stringify(jsonLd).length} chars</pre>
       {/* Header */}
       <Header />
       
@@ -219,8 +215,8 @@ export default async function BlogPostPage({
               {/* Main Content */}
               <article className="bg-white rounded-2xl shadow-lg p-6 md:p-10">
                 <div 
-                  className="prose prose-lg max-w-none prose-headings:text-vag-navy prose-p:text-gray-600 prose-a:text-vag-blue prose-strong:text-vag-navy"
-                  dangerouslySetInnerHTML={{ __html: formatContent(post.content) }}
+                  className="prose prose-lg max-w-none"
+                  dangerouslySetInnerHTML={{ __html: `<h1>${post.title}</h1><p>${post.excerpt}</p><pre style="white-space:pre-wrap;font-size:11px">${post.content.slice(0, 500)}</pre>` }}
                 />
 
                 {/* Share Section */}
