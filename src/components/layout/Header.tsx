@@ -42,6 +42,7 @@ const navItems = [
       { name: 'Seat', href: '/markalar/seat' },
       { name: 'Skoda', href: '/markalar/skoda' },
       { name: 'Cupra', href: '/markalar/cupra' },
+      { name: 'Porsche', href: '/markalar/porsche' },
     ]
   },
   { name: 'Periyodik Bakım', href: '/periyodik-bakim' },

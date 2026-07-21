@@ -15,7 +15,7 @@ import { brands, getAllBrands, type PeriyodikPaket } from '@/lib/brands-data'
 export const metadata: Metadata = {
   title: 'VAG Periyodik Bakım Paketleri | İmza Volkswagen - Ankara Şaşmaz',
   description:
-    'VW, Audi, Seat, Skoda, Cupra araçlarınız için periyodik bakım paketleri. Motor yağı, filtre, fren balata, triger seti — Ankara Şaşmaz stoklu, orijinal ve yan sanayi.',
+    'VW, Audi, Seat, Skoda, Cupra, Porsche araçlarınız için periyodik bakım paketleri. Motor yağı, filtre, fren balata, triger seti — Ankara Şaşmaz stoklu, orijinal ve yan sanayi.',
   keywords: [
     'periyodik bakım paketi', 'VW periyodik bakım', 'Audi bakım paketi', 'Seat bakım',
     'Skoda periyodik bakım', 'VAG bakım paketi Ankara', 'fren balata paketi',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'VAG Periyodik Bakım Paketleri | İmza Volkswagen',
-    description: 'VW, Audi, Seat, Skoda, Cupra için periyodik bakım paketleri. Ankara Şaşmaz stoklu.',
+    description: 'VW, Audi, Seat, Skoda, Cupra, Porsche için periyodik bakım paketleri. Ankara Şaşmaz stoklu.',
     type: 'website',
   },
 }
@@ -54,7 +54,7 @@ export default function PeriyodikBakimPage() {
                 VAG Periyodik Bakım Paketleri
               </h1>
               <p className="text-xl text-white/90 leading-relaxed mb-8">
-                Volkswagen, Audi, Seat, Skoda, Cupra araçlarınız için
+                Volkswagen, Audi, Seat, Skoda, Cupra ve Porsche araçlarınız için
                 <strong> 4 kategoride periyodik bakım paketi</strong>: Mini (15.000 km),
                 Standart (30.000 km), Geniş (60.000 km) ve Triger (90.000-120.000 km).
                 Tüm parçalar <strong>Ankara Şaşmaz stoklu</strong>, orijinal ve yan sanayi seçenekleriyle.

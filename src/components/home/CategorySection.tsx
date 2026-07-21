@@ -19,9 +19,9 @@ export function CategorySection() {
             <h2 className="text-3xl md:text-4xl font-bold text-vag-navy">
               Yedek Parça Hizmetlerimiz
             </h2>
-            <p className="text-muted-foreground mt-2 text-lg">
-              VAG grubu araçlarınız için sunduğumuz geniş hizmet yelpazesi
-            </p>
+          <p className="text-muted-foreground mt-2 text-lg">
+            VAG grubu araçlarınız için sunduğumuz geniş hizmet yelpazesi — VW, Audi, Seat, Skoda, Cupra, Porsche
+          </p>
           </div>
           <Link href="/hizmetlerimiz">
             <button className="flex items-center gap-2 text-vag-blue hover:text-vag-navy font-semibold transition-colors">

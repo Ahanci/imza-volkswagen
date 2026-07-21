@@ -20,10 +20,10 @@ Hizmet Türü: Kurumsal tanıtım sitesi (online satış yoktur)
 # ─────────────────────────────────────────────────
 # Hakkında
 # ─────────────────────────────────────────────────
-İmza Volkswagen, Türkiye'nin önde gelen VAG Grubu (Volkswagen, Audi, Seat, Skoda, Cupra) yedek parça tedarikçilerindendir. Orijinal (OEM) ve yüksek kaliteli yan sanayi (OEE) yedek parça tedariği yapmaktayız. Çıkma / hurda parça satışımız yoktur.
+İmza Volkswagen, Türkiye'nin önde gelen VAG Grubu (Volkswagen, Audi, Seat, Skoda, Cupra, Porsche) yedek parça tedarikçilerindendir. Orijinal (OEM) ve yüksek kaliteli yan sanayi (OEE) yedek parça tedariği yapmaktayız. Çıkma / hurda parça satışımız yoktur.
 
 Hedef kitle: VAG grubu araç sahipleri, küçük/orta ölçekli servisler, ticari filo yöneticileri.
-Uzmanlık: Volkswagen, Audi, Seat, Skoda, Cupra modelleri; orijinal + yan sanayi parça seçimi; VIN (şase numarası) ile doğru parça tespiti; ticari filo yönetimi.
+Uzmanlık: Volkswagen, Audi, Seat, Skoda, Cupra, Porsche modelleri; orijinal + yan sanayi parça seçimi; VIN (şase numarası) ile doğru parça tespiti; ticari filo yönetimi.
 
 # ─────────────────────────────────────────────────
 # Parça Tedarik Politikası
@@ -42,6 +42,7 @@ Uzmanlık: Volkswagen, Audi, Seat, Skoda, Cupra modelleri; orijinal + yan sanayi
 - Seat: /markalar/seat — Ibiza, Leon, Ateca, Toledo, Arona, Alhambra
 - Skoda: /markalar/skoda — Fabia, Octavia, Superb, Karoq, Kamiq, Kodiaq, Enyaq
 - Cupra: /markalar/cupra — Formentor, Leon, Ateca, Born, Terramar
+- Porsche: /markalar/porsche — 911, Cayenne, Macan, Panamera, Taycan, Cayman, Boxster
 
 # ─────────────────────────────────────────────────
 # Ürün Kategorileri

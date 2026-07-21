@@ -74,7 +74,7 @@ export default function UrunlerPage() {
                 Yedek Parça Ürünleri
               </h1>
               <p className="text-lg text-white/80 max-w-2xl">
-                Volkswagen, Audi, Seat, Skoda ve Cupra araçlarınız için kaliteli yedek parçalar. 
+                Volkswagen, Audi, Seat, Skoda, Cupra ve Porsche araçlarınız için kaliteli yedek parçalar.
                 Aradığınız parçayı bulun veya bizimle iletişime geçin.
               </p>
             </div>

@@ -68,7 +68,7 @@ export function BrandSection() {
             VAG Grubu Markaları
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            Volkswagen, Audi, Seat, Skoda ve Cupra araçlarınız için geniş yedek parça portföyümüz
+            Volkswagen, Audi, Seat, Skoda, Cupra ve Porsche araçlarınız için geniş yedek parça portföyümüz
           </p>
         </div>
 

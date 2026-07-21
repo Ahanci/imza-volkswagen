@@ -11,7 +11,7 @@ import { services, iconMap } from '@/lib/services-data'
 export const metadata: Metadata = {
   title: 'Hizmetlerimiz | İmza Volkswagen - VAG Grubu Yedek Parça',
   description:
-    'VAG grubu (VW, Audi, Seat, Skoda, Cupra) yedek parça hizmetlerimiz: motor, fren, süspansiyon, elektrik, filtre, şanzıman, egzoz, akü. 8 kategoride orijinal ve yan sanayi parça.',
+    'VAG grubu (VW, Audi, Seat, Skoda, Cupra, Porsche) yedek parça hizmetlerimiz: motor, fren, süspansiyon, elektrik, filtre, şanzıman, egzoz, akü. 8 kategoride orijinal ve yan sanayi parça.',
   keywords: [
     'VAG yedek parça', 'VW yedek parça', 'Audi yedek parça', 'Skoda yedek parça', 'Seat yedek parça',
     'motor parçaları', 'fren balata', 'süspansiyon', 'elektrik', 'filtre', 'şanzıman', 'egzoz', 'akü',
@@ -41,7 +41,7 @@ export default function HizmetlerimizPage() {
                 Yedek Parça Hizmetlerimiz
               </h1>
               <p className="text-xl text-white/90 leading-relaxed mb-8">
-                Volkswagen, Audi, Seat, Skoda ve Cupra araçlarınız için
+                Volkswagen, Audi, Seat, Skoda, Cupra ve Porsche araçlarınız için
                 <strong> 8 kategoride </strong>
                 orijinal ve yüksek kaliteli yan sanayi yedek parça tedariği.
                 Her parça faturalı, garantili, VIN ile doğru eşleşme garantili.
@@ -138,7 +138,7 @@ export default function HizmetlerimizPage() {
                 {
                   icon: Award,
                   title: '20+ Yıl VAG Tecrübesi',
-                  desc: 'VAG grubu (VW, Audi, Seat, Skoda, Cupra) parçalarında uzman ekibimizle doğru parça.',
+                  desc: 'VAG grubu (VW, Audi, Seat, Skoda, Cupra, Porsche) parçalarında uzman ekibimizle doğru parça.',
                 },
                 {
                   icon: Truck,

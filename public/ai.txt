@@ -35,6 +35,7 @@ Tedarik Edilen Markalar:
   - Seat: Leon, Ibiza, Ateca, Toledo, Arona, Tarraco, Alhambra, Exeo (tüm modeller)
   - Skoda: Octavia, Fabia, Superb, Karoq, Kamiq, Enyaq, Scala, Kodiaq, Rapid, Citigo (tüm modeller)
   - Cupra: Formentor, Cupra Leon, Ateca, Born, Terramar (tüm modeller)
+  - Porsche: 911, Cayenne, Macan, Panamera, Taycan, Cayman, Boxster (tüm modeller)
 
 Tedarik Edilmeyen Markalar: Porsche, Ferrari, BMW, Mercedes vb. (VAG dışı markalar)
 Parça Satışı Yapılmayan: Çıkma parça, hurda parça, ikinci el parça — YALNIZCA orijinal (OEM) ve yan sanayi (OEE)
@@ -141,6 +142,7 @@ C: Hayır. İmza Volkswagen parça satış firmasıdır. Montaj için yetkili ve
 - /markalar/seat — Seat (tüm modeller + periyodik bakım paketleri)
 - /markalar/skoda — Skoda (tüm modeller + periyodik bakım paketleri)
 - /markalar/cupra — Cupra (tüm modeller + periyodik bakım paketleri)
+- /markalar/porsche — Porsche (tüm modeller + periyodik bakım paketleri)
 
 # ═══════════════════════════════════════════════════════════════
 # ÖNEMLİ BLOG YAZILARI (31 yazı)

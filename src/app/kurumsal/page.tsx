@@ -13,7 +13,7 @@ import {
 export const metadata: Metadata = {
   title: 'Kurumsal | İmza Volkswagen - VAG Grubu Yedek Parça Uzmanı',
   description:
-    'İmza Volkswagen, 20+ yıllık tecrübesiyle VAG Grubu (Volkswagen, Audi, Seat, Skoda, Cupra) yedek parça tedarikçisidir. Orijinal ve yan sanayi parça, uzman ekip, hızlı teslimat.',
+    'İmza Volkswagen, 20+ yıllık tecrübesiyle VAG Grubu (Volkswagen, Audi, Seat, Skoda, Cupra, Porsche) yedek parça tedarikçisidir. Orijinal ve yan sanayi parça, uzman ekip, hızlı teslimat.',
   keywords: [
     'İmza Volkswagen kurumsal', 'VAG yedek parça firması', 'VW parça tedarikçisi',
     'Ankara VAG yedek parça', 'orijinal VAG parça', 'yan sanayi VAG parça',
@@ -89,7 +89,7 @@ export default function KurumsalPage() {
               </h1>
               <p className="text-xl text-white/90 leading-relaxed mb-8">
                 2003 yılından bu yana Türkiye'nin önde gelen VAG Grubu
-                (Volkswagen, Audi, Seat, Skoda, Cupra) yedek parça
+                (Volkswagen, Audi, Seat, Skoda, Cupra, Porsche) yedek parça
                 tedarikçilerinden biri olarak hizmet veriyoruz. Orijinal
                 ve yüksek kaliteli yan sanayi parça ile müşterilerimizin
                 araçlarını güvenle yola çıkarıyoruz.
@@ -143,7 +143,7 @@ export default function KurumsalPage() {
                 <p className="text-muted-foreground text-lg leading-relaxed">
                   İmza Volkswagen, Ankara merkezli bir VAG Grubu yedek parça
                   tedarikçisidir. Faaliyet gösterdiğimiz tüm markalar —
-                  Volkswagen, Audi, Seat, Skoda, Cupra — için orijinal (OEM)
+                  Volkswagen, Audi, Seat, Skoda, Cupra, Porsche — için orijinal (OEM)
                   ve kaliteli yan sanayi (OEE) parçalar sunuyoruz. Çıkma parça
                   satışımız yoktur.
                 </p>

@@ -57,7 +57,7 @@ export function HeroSection() {
 
           {/* Subtitle */}
           <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed max-w-xl">
-            <span className="font-semibold text-yellow-300">Ankara Şaşmaz</span>'da 20+ yıldır Volkswagen, Audi, Seat ve Skoda araçlarınız için
+            <span className="font-semibold text-yellow-300">Ankara Şaşmaz</span>'da 20+ yıldır Volkswagen, Audi, Seat, Skoda, Cupra ve Porsche araçlarınız için
             <span className="font-semibold"> orijinal ve yan sanayi </span>
             yedek parça satışı. Profesyonel hizmet, güvenilir çözümler.
           </p>

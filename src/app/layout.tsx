@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     default: "İmza Volkswagen | VAG Grubu Yedek Parça Uzmanı - Volkswagen Audi Seat Skoda",
     template: "%s | İmza Volkswagen",
   },
-  description: "İmza Volkswagen - Volkswagen, Audi, Seat, Skoda yedek parça uzmanı. 20+ yıl tecrübe, orijinal ve yan sanayi parça, güvenilir hizmet. Hemen arayın veya WhatsApp ile yazın!",
+  description: "İmza Volkswagen - Volkswagen, Audi, Seat, Skoda, Cupra, Porsche yedek parça uzmanı. 20+ yıl tecrübe, orijinal ve yan sanayi parça, güvenilir hizmet. Hemen arayın veya WhatsApp ile yazın!",
   keywords: [
     "İmza Volkswagen", "VAG yedek parça", "Volkswagen yedek parça", "Audi yedek parça",
     "Seat yedek parça", "Skoda yedek parça", "orijinal yedek parça", "yan sanayi parça",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "İmza Volkswagen | VAG Grubu Yedek Parça Uzmanı",
-    description: "Volkswagen, Audi, Seat, Skoda orijinal ve yan sanayi yedek parçaları. 20+ yıl tecrübe, güvenilir hizmet.",
+    description: "Volkswagen, Audi, Seat, Skoda, Cupra, Porsche orijinal ve yan sanayi yedek parçaları. 20+ yıl tecrübe, güvenilir hizmet.",
     siteName: "İmza Volkswagen",
     type: "website",
     locale: "tr_TR",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "İmza Volkswagen | VAG Grubu Yedek Parça Uzmanı",
-    description: "Volkswagen, Audi, Seat, Skoda orijinal yedek parçaları. Güvenilir hizmet, hızlı teslimat.",
+    description: "Volkswagen, Audi, Seat, Skoda, Cupra, Porsche orijinal yedek parçaları. Güvenilir hizmet, hızlı teslimat.",
   },
   robots: {
     index: true,
@@ -77,7 +77,7 @@ const jsonLd = {
       url: SITE_URL,
       logo: `${SITE_URL}/logo.svg`,
       description:
-        "Türkiye'nin önde gelen VAG Grubu (Volkswagen, Audi, Seat, Skoda, Cupra) yedek parça tedarikçisi. 20+ yıl tecrübe, orijinal ve yan sanayi parça.",
+        "Türkiye'nin önde gelen VAG Grubu (Volkswagen, Audi, Seat, Skoda, Cupra, Porsche) yedek parça tedarikçisi. 20+ yıl tecrübe, orijinal ve yan sanayi parça.",
       foundingDate: "2003",
       areaServed: { "@type": "Country", name: "Türkiye" },
       knowsAbout: [
