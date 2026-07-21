@@ -64,3 +64,4 @@ server.log
 /data/
 # İstisna: docs/ içindeki örnek CSV'yi paylaşmak istersen
 !/.gitkeep
+.env*
