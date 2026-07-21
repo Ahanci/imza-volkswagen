@@ -19,7 +19,8 @@ export interface BlogPost {
   tags: string[]
 }
 
-export const blogPosts: BlogPost[] = [
+export const blogPosts: BlogPost[] = ([
+
 {
     id: 'blog-001',
     title: 'Volkswagen Golf 8 Fren Sistemi Bakım Rehberi',
@@ -3140,7 +3141,12 @@ Güç ve performans istiyorsanız 2.0 TSI (190 HP), yakıt ekonomisi ve düşük
     readTime: 11,
     tags: ['Skoda', 'Octavia', 'Turbo', 'TSI', 'TDI', 'Orijinal', 'Yan Sanayi', 'Ankara']
   }
-]
+] as BlogPost[])
+
+// Yardımcı fonksiyonlar: tanımsız (undefined) elemanları filtrele
+function validPosts(): BlogPost[] {
+  return blogPosts.filter((p): p is BlogPost => p !== undefined && p !== null)
+}
 
 // ─── Utility fonksiyonları ───
 

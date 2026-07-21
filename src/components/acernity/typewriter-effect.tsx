@@ -18,10 +18,10 @@ export const TypewriterEffect = ({
   words: { text: string; className?: string }[];
   className?: string;
   cursorClassName?: string;
-  as?: keyof React.JSX.IntrinsicElements;
+  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "div" | "span";
   delay?: number;
 }) => {
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-10% 0px" });
 
   // Her kelime için harf sayısı toplamı (stagger için)
@@ -58,7 +58,7 @@ export const TypewriterEffect = ({
 
   return (
     <Tag
-      ref={ref as React.RefObject<never>}
+      ref={ref}
       className={cn("leading-snug tracking-tight", className)}
       aria-label={words.map((w) => w.text).join(" ")}
     >

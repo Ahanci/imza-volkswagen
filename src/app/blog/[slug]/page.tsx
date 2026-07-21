@@ -210,7 +210,7 @@ export default async function BlogPostPage({
               <Tag size={16} className="text-muted-foreground" />
               {post.tags.map((tag) => (
                 <Link key={tag} href={`/blog?tag=${tag}`}>
-                  <Badge variant="outline" className="cursor-pointer hover:bg-vag-blue/10 hover:border-vag-blue hover:text-vag-blue transition-colors">
+                  <Badge variant="outline" className="cursor-pointer hover:bg-vag-blue hover:border-vag-blue hover:text-white transition-colors">
                     #{tag}
                   </Badge>
                 </Link>

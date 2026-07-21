@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { ArrowRight, Phone, MessageCircle, Shield, Truck, Award, Clock } from 'lucide-react'
 import { TypewriterEffect } from '@/components/acernity/typewriter-effect'
@@ -10,10 +11,15 @@ export function HeroSection() {
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
-        <img
-          src="/images/hero-car.png"
+        <Image
+          src="/images/hero-car.jpg"
           alt="Lüks Porsche - İmza Volkswagen VAG Grubu Yedek Parça"
-          className="w-full h-full object-cover object-center"
+          fill
+          priority
+          fetchPriority="high"
+          sizes="100vw"
+          quality={80}
+          className="object-cover object-center"
         />
         {/* Dark Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-vag-navy/95 via-vag-navy/80 to-vag-navy/40" />

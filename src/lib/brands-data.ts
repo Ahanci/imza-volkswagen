@@ -25,6 +25,7 @@ export interface Brand {
   slug: string
   logo: string
   color: string
+  textColor?: string
   bgColor: string
   description: string
   longDescription: string

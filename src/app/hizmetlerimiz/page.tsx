@@ -147,7 +147,7 @@ export default function HizmetlerimizPage() {
                 },
               ].map((item) => (
                 <div key={item.title} className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-vag-blue/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-vag-blue rounded-xl flex items-center justify-center flex-shrink-0">
                     <item.icon size={24} className="text-vag-blue" />
                   </div>
                   <div>

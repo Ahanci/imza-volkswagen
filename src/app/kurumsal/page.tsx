@@ -153,7 +153,7 @@ export default function KurumsalPage() {
                 {values.map((v) => (
                   <Card key={v.title} className="border-0 shadow-sm">
                     <CardContent className="p-6">
-                      <div className="w-12 h-12 bg-vag-blue/10 rounded-xl flex items-center justify-center mb-4">
+                      <div className="w-12 h-12 bg-vag-blue rounded-xl flex items-center justify-center mb-4">
                         <v.icon size={24} className="text-vag-blue" />
                       </div>
                       <h3 className="font-bold text-lg text-vag-navy mb-2">{v.title}</h3>

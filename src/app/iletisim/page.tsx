@@ -67,7 +67,7 @@ export default function IletisimPage() {
                   {/* Telefon */}
                   <Card className="border-0 shadow-sm">
                     <CardContent className="p-5 flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-vag-blue/10 flex items-center justify-center flex-shrink-0">
+                      <div className="w-12 h-12 rounded-xl bg-vag-blue flex items-center justify-center flex-shrink-0">
                         <Phone size={22} className="text-vag-blue" />
                       </div>
                       <div className="flex-1">
@@ -108,7 +108,7 @@ export default function IletisimPage() {
                   {/* E-posta */}
                   <Card className="border-0 shadow-sm">
                     <CardContent className="p-5 flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-vag-blue/10 flex items-center justify-center flex-shrink-0">
+                      <div className="w-12 h-12 rounded-xl bg-vag-blue flex items-center justify-center flex-shrink-0">
                         <Mail size={22} className="text-vag-blue" />
                       </div>
                       <div className="flex-1">

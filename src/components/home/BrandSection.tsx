@@ -120,7 +120,7 @@ export function BrandSection() {
                         </span>
                       ))}
                       {brand.models.length > 4 && (
-                        <span className="text-xs px-2 py-1 bg-vag-blue/10 text-vag-blue rounded-md font-medium">
+                        <span className="text-xs px-2 py-1 bg-vag-blue text-white rounded-md font-medium">
                           +{brand.models.length - 4}
                         </span>
                       )}

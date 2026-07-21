@@ -103,7 +103,7 @@ const jsonLd = {
       "@type": "LocalBusiness",
       "@id": `${SITE_URL}/#localbusiness`,
       name: "İmza Volkswagen",
-      image: `${SITE_URL}/images/hero-car.png`,
+      image: `${SITE_URL}/images/hero-car.jpg`,
       url: SITE_URL,
       telephone: "+90-532-123-45-67",
       email: "info@imzavolkswagen.com.tr",

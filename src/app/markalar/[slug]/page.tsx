@@ -218,7 +218,7 @@ export default function BrandPage() {
                       {brand.models.map((model) => (
                         <div
                           key={model}
-                          className="flex items-center gap-2 p-3 bg-vag-light rounded-lg hover:bg-vag-blue/10 transition-colors"
+                          className="flex items-center gap-2 p-3 bg-vag-light rounded-lg hover:bg-vag-blue hover:text-white transition-colors"
                         >
                           <CheckCircle2 size={16} className="text-green-500 flex-shrink-0" />
                           <span className="text-sm font-medium text-vag-navy truncate">{model}</span>
