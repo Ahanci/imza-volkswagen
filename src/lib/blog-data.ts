@@ -3145,7 +3145,8 @@ Güç ve performans istiyorsanız 2.0 TSI (190 HP), yakıt ekonomisi ve düşük
 // ─── Utility fonksiyonları ───
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
-  return blogPosts.find(p => p.slug === slug)
+  // Defensive: array'de undefined olabilir, optional chaining ile
+  return blogPosts.find(p => p && p.slug === slug)
 }
 
 export function getBlogPostsByCategory(categorySlug: string): BlogPost[] {
