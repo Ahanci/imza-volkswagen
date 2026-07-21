@@ -3,6 +3,7 @@
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import { ArrowRight, Phone, MessageCircle, Shield, Truck, Award, Clock } from 'lucide-react'
+import { TypewriterEffect } from '@/components/acernity/typewriter-effect'
 
 export function HeroSection() {
   return (
@@ -33,16 +34,26 @@ export function HeroSection() {
             İMZA VOLKSWAGEN
           </p>
 
-          {/* Main Title */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            VAG Grubu İçin
-            <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">
-              Premium Kalitede
-            </span>
-            <br />
-            Yedek Parça Çözümleri
-          </h1>
+          {/* Main Title (Acernity-style typewriter reveal) */}
+          <TypewriterEffect
+            as="h1"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
+            words={[
+              { text: "VAG" },
+              { text: "Grubu" },
+              { text: "İçin" },
+              {
+                text: "Premium",
+                className:
+                  "text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400",
+              },
+              { text: "Kalitede" },
+              { text: "Yedek" },
+              { text: "Parça" },
+              { text: "Çözümleri" },
+            ]}
+            cursorClassName="bg-white"
+          />
 
           {/* Subtitle */}
           <p className="text-lg md:text-xl text-white/80 mb-8 leading-relaxed max-w-xl">

@@ -2,12 +2,12 @@
 
 import React from 'react'
 import { Card, CardContent } from '@/components/ui/card'
-import { 
-  Shield, 
-  Truck, 
-  Award, 
-  Headphones, 
-  Clock, 
+import {
+  Shield,
+  Truck,
+  Award,
+  Headphones,
+  Clock,
   CreditCard,
   CheckCircle,
   Star,
@@ -15,6 +15,7 @@ import {
   Phone,
   MessageCircle
 } from 'lucide-react'
+import { BackgroundGradient } from '@/components/acernity/background-gradient'
 
 const advantages = [
   {
@@ -93,19 +94,33 @@ export function TrustSection() {
   return (
     <section className="py-16 md:py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
-        {/* Stats Bar */}
-        <div className="bg-gradient-to-r from-vag-navy to-vag-blue rounded-2xl p-8 md:p-12 mb-12 -mx-4 sm:-mx-6 lg:-mx-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <p className="text-3xl md:text-4xl font-bold text-white mb-1 flex items-center justify-center gap-1">
-                  {stat.value}
-                  {stat.icon && <stat.icon size={24} className="text-yellow-400 fill-yellow-400" />}
-                </p>
-                <p className="text-white/70 text-sm md:text-base">{stat.label}</p>
-              </div>
-            ))}
-          </div>
+        {/* Stats Bar (Acernity arka plan gradyan animasyonu ile) */}
+        <div className="rounded-2xl p-[1px] mb-12 -mx-4 sm:-mx-6 lg:-mx-4">
+          <BackgroundGradient
+            className="rounded-2xl p-8 md:p-12"
+            gradientBackgroundStart="rgb(30, 58, 95)"
+            gradientBackgroundEnd="rgb(37, 99, 235)"
+            firstColor="220, 38, 38"
+            secondColor="234, 179, 8"
+            thirdColor="37, 99, 235"
+            fourthColor="30, 58, 95"
+            fifthColor="22, 163, 74"
+            pointerColor="255, 255, 255"
+            size="70%"
+            blendingValue="hard-light"
+          >
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <p className="text-3xl md:text-4xl font-bold text-white mb-1 flex items-center justify-center gap-1 drop-shadow">
+                    {stat.value}
+                    {stat.icon && <stat.icon size={24} className="text-yellow-400 fill-yellow-400" />}
+                  </p>
+                  <p className="text-white/80 text-sm md:text-base font-medium">{stat.label}</p>
+                </div>
+              ))}
+            </div>
+          </BackgroundGradient>
         </div>
 
         {/* Section Header */}

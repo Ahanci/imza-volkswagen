@@ -4,6 +4,7 @@ import React from 'react'
 import Link from 'next/link'
 import { Card, CardContent } from '@/components/ui/card'
 import { ChevronRight } from 'lucide-react'
+import { CardHoverEffect } from '@/components/acernity/card-hover-effect'
 
 const brands = [
   {
@@ -75,59 +76,64 @@ export function BrandSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {brands.map((brand) => (
             <Link key={brand.slug} href={`/markalar/${brand.slug}`}>
-              <Card className="group card-hover cursor-pointer border-2 hover:border-vag-blue/30 h-full overflow-hidden">
-                {/* Brand Header */}
-                <div 
-                  className="p-6 pb-4 transition-colors"
-                  style={{ backgroundColor: `${brand.bgColor}05` }}
-                >
-                  <div className="flex items-center gap-4 mb-3">
-                    {/* Logo Circle */}
-                    <div 
-                      className="w-16 h-16 rounded-2xl flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:scale-110 transition-transform"
-                      style={{ backgroundColor: brand.bgColor }}
-                    >
-                      {brand.logo}
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-vag-navy group-hover:text-vag-blue transition-colors">
-                        {brand.name}
-                      </h3>
-                      <p className="text-sm text-muted-foreground">
-                        VAG Grubu
-                      </p>
-                    </div>
-                  </div>
-                  
-                  {/* Description */}
-                  <p className="text-sm text-muted-foreground mb-3 leading-relaxed">
-                    {brand.description}
-                  </p>
-
-                  {/* Models Tags */}
-                  <div className="flex flex-wrap gap-1.5">
-                    {brand.models.slice(0, 4).map((model) => (
-                      <span 
-                        key={model}
-                        className="text-xs px-2 py-1 bg-vag-light rounded-md text-vag-navy font-medium"
+              <CardHoverEffect
+                spotlightColor={`${brand.bgColor}33`}
+                containerClassName="h-full"
+              >
+                <Card className="group card-hover cursor-pointer border-0 h-full overflow-hidden bg-transparent shadow-none">
+                  {/* Brand Header */}
+                  <div
+                    className="p-6 pb-4 transition-colors"
+                    style={{ backgroundColor: `${brand.bgColor}05` }}
+                  >
+                    <div className="flex items-center gap-4 mb-3">
+                      {/* Logo Circle */}
+                      <div
+                        className="w-16 h-16 rounded-2xl flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:scale-110 transition-transform"
+                        style={{ backgroundColor: brand.bgColor }}
                       >
-                        {model}
-                      </span>
-                    ))}
-                    {brand.models.length > 4 && (
-                      <span className="text-xs px-2 py-1 bg-vag-blue/10 text-vag-blue rounded-md font-medium">
-                        +{brand.models.length - 4}
-                      </span>
-                    )}
-                  </div>
-                </div>
+                        {brand.logo}
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-vag-navy group-hover:text-vag-blue transition-colors">
+                          {brand.name}
+                        </h3>
+                        <p className="text-sm text-muted-foreground">
+                          VAG Grubu
+                        </p>
+                      </div>
+                    </div>
 
-                {/* Footer */}
-                <CardContent className="px-6 py-3 bg-vag-light/50 border-t flex items-center justify-between">
-                  <span className="text-sm font-medium text-vag-navy">Detaylı Bilgi</span>
-                  <ChevronRight size={16} className="text-vag-blue group-hover:translate-x-1 transition-transform" />
-                </CardContent>
-              </Card>
+                    {/* Description */}
+                    <p className="text-sm text-muted-foreground mb-3 leading-relaxed">
+                      {brand.description}
+                    </p>
+
+                    {/* Models Tags */}
+                    <div className="flex flex-wrap gap-1.5">
+                      {brand.models.slice(0, 4).map((model) => (
+                        <span
+                          key={model}
+                          className="text-xs px-2 py-1 bg-vag-light rounded-md text-vag-navy font-medium"
+                        >
+                          {model}
+                        </span>
+                      ))}
+                      {brand.models.length > 4 && (
+                        <span className="text-xs px-2 py-1 bg-vag-blue/10 text-vag-blue rounded-md font-medium">
+                          +{brand.models.length - 4}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Footer */}
+                  <CardContent className="px-6 py-3 bg-vag-light/50 border-t flex items-center justify-between">
+                    <span className="text-sm font-medium text-vag-navy">Detaylı Bilgi</span>
+                    <ChevronRight size={16} className="text-vag-blue group-hover:translate-x-1 transition-transform" />
+                  </CardContent>
+                </Card>
+              </CardHoverEffect>
             </Link>
           ))}
         </div>

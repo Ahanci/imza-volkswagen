@@ -7,11 +7,11 @@ import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { getBlogPostBySlug, blogPosts } from '@/lib/blog-data'
 import { FloatingCTA } from '@/components/home/FloatingCTA'
-import { 
-  ArrowLeft, 
-  Calendar, 
-  Clock, 
-  User, 
+import {
+  ArrowLeft,
+  Calendar,
+  Clock,
+  User,
   Tag,
   ChevronRight,
   BookOpen,
@@ -24,11 +24,32 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
 
+// Markdown içerikteki "Sıkça Sorulan Sorular" bölümünü parse eder.
+// Format: "## Sıkça Sorulan Sorular (SSS)" ardından "**Soru?**" + "Cevap" satırları.
+function extractFaqs(content: string): { question: string; answer: string }[] {
+  const sssIdx = content.indexOf('Sıkça Sorulan Sorular')
+  if (sssIdx === -1) return []
+  const rest = content.slice(sssIdx)
+  const after = rest.replace(/^.*?\n/, '') // drop the heading line
+  const faqBlocks = after.split(/\n\n+/).slice(0, 12)
+  const faqs: { question: string; answer: string }[] = []
+  for (const block of faqBlocks) {
+    const qm = block.match(/^\*\*([^*]+\?)\*\*\s*([\s\S]*)$/)
+    if (qm) {
+      faqs.push({
+        question: qm[1].trim(),
+        answer: qm[2].replace(/\n+/g, ' ').trim().slice(0, 500),
+      })
+    }
+  }
+  return faqs
+}
+
 export default function BlogPostPage() {
   const params = useParams()
   const slug = params.slug as string
   const post = getBlogPostBySlug(slug)
-  
+
   if (!post) {
     return (
       <div className="min-h-screen flex flex-col">
@@ -54,8 +75,52 @@ export default function BlogPostPage() {
     .filter(p => p.categorySlug === post.categorySlug && p.id !== post.id)
     .slice(0, 3)
 
+  // Schema.org JSON-LD: Article + (varsa) FAQPage
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.imzavolkswagen.com.tr'
+  const articleUrl = `${siteUrl}/blog/${post.slug}`
+  const articleLd: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.publishedAt,
+    dateModified: post.publishedAt,
+    author: {
+      '@type': 'Organization',
+      name: post.author,
+      url: siteUrl,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'İmza Volkswagen',
+      logo: { '@type': 'ImageObject', url: `${siteUrl}/logo.svg` },
+    },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': articleUrl },
+    keywords: post.tags.join(', '),
+    inLanguage: 'tr-TR',
+  }
+  const faqs = extractFaqs(post.content)
+  const graphNodes: Record<string, unknown>[] = [articleLd]
+  if (faqs.length > 0) {
+    graphNodes.push({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqs.map((f) => ({
+        '@type': 'Question',
+        name: f.question,
+        acceptedAnswer: { '@type': 'Answer', text: f.answer },
+      })),
+    })
+  }
+  const jsonLd = { '@context': 'https://schema.org', '@graph': graphNodes }
+
   return (
     <div className="min-h-screen flex flex-col">
+      {/* Schema.org JSON-LD: Article + FAQPage (AEO için kritik) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Header */}
       <Header />
       

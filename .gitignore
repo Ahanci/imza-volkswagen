@@ -1,5 +1,3 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # dependencies
 node_modules
 /.pnp
@@ -30,25 +28,39 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# env files (NEVER commit real .env)
+.env
+.env*.local
+.env.production
+.env.development
+# .env.example is committed
 
 # vercel
 .vercel
-
 
 # typescript
 *.tsbuildinfo
 next-env.d.ts
 local-*
-.claude
-.z-ai-config
+
+# editor / OS
+.idea/
+.vscode/
+*.swp
+
+# logs
 *.log
 dev.log
 dev.out.log
-test
-prompt
-
 server.log
-# Skills directory
+
+# agent/skill artifacts
+.claude
+.z-ai-config
 /skills/
+
+# Internal research data (anahtar kelime analizleri, scrape çıktıları vb.)
+# /data/ klasöründeki dosyalar repoya EKLENMEmeli
+/data/
+# İstisna: docs/ içindeki örnek CSV'yi paylaşmak istersen
+!/.gitkeep
