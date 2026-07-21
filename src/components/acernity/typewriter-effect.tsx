@@ -2,11 +2,14 @@
 
 import { motion, useInView } from "framer-motion";
 import { cn } from "@/lib/utils";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 /**
  * Acernity UI tarzı "Text Generate Effect" — kelimeleri sırayla,
  * soldan sağa fade-in olarak gösterir. Hero başlıklarında kullanılır.
+ *
+ * Hydration güvenli: ilk server render'da animasyonsuz statik text döner,
+ * useEffect sonrası client'ta animasyon başlar (mismatch riski yok).
  */
 export const TypewriterEffect = ({
   words,
@@ -22,7 +25,12 @@ export const TypewriterEffect = ({
   delay?: number;
 }) => {
   const ref = useRef<HTMLDivElement>(null);
+  const [mounted, setMounted] = useState(false);
   const inView = useInView(ref, { once: true, margin: "-10% 0px" });
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Her kelime için harf sayısı toplamı (stagger için)
   const totalLetters = words.reduce((acc, w) => acc + w.text.length, 0);
@@ -39,7 +47,7 @@ export const TypewriterEffect = ({
             <motion.span
               key={`letter-${wi}-${li}`}
               initial={{ opacity: 0, y: 8, filter: "blur(8px)" }}
-              animate={inView ? { opacity: 1, y: 0, filter: "blur(0px)" } : {}}
+              animate={mounted && inView ? { opacity: 1, y: 0, filter: "blur(0px)" } : {}}
               transition={{
                 duration: 0.45,
                 delay: delay + current * 0.035,
@@ -56,6 +64,21 @@ export const TypewriterEffect = ({
     );
   };
 
+  // Hydration-safe: ilk server render'da sadece text
+  if (!mounted) {
+    const fullText = words.map((w) => w.text).join(" ");
+    return (
+      <Tag
+        ref={ref}
+        className={cn("leading-snug tracking-tight", className)}
+        aria-label={fullText}
+        suppressHydrationWarning
+      >
+        {fullText}
+      </Tag>
+    );
+  }
+
   return (
     <Tag
       ref={ref}
@@ -65,7 +88,7 @@ export const TypewriterEffect = ({
       {words.map(renderWord)}
       <motion.span
         initial={{ opacity: 0 }}
-        animate={inView ? { opacity: 1 } : {}}
+        animate={mounted && inView ? { opacity: 1 } : {}}
         transition={{ duration: 0.6, delay: delay + totalLetters * 0.035 + 0.2 }}
         className={cn(
           "inline-block h-[0.9em] w-[3px] translate-y-[0.05em] bg-current align-middle",
@@ -76,7 +99,7 @@ export const TypewriterEffect = ({
         <motion.span
           aria-hidden
           className="block h-full w-full bg-current"
-          animate={{ opacity: [1, 0, 1] }}
+          animate={mounted ? { opacity: [1, 0, 1] } : { opacity: 1 }}
           transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
         />
       </motion.span>

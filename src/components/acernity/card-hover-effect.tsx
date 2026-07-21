@@ -1,12 +1,15 @@
 "use client";
 
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
-import React, { useCallback, useEffect, useRef } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
 /**
  * Acernity UI "Card Hover Effect" — fare imleci kartın üzerinde gezdikçe
  * hareket eden radial gradient highlight gösterir.
+ *
+ * Hydration güvenli: ilk render'da spotlight render edilmez,
+ * useEffect sonrası client'ta mount olunca spotlight eklenir.
  */
 export const CardHoverEffect = ({
   children,
@@ -22,6 +25,7 @@ export const CardHoverEffect = ({
   const cardRef = useRef<HTMLDivElement>(null);
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
+  const [mounted, setMounted] = useState(false);
 
   const handleMouseMove = useCallback(
     (e: React.MouseEvent<HTMLDivElement>) => {
@@ -34,8 +38,9 @@ export const CardHoverEffect = ({
     [mouseX, mouseY]
   );
 
-  // Dokunmatik cihazlarda merkezde tut
+  // Mount sonrası spotlight merkezi + state guard
   useEffect(() => {
+    setMounted(true);
     const el = cardRef.current;
     if (!el) return;
     const rect = el.getBoundingClientRect();
@@ -51,19 +56,22 @@ export const CardHoverEffect = ({
         "group/spotlight relative overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-950",
         containerClassName
       )}
+      suppressHydrationWarning
     >
-      <motion.div
-        className="pointer-events-none absolute -inset-px z-0 rounded-xl opacity-0 transition-opacity duration-300 group-hover/spotlight:opacity-100"
-        style={{
-          background: useMotionTemplate`
-            radial-gradient(
-              400px circle at ${mouseX}px ${mouseY}px,
-              ${spotlightColor},
-              transparent 80%
-            )
-          `,
-        }}
-      />
+      {mounted && (
+        <motion.div
+          className="pointer-events-none absolute -inset-px z-0 rounded-xl opacity-0 transition-opacity duration-300 group-hover/spotlight:opacity-100"
+          style={{
+            background: useMotionTemplate`
+              radial-gradient(
+                400px circle at ${mouseX}px ${mouseY}px,
+                ${spotlightColor},
+                transparent 80%
+              )
+            `,
+          }}
+        />
+      )}
       <div className={cn("relative z-10", className)}>{children}</div>
     </div>
   );
