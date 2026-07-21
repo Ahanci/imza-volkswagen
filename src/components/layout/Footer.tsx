@@ -81,7 +81,7 @@ export function Footer() {
             </Link>
             
             <p className="text-white/70 mb-6 leading-relaxed text-sm">
-              Volkswagen, Audi, Seat ve Skoda araçlarınız için orijinal ve eşdeğer kalitede 
+              Volkswagen, Audi, Seat, Skoda, Cupra ve Porsche araçlarınız için orijinal ve eşdeğer kalitede
               yedek parçaları en uygun fiyatlarla sunuyoruz. 20 yılı aşkın tecrübemizle hizmetinizdeyiz.
             </p>
 

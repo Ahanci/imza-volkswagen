@@ -425,6 +425,58 @@ export const products: Product[] = [
     },
     oemNumbers: ['04E 129 620 Q', '04E 129 620 R'],
     compatibleModels: ['Born', 'ID.3 GTX', 'ID.4 GTX']
+  },
+  {
+    id: 'porsche-cayenne-958-fren-balata',
+    name: 'Porsche Cayenne 958 Fren Balata Seti (Ön)',
+    slug: 'porsche-cayenne-958-fren-balata',
+    brand: 'Porsche',
+    brandSlug: 'porsche',
+    category: 'Fren Sistemi',
+    categorySlug: 'fren',
+    description: 'Porsche Cayenne 958 (2010-2017) ön fren balata seti. PCCB seramik fren opsiyonu hariç, standart çelik disk fren sistemleri için. Düşük toz emisyonu, yüksek ısı dayanımı.',
+    features: [
+      'Düşük toz emisyonu (Low-Metallic)',
+      'Yüksek ısı dayanımı (700°C+)',
+      'OEM kalitesinde sürtünme materyali',
+      'Sessiz çalışma (NBR shim)',
+      'Slot + chamfer (çentik) tasarım'
+    ],
+    specifications: {
+      'Malzeme': 'Semi-Metallic (NAO)',
+      'Fren Tipi': 'Çelik disk (PCCB seramik uyumlu değil)',
+      'Konum': 'Ön aks (sol + sağ)',
+      'Aşınma Sensörü': 'Evet (2 adet)',
+      'OE Numarası': '7P0 698 151 AJ'
+    },
+    oemNumbers: ['7P0 698 151 AJ', '7P0 698 151 AF', '7L0 698 151'],
+    compatibleModels: ['Cayenne 958 (2010-2017)', 'Cayenne S', 'Cayenne Diesel', 'Cayenne GTS']
+  },
+  {
+    id: 'porsche-taycan-j1-yag-filtresi',
+    name: 'Porsche Taycan J1 Yüksek Performans Yağ Filtresi',
+    slug: 'porsche-taycan-j1-yag-filtresi',
+    brand: 'Porsche',
+    brandSlug: 'porsche',
+    category: 'Filtreler',
+    categorySlug: 'filtre',
+    description: 'Porsche Taycan (J1 platformu) için yüksek performans yağ filtresi. Elektrikli performans sedanlarının termal yüklerine dayanıklı, sentetik yağ uyumlu filtre ortamı.',
+    features: [
+      'Sentetik yağ uyumlu filtre ortamı',
+      '700°C+ çalışma sıcaklığı dayanımı',
+      '%99.5 filtrasyon verimliliği (50 micron)',
+      'Manyetik tahliye valfi',
+      'OEM eşdeğeri kapasite'
+    ],
+    specifications: {
+      'Filtre Tipi': 'Spin-on (yerleşik valf)',
+      'Çap': '76 mm',
+      'Yükseklik': '90 mm',
+      'Diş': 'M22x1.5',
+      'OE Numarası': '9J1 115 466 B'
+    },
+    oemNumbers: ['9J1 115 466 B', 'EA111'],
+    compatibleModels: ['Taycan', 'Taycan 4S', 'Taycan Turbo', 'Taycan Turbo S', 'Taycan GTS']
   }
 ]
 

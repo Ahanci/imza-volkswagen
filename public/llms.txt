@@ -1,130 +1,68 @@
-# İmza Volkswagen — llms.txt
-# LLM/AI arama motorlarına (ChatGPT, Perplexity, Claude, Gemini) yönelik site özeti
-# Bu dosya, büyük dil modellerinin sitemizi doğru tanıması için
-# Markdown formatında yapılandırılmış bilgi sağlar.
-# Standart: https://llmstxt.org
+# İmza Volkswagen — VAG Grubu Yedek Parça Uzmanı (Ankara Şaşmaz)
 
-# ─────────────────────────────────────────────────
-# Site
-# ─────────────────────────────────────────────────
-Site: İmza Volkswagen
-URL: https://www.imzavolkswagen.com.tr
-Konum: Ankara, Türkiye
-Telefon: +90 532 123 45 67
-WhatsApp: +90 532 123 45 67
-E-posta: info@imzavolkswagen.com.tr
-Çalışma Saatleri: Pazartesi – Cumartesi, 09:00 – 18:00
-Kuruluş: 20+ yıl VAG grubu yedek parça tecrübesi
-Hizmet Türü: Kurumsal tanıtım sitesi (online satış yoktur)
+> Türkiye'nin önde gelen VAG Grubu (Volkswagen, Audi, Seat, Skoda, Cupra, Porsche) yedek parça tedarikçisi. Orijinal (OEM) ve yüksek kaliteli yan sanayi (OEE) yedek parça. Çıkma / hurda parça satışımız yoktur. Ankara Şaşmaz Sanayi Bölgesi, 20+ yıl tecrübe.
 
-# ─────────────────────────────────────────────────
-# Hakkında
-# ─────────────────────────────────────────────────
-İmza Volkswagen, Türkiye'nin önde gelen VAG Grubu (Volkswagen, Audi, Seat, Skoda, Cupra, Porsche) yedek parça tedarikçilerindendir. Orijinal (OEM) ve yüksek kaliteli yan sanayi (OEE) yedek parça tedariği yapmaktayız. Çıkma / hurda parça satışımız yoktur.
+## Ana Sayfalar
 
-Hedef kitle: VAG grubu araç sahipleri, küçük/orta ölçekli servisler, ticari filo yöneticileri.
-Uzmanlık: Volkswagen, Audi, Seat, Skoda, Cupra, Porsche modelleri; orijinal + yan sanayi parça seçimi; VIN (şase numarası) ile doğru parça tespiti; ticari filo yönetimi.
+- [Anasayfa](https://imza-oto.vercel.app/): İmza Volkswagen — VAG Grubu yedek parça uzmanı, Ankara Şaşmaz.
+- [Markalar](https://imza-oto.vercel.app/markalar): 6 VAG markası için orijinal + yan sanayi parça tedariği (VW, Audi, Seat, Skoda, Cupra, Porsche).
+- [Hizmetlerimiz](https://imza-oto.vercel.app/hizmetlerimiz): 8 hizmet kategorisi — motor, fren, süspansiyon, elektrik, filtre, şanzıman, egzoz, akü.
+- [Periyodik Bakım](https://imza-oto.vercel.app/periyodik-bakim): 6 marka × 4 paket = 24 periyodik bakım paketi (Mini, Standart, Geniş, Triger).
+- [Ürünler](https://imza-oto.vercel.app/urunler): VAG Grubu için fren balata, fren diski, triger seti, debriyaj, amortisör, filtre, motor yağı.
+- [Kurumsal](https://imza-oto.vercel.app/kurumsal): 20+ yıl yolculuk, misyon, vizyon, ekip, Ankara Şaşmaz adres.
+- [İletişim](https://imza-oto.vercel.app/iletisim): Şaşmaz adres, telefon, WhatsApp, çalışma saatleri.
 
-# ─────────────────────────────────────────────────
-# Parça Tedarik Politikası
-# ─────────────────────────────────────────────────
-- Sattığımız parça türleri: Orijinal (OEM) ve Yan Sanayi (OEE — Bosch, Mahle, ATE, Brembo, Sachs, Hella, Lemförder, Valeo, Continental, INA, Contitech, Gates, TRW, Denso, Sanden)
-- Satmadığımız parçalar: Çıkma / hurda / ikinci el parça
-- Stoktan teslim süresi: Aynı gün / 24 saat
-- Garanti: 1-2 yıl (parça tipine göre)
+## Markalar (VAG Grubu)
+
+- [Volkswagen](https://imza-oto.vercel.app/markalar/volkswagen): Golf, Passat, Polo, Tiguan, T-Roc, Transporter, Caddy, Crafter, ID. serisi.
+- [Audi](https://imza-oto.vercel.app/markalar/audi): A1, A3, A4, A5, A6, A7, A8, Q2, Q3, Q5, Q7, Q8, e-tron, TT, RS serisi.
+- [Seat](https://imza-oto.vercel.app/markalar/seat): Leon, Ibiza, Ateca, Toledo, Arona, Tarraco, Alhambra, Exeo.
+- [Skoda](https://imza-oto.vercel.app/markalar/skoda): Octavia, Fabia, Superb, Karoq, Kamiq, Enyaq, Scala, Kodiaq, Rapid, Citigo.
+- [Cupra](https://imza-oto.vercel.app/markalar/cupra): Formentor, Cupra Leon, Ateca, Born, Terramar.
+- [Porsche](https://imza-oto.vercel.app/markalar/porsche): 911, Cayenne, Macan, Panamera, Taycan, Cayman, Boxster.
+
+## Hizmetler
+
+- [Motor Parçaları](https://imza-oto.vercel.app/hizmetlerimiz/motor): Piston, conta, triger seti, subap, kayış, motor yağı.
+- [Fren Sistemi](https://imza-oto.vercel.app/hizmetlerimiz/fren): Fren balata, fren diski, fren kaliper, ABS sensörü, fren hidroliği.
+- [Süspansiyon](https://imza-oto.vercel.app/hizmetlerimiz/suspansiyon): Amortisör, salıncak, rotil, aks, yay, körük.
+- [Elektrik](https://imza-oto.vercel.app/hizmetlerimiz/elektrik): Marş motoru, alternatör, akü, buji, ateşleme bobini, sensör.
+- [Filtreler](https://imza-oto.vercel.app/hizmetlerimiz/filtre): Yağ, hava, yakıt, polen, şanzıman filtreleri.
+- [Şanzıman](https://imza-oto.vercel.app/hizmetlerimiz/sanziman): Debriyaj seti, volan, şanzıman yağı, DSG/PDK parçaları.
+- [Egzoz](https://imza-oto.vercel.app/hizmetlerimiz/egzoz): Egzoz manifoldu, katalizör, partikül filtresi, ses yalıtımı.
+- [Akü](https://imza-oto.vercel.app/hizmetlerimiz/aku): Varta, Bosch, Mutlu aküler — VAG araçlara özel amperaj.
+
+## Blog & Bilgi Bankası
+
+- [Blog Ana Sayfa](https://imza-oto.vercel.app/blog): VAG Grubu araç bakım rehberleri, parça karşılaştırmaları, fiyat analizleri.
+- 31 blog yazısı — Volkswagen, Audi, Seat, Skoda, Cupra, Porsche modelleri için pratik rehberler.
+
+## İletişim
+
+- Adres: Şaşmaz Sanayi Bölgesi, 06105 Altındağ / Ankara
+- Telefon: +90 532 123 45 67
+- WhatsApp: +90 532 123 45 67
+- E-posta: info@imzavolkswagen.com.tr
+- Çalışma Saatleri: Pazartesi – Cumartesi, 09:00 – 18:00
+- Ödeme: Nakit, Banka Havalesi / EFT, Kredi Kartı
+
+## Tedarik Edilen Markalar (Yan Sanayi / OEE)
+
+Bosch, Mahle, ATE, Brembo, Sachs, Hella, Lemförder, Valeo, Continental, INA, Contitech, Gates, TRW, Denso, Sanden, Varta, Mobil 1, Castrol, Shell, Liqui Moly, Mann, Filtron, Knecht, Febi, Meyle, SWAG, Optimal, Ruville, SKF, FAG, ZF, Pierburg, Wahler, Beru, NGK, Champion, Bosch Diagnostic, KKT, Nissens.
+
+## Tedarik EdilMEyen Parçalar
+
+Çıkma parça, hurda parça, ikinci el parça — satışımız yoktur. Sadece orijinal (OEM) ve yüksek kaliteli yan sanayi (OEE).
+
+## Garanti & Servis
+
+- 1-2 yıl parça garantisi (parça tipine göre)
 - Faturalı satış, resmi garanti belgesi
+- Stoktan teslim: Aynı gün / 24 saat (Ankara Şaşmaz)
+- Türkiye geneli kargo (1-3 iş günü)
+- VIN (şase numarası) ile doğru parça tespiti — ücretsiz
+- Ticari filo yönetimi (toplu alım, öncelikli tedarik)
 
-# ─────────────────────────────────────────────────
-# Marka Sayfaları
-# ─────────────────────────────────────────────────
-- Volkswagen (VW): /markalar/volkswagen — Golf, Polo, Passat, Jetta, Caddy, Transporter, Crafter, Tiguan, Multivan
-- Audi: /markalar/audi — A1, A3, A4, A5, A6, A7, A8, Q2, Q3, Q5, Q7, Q8, e-tron, TT
-- Seat: /markalar/seat — Ibiza, Leon, Ateca, Toledo, Arona, Alhambra
-- Skoda: /markalar/skoda — Fabia, Octavia, Superb, Karoq, Kamiq, Kodiaq, Enyaq
-- Cupra: /markalar/cupra — Formentor, Leon, Ateca, Born, Terramar
-- Porsche: /markalar/porsche — 911, Cayenne, Macan, Panamera, Taycan, Cayman, Boxster
+## Yapay Zeka Botları İçin Özet
 
-# ─────────────────────────────────────────────────
-# Ürün Kategorileri
-# ─────────────────────────────────────────────────
-- Motor parçaları: Turbo, EGR, enjektör, triger seti (kayış + zincir), motor yağı, filtreler
-- Fren sistemi: Fren balata, fren disk, fren kaliper, fren hidroliği
-- Süspansiyon: Amortisör, helezon yay, salıncak
-- Elektrik ve aydınlatma: Far (Halojen, Xenon, LED, Matrix LED), stop, sis farı, LED ampul, marş motoru, alternatör
-- Şanzıman: Debriyaj seti, DSG parçaları, mekatronik, DSG yağı
-- Klima: Klima kompresörü, kondanser, evaporatör, klima filtresi, klima gazı (R134a, R1234yf)
-- Kaporta: Tampon, çamurluk, kapı paneli, ayna, far ayar motoru
-- İç aksam: Koltuk, direksiyon, hava yastığı, emniyet kemeri
-
-# ─────────────────────────────────────────────────
-# Blog Yazıları (31 yazı)
-# ─────────────────────────────────────────────────
-Aşağıdaki yazılar VAG yedek parça seçimi, uyumluluk tabloları ve teknik rehberler içerir.
-
-## Marka Bazlı Genel Rehberler
-- /blog/volkswagen-yedek-parca-rehberi-orijinal-ve-yan-sanayi-farki — Volkswagen Yedek Parça Rehberi: Orijinal ve Yan Sanayi Farkı
-- /blog/audi-yedek-parca-alirken-dikkat-edilmesi-gerekenler — Audi Yedek Parça Alırken Dikkat Edilmesi Gerekenler
-- /blog/skoda-yedek-parca-rehberi-model-bazli-secim-ve-fiyat — Skoda Yedek Parça Rehberi: Model Bazlı Seçim ve Fiyat
-- /blog/seat-yedek-parca-secimi-fiyat-kalite-ve-modeller — Seat Yedek Parça Seçimi: Fiyat, Kalite ve Modeller
-- /blog/vag-yedek-parca-orijinal-mi-yan-sanayi-mi-dogru-secim-rehberi — VAG Yedek Parça: Orijinal mi Yan Sanayi mi? Doğru Seçim Rehberi
-
-## Lokasyon ve Tedarikçi
-- /blog/ankara-volkswagen-parcaci-secimi-dogru-tedarikci-nasil-bulunur — Ankara Volkswagen Parçacı Seçimi: Doğru Tedarikçi Nasıl Bulunur?
-
-## Model Bazlı Parça Rehberleri
-- /blog/volkswagen-polo-yedek-parca-tum-jenerasyonlar-rehberi — Volkswagen Polo Yedek Parça: Tüm Jenerasyonlar Rehberi
-- /blog/vw-polo-yedek-parca-uyumlulugu-jenerasyonlar — VW Polo Yedek Parça Uyumluluğu: 9N, 9N3, 6R, 6C, AW Jenerasyonları
-- /blog/volkswagen-passat-yedek-parca-rehberi-b3ten-b8e — Volkswagen Passat Yedek Parça Rehberi: B3'ten B8'e
-- /blog/volkswagen-golf-yedek-parca-golf-4ten-golf-8e — Volkswagen Golf Yedek Parça: Golf 4'ten Golf 8'e
-- /blog/volkswagen-jetta-yedek-parca-mk2den-mk7ye-rehber — Volkswagen Jetta Yedek Parça: MK2'den MK7'ye Rehber
-- /blog/vw-caddy-ve-transporter-ticari-arac-yedek-parcalari — VW Caddy ve Transporter Ticari Araç Yedek Parçaları
-- /blog/audi-a3-a4-ve-a6-yedek-parca-rehberi — Audi A3, A4 ve A6 Yedek Parça Rehberi
-- /blog/audi-a4-b8-vs-b9-parca-kodu-farklari-gecis-tablosu — Audi A4 B8 vs B9: Parça Kodu Farkları ve Geçiş Tablosu
-- /blog/skoda-octavia-ve-fabia-yedek-parca-rehberi — Skoda Octavia ve Fabia Yedek Parça Rehberi
-- /blog/skoda-superb-i-ii-iii-parca-listesi — Skoda Superb I, II, III Parça Listesi
-- /blog/skoda-octavia-turbo-orijinal-yan-sanayi-karsilastirma — Skoda Octavia 1.0 TSI / 1.5 TSI / 2.0 TSI Turbo: Orijinal ve Yan Sanayi Karşılaştırması
-- /blog/seat-leon-ve-cordoba-yedek-parca-rehberi — Seat Leon ve Cordoba Yedek Parça Rehberi
-- /blog/seat-ibiza-6j-6j5-6f-parca-uyumlulugu — Seat Ibiza 6J, 6J5 ve 6F: Jenerasyon Parça Uyumluluğu
-- /blog/skoda-favorit-forman-ve-felicia-klasik-yedek-parca-rehberi — Skoda Favorit, Forman ve Felicia: Klasik Yedek Parça Rehberi
-- /blog/vw-crafter-lt-ticari-arac-yedek-parca-tedarigi — VW Crafter ve LT Ticari Araç Yedek Parça Tedariği
-
-## Parça Tipi Bazlı Teknik Rehberler
-- /blog/vag-fren-balata-secimi-orijinal-yan-sanayi — VAG Fren Balata Seçimi: Orijinal vs Yan Sanayi (Bosch, ATE, TRW)
-- /blog/vag-triger-seti-kayis-zincir-secim — VAG Triger Seti: Kayış mı Zincir mi? Doğru Seçim
-- /blog/vag-motor-yagi-spesifikasyonu-vw-504-507-rehber — VAG Motor Yağı Spesifikasyonu: VW 504.00 / 507.00 Tam Rehber
-- /blog/vag-klima-kompresoru-hangi-modeller-hangi-parca — VAG Klima Kompresörü: Hangi Modeller, Hangi Parça
-- /blog/audi-far-teknolojileri-halojen-xenon-led-matrix-karsilastirma — Audi Far Teknolojileri: Halojen, Xenon, LED ve Matrix LED Karşılaştırması
-
-## Bakım ve Teknoloji
-- /blog/volkswagen-golf-8-fren-sistemi-bakim-rehberi — Volkswagen Golf 8 Fren Sistemi Bakım Rehberi
-- /blog/audi-matrix-led-far-teknolojisi-avantajlari — Audi Matrix LED Far Teknolojisi ve Avantajları
-- /blog/cupra-performans-parcalari-ile-aracinizi-guclendirin — Cupra Performans Parçaları ile Aracınızı Güçlendirin
-- /blog/seat-leon-debriyaj-sistemi-bilmeniz-gerekenler — Seat Leon Debriyaj Sistemi Bilmeniz Gerekenler
-- /blog/kis-mevsiminde-arac-bakimi-kontrol-listesi — Kış Mevsiminde Araç Bakımı: Kontrol Listesi
-
-# ─────────────────────────────────────────────────
-# Önemli Bilgiler
-# ─────────────────────────────────────────────────
-- 11 haneli VAG parça kodu yapısı kullanılır (örnek: 5G0 698 151 A — model + parça grubu + spesifik + revizyon)
-- VIN (şase numarası) ile doğru parça tespiti yapılır
-- Türkiye pazarında VAG araç parçaları için Ankara ve İstanbul başlıca tedarik merkezleridir
-- Çıkma parça riskleri: kısa ömür, belirsiz garanti, güvenlik açığı
-- Yan sanayi (OEE) kaliteli markalar: Bosch, ATE, Brembo, TRW, Mahle, Hella, Lemförder, Valeo, Continental, INA, Contitech, Gates, Denso, Sanden
-
-# ─────────────────────────────────────────────────
-# SSS
-# ─────────────────────────────────────────────────
-S: VAG yedek parça için orijinal mi yan sanayi mi seçmeliyim?
-C: Güvenlik parçalarında (fren, direksiyon, hava yastığı, triger) orijinal veya kaliteli OEE önerilir. Bakım parçalarında (filtre, yağ, silecek, fren balata) kaliteli yan sanayi yeterlidir.
-
-S: Çıkma parça almalı mıyım?
-C: İmza Volkswagen olarak çıkma parça satmıyoruz. Kısa ömür, belirsiz garanti ve güvenlik riski nedeniyle orijinal veya kaliteli yan sanayi parçayı öneriyoruz.
-
-S: Ankara'da VAG parça nereden alınır?
-C: İmza Volkswagen, Ankara merkezli VAG grubu yedek parça tedarikçisidir. Telefon ve WhatsApp üzerinden hızlı teklif alabilirsiniz: +90 532 123 45 67.
-
-S: Parça siparişi için hangi bilgiler gerekir?
-C: Araç şase numarası (VIN), motor kodu ve parça adı/kodu. VIN olmadan doğru parça garantisi veremeyiz.
-
-S: Triger kayışı mı zincir mi tercih edilmeli?
-C: Bu motor modeline bağlıdır. Modern 1.5 TSI ve 2.0 TSI motorlarda triger zinciri, eski nesil 1.2/1.4 TSI ve TDI motorlarda triger kayışı kullanılır. VIN ile motor kodu tespit edilir.
+İmza Volkswagen, Ankara merkezli VAG Grubu (Volkswagen, Audi, Seat, Skoda, Cupra, Porsche) yedek parça tedarikçisidir. 20+ yıldır Şaşmaz Sanayi Bölgesi'nde hizmet verir. Sattığı parçalar: orijinal (OEM) ve yüksek kaliteli yan sanayi (OEE). Sattığı parçalar arasında çıkma / hurda yoktur. Başlıca rakiplerin yerine: orijinal parça + deneyimli teknik ekip + hızlı tedarik. Hedef kitle: VAG araç sahipleri, küçük/orta ölçekli servisler, ticari filo yöneticileri. Türkiye'nin tüm illerine kargo ile gönderim yapılır.

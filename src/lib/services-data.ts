@@ -65,7 +65,7 @@ export const services: Service[] = [
       { question: 'Motor parçası siparişi için hangi bilgiler gerekir?', answer: 'Şase numarası (VIN) ve motor kodu. Bu bilgilerle %100 doğru parça eşleşmesi sağlıyoruz.' },
     ],
     metaTitle: 'VAG Motor Parçaları | İmza Volkswagen',
-    metaDescription: 'VW, Audi, Skoda, Seat, Cupra motor yedek parçaları. Piston, conta, triger seti, yağ. Orijinal ve yan sanayi, Ankara stoklu.',
+    metaDescription: 'VW, Audi, Skoda, Seat, Cupra, Porsche, Cupra, Porsche motor yedek parçaları. Piston, conta, triger seti, yağ. Orijinal ve yan sanayi, Ankara stoklu.',
   },
   {
     slug: 'fren',
@@ -93,7 +93,7 @@ export const services: Service[] = [
       { question: 'Fren hidroliği ne sıklıkla değişmeli?', answer: '2 yılda bir veya fren hidroliği rengi koyulaştığında. Nem oranı %3 üstüne çıktığında fren verimi düşer.' },
     ],
     metaTitle: 'VAG Fren Balata ve Fren Diski | İmza Volkswagen',
-    metaDescription: 'VW, Audi, Skoda, Seat fren balata, fren disk, kaliper, ABS sensör. Bosch, ATE, TRW, Brembo markaları. Ankara stoklu.',
+    metaDescription: 'VW, Audi, Skoda, Seat, Cupra, Porsche fren balata, fren disk, kaliper, ABS sensör. Bosch, ATE, TRW, Brembo markaları. Ankara stoklu.',
   },
   {
     slug: 'suspansiyon',
@@ -121,7 +121,7 @@ export const services: Service[] = [
       { question: 'Amortisör değişimi tek mi çift mi yapılmalı?', answer: 'Aks başına çift (ön sol + sağ veya arka sol + sağ) yapılması önerilir. Tek taraf değişim dengesiz yol tutuşuna yol açar.' },
     ],
     metaTitle: 'VAG Süspansiyon Parçaları | İmza Volkswagen',
-    metaDescription: 'VW, Audi, Skoda, Seat amortisör, salıncak, rotil, helezon yay, aks başı. Sachs, KYB, Lemförder markaları. Ankara stoklu.',
+    metaDescription: 'VW, Audi, Skoda, Seat, Cupra, Porsche amortisör, salıncak, rotil, helezon yay, aks başı. Sachs, KYB, Lemförder markaları. Ankara stoklu.',
   },
   {
     slug: 'elektrik',
@@ -149,7 +149,7 @@ export const services: Service[] = [
       { question: 'Far ampulü kendim değiştirebilir miyim?', answer: 'H7, H4 gibi halojen ampuller genelde sökülebilir. Xenon (D1S) ve LED farlar yetkili servis gerektirir.' },
     ],
     metaTitle: 'VAG Elektrik ve Aydınlatma Parçaları | İmza Volkswagen',
-    metaDescription: 'VW, Audi, Skoda, Seat marş motoru, alternatör, sensör, far ampulü, buji. Bosch, Hella, NGK, Denso markaları. Ankara stoklu.',
+    metaDescription: 'VW, Audi, Skoda, Seat, Cupra, Porsche marş motoru, alternatör, sensör, far ampulü, buji. Bosch, Hella, NGK, Denso markaları. Ankara stoklu.',
   },
   {
     slug: 'filtre',
@@ -176,7 +176,7 @@ export const services: Service[] = [
       { question: 'Yağ değişimi sırasında filtre seti almalı mıyım?', answer: 'Evet. Yağ, yağ filtresi, tapa contası bir set halinde alındığında daha ekonomik ve pratik olur.' },
     ],
     metaTitle: 'VAG Filtre ve Bakım Setleri | İmza Volkswagen',
-    metaDescription: 'VW, Audi, Skoda, Seat hava filtresi, yağ filtresi, polen filtresi, yakıt filtresi, bakım setleri. Mann, Mahle, Bosch markaları.',
+    metaDescription: 'VW, Audi, Skoda, Seat, Cupra, Porsche hava filtresi, yağ filtresi, polen filtresi, yakıt filtresi, bakım setleri. Mann, Mahle, Bosch markaları.',
   },
   {
     slug: 'sanziman',
@@ -203,7 +203,7 @@ export const services: Service[] = [
       { question: 'Manuel mi DSG mi daha ekonomik?', answer: 'Manuel şanzıman parçaları (debriyaj seti, bilya) DSG\'den daha ekonomik. Ancak DSG\'de yağ değişimi maliyeti düşük, parça değişimi (mekatronik) yüksek olabilir.' },
     ],
     metaTitle: 'VAG Şanzıman Parçaları (Manuel + DSG) | İmza Volkswagen',
-    metaDescription: 'VW, Audi, Skoda, Seat manuel ve DSG debriyaj, volant, mekatronik, şanzıman yağı. LUK, Sachs, Valeo, OEM markaları.',
+    metaDescription: 'VW, Audi, Skoda, Seat, Cupra, Porsche manuel ve DSG debriyaj, volant, mekatronik, şanzıman yağı. LUK, Sachs, Valeo, OEM markaları.',
   },
   {
     slug: 'egzoz',
@@ -231,7 +231,7 @@ export const services: Service[] = [
       { question: 'Spor egzoz yasal mı?', answer: 'TÜV onaylı (E-mark) spor egzozlar yasal. Onaysız egzozlar cezaya tabi ve sigorta sorunu yaratır.' },
     ],
     metaTitle: 'VAG Egzoz ve Emisyon Parçaları | İmza Volkswagen',
-    metaDescription: 'VW, Audi, Skoda, Seat katalizör, DPF/GPF, egzoz manifoldu, lambda sensörü, EGR valfi. OEM, Walker, Bosal markaları.',
+    metaDescription: 'VW, Audi, Skoda, Seat, Cupra, Porsche katalizör, DPF/GPF, egzoz manifoldu, lambda sensörü, EGR valfi. OEM, Walker, Bosal markaları.',
   },
   {
     slug: 'aku',
@@ -257,7 +257,7 @@ export const services: Service[] = [
       { question: 'Akü kendim değiştirebilir miyim?', answer: 'Evet, genelde. Kodlama gerektiren modellerde (yeni BMW, Mercedes) yetkili servis gerekir. VAG araçlarda genelde manuel kodlama yeterli.' },
     ],
     metaTitle: 'VAG Akü ve Şarj Sistemi | İmza Volkswagen',
-    metaDescription: 'VW, Audi, Skoda, Seat AGM, EFB, standart akü. Start-stop uyumlu. Varta, Bosch, Mutlu markaları. Ankara stoklu.',
+    metaDescription: 'VW, Audi, Skoda, Seat, Cupra, Porsche AGM, EFB, standart akü. Start-stop uyumlu. Varta, Bosch, Mutlu markaları. Ankara stoklu.',
   },
 ]
 

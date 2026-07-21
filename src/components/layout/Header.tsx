@@ -136,7 +136,7 @@ export function Header() {
             {/* Mobile Menu Button */}
             <Sheet>
               <SheetTrigger asChild className="lg:hidden">
-                <Button variant="ghost" size="icon">
+                <Button variant="ghost" size="icon" aria-label="Menüyü aç">
                   <Menu size={26} />
                 </Button>
               </SheetTrigger>
