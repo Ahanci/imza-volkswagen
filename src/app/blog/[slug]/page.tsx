@@ -1,5 +1,4 @@
 import React from 'react'
-import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
@@ -52,7 +51,23 @@ export default async function BlogPostPage({
   const post = getBlogPostBySlug(slug)
 
   if (!post) {
-    notFound()
+    return (
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-1 flex items-center justify-center">
+          <div className="text-center">
+            <BookOpen size={64} className="mx-auto text-muted-foreground/30 mb-4" />
+            <h1 className="text-2xl font-bold text-vag-navy mb-2">Yazı Bulunamadı</h1>
+            <p className="text-muted-foreground mb-6">Aradığınız blog yazısı mevcut değil.</p>
+            <Link href="/blog">
+              <Button>Bloga Dön</Button>
+            </Link>
+          </div>
+        </main>
+        <Footer />
+        <FloatingCTA />
+      </div>
+    )
   }
 
   // Get related posts (same category, different post)
