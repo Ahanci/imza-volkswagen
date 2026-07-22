@@ -44,7 +44,7 @@ export default function HizmetlerimizPage() {
                 Volkswagen, Audi, Seat, Skoda, Cupra ve Porsche araçlarınız için
                 <strong> 7 kategoride </strong>
                 orijinal ve yüksek kaliteli yan sanayi yedek parça tedariği.
-                Her parça faturalı, garantili, VIN ile doğru eşleşme garantili.
+                Her parça faturalı, VIN ile doğru eşleşme garantili. Garanti süresi parça tipine göre değişir.
                 <span className="block text-base text-white/70 mt-3">Not: Akü, lastik ve jant satışımız yoktur.</span>
               </p>
 

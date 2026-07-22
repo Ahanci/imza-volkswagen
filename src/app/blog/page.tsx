@@ -250,27 +250,6 @@ export default function BlogPage() {
           </div>
         </section>
 
-        {/* Newsletter Section */}
-        <section className="bg-vag-navy py-12">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              Bültenimize Abone Olun
-            </h2>
-            <p className="text-white/80 mb-6 max-w-xl mx-auto">
-              En son blog yazılarından, teknik rehberlerden ve özel fırsatlardan haberdar olun.
-            </p>
-            <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onSubmit={(e) => e.preventDefault()}>
-              <Input 
-                placeholder="E-posta adresiniz" 
-                type="email" 
-                className="h-12 bg-white/10 border-white/20 text-white placeholder:text-white/50"
-              />
-              <Button type="submit" className="bg-green-500 hover:bg-green-600 h-12 px-8 whitespace-nowrap">
-                Abone Ol
-              </Button>
-            </form>
-          </div>
-        </section>
       </main>
       
       {/* Footer */}

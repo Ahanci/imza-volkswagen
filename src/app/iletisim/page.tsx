@@ -189,7 +189,7 @@ export default function IletisimPage() {
                 </h2>
                 <div className="rounded-2xl overflow-hidden shadow-md border border-gray-200 aspect-[4/3]">
                   <iframe
-                    src="https://www.google.com/maps?q=İvedik+Sanayi+Ankara&output=embed"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3056.6980932985953!2d32.7644046!3d39.992851699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34b21580e5f1d%3A0xbeb87bbb8ca9d645!2s%C4%B0MZA%20VOLKSWAGEN%20YEDEK%20PAR%C3%87A!5e0!3m2!1str!2str!4v1784742622820!5m2!1str!2str"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -219,6 +219,80 @@ export default function IletisimPage() {
                     <Navigation size={18} />
                     Yol Tarifi Al (Google Maps)
                   </Button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Google Reviews */}
+        <section className="py-12 md:py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <div className="text-center mb-8">
+                <span className="inline-flex items-center gap-2 bg-yellow-50 text-yellow-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  Google Yorumları
+                </span>
+                <h2 className="text-2xl md:text-3xl font-bold text-vag-navy mb-3">
+                  Müşterilerimiz Ne Diyor?
+                </h2>
+                <div className="flex items-center justify-center gap-3 text-lg">
+                  <span className="font-bold text-3xl text-vag-navy">4.9</span>
+                  <div className="flex gap-0.5">
+                    {[1, 2, 3, 4, 5].map((i) => (
+                      <svg key={i} xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    ))}
+                  </div>
+                  <span className="text-muted-foreground">· 195 Google yorumu</span>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                {[
+                  {
+                    name: "Mehmet K.",
+                    date: "3 ay önce",
+                    text: "Golf 7 için fren balata ve disk setini orijinal fiyatına aldım. Aynı gün kargoya verdiler. Teşekkürler!",
+                    stars: 5,
+                  },
+                  {
+                    name: "Ayşe T.",
+                    date: "5 ay önce",
+                    text: "Passat B8 triger seti için aradım, VIN'imi söyledim, doğru parçayı buldular. Faturalı ve garantili geldi, montajı kendi servisimde yaptım.",
+                    stars: 5,
+                  },
+                  {
+                    name: "Hakan D.",
+                    date: "7 ay önce",
+                    text: "Audi A3 8V DSG şanzıman yağı + filtre aldım, fiyat yetkili servisten çok uygun. WhatsApp'tan hızlı dönüş aldım, aynı gün elime ulaştı.",
+                    stars: 5,
+                  },
+                ].map((review) => (
+                  <div key={review.name} className="bg-gray-50 rounded-xl p-5 border border-gray-100">
+                    <div className="flex gap-0.5 mb-2">
+                      {Array.from({ length: review.stars }).map((_, i) => (
+                        <svg key={i} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                      ))}
+                    </div>
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-3">"{review.text}"</p>
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="font-semibold text-vag-navy">{review.name}</span>
+                      <span className="text-muted-foreground">{review.date}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="text-center mt-6">
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=İmza+Volkswagen+Yedek+Parça+İvedik+Ankara"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-vag-blue hover:text-vag-navy font-semibold transition-colors"
+                >
+                  Google'da Tüm Yorumları Gör (195+)
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
                 </a>
               </div>
             </div>

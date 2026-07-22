@@ -104,7 +104,7 @@ export function Footer() {
                 <MapPin size={16} className="text-vag-blue flex-shrink-0 mt-0.5" />
                 <span className="text-sm">
                   Organize Sanayi Bölgesi,<br />
-                  İstanbul / Türkiye
+                  Ankara / Türkiye
                 </span>
               </div>
               <div className="flex items-center gap-3 text-white/80">

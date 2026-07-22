@@ -29,7 +29,7 @@ const values = [
   {
     icon: Shield,
     title: 'Güvenilirlik',
-    desc: 'Her parça faturalı, garantili ve VIN ile doğru eşleşme garantili. Yanlış parça göndermiyoruz.',
+    desc: 'Her parça faturalı ve VIN ile doğru eşleşme garantili. Yanlış parça göndermiyoruz. (Garanti süresi parça tipine göre değişir; detay için teklif isteyin.)',
   },
   {
     icon: Wrench,
@@ -175,7 +175,7 @@ export default function KurumsalPage() {
                   <Target size={32} className="text-vag-blue mb-4" />
                   <h2 className="text-2xl font-bold text-vag-navy mb-3">Misyonumuz</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    VAG grubu araç sahiplerine ve servislerine doğru parçayı, doğru fiyata, doğru zamanda ulaştırmak. Her parça için fatura, garanti ve VIN ile doğru eşleşme garantisi vermek.
+                    VAG grubu araç sahiplerine ve servislerine doğru parçayı, doğru fiyata, doğru zamanda ulaştırmak. Her parça faturalı; garanti süresi parça tipine göre değişir; VIN ile doğru eşleşme garantisi veriyoruz.
                   </p>
                 </CardContent>
               </Card>
@@ -276,7 +276,7 @@ export default function KurumsalPage() {
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
                 {[
-                  'Her parça faturalı ve garantili',
+                  'Her parça faturalı (garanti parça tipine göre)',
                   'VIN ile doğru parça eşleşmesi garantili',
                   'Çıkma / hurda parça satmıyoruz',
                   'Yalnızca kanıtlanmış markalar (Bosch, ATE, Mahle, Sachs, Hella)',

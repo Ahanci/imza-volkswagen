@@ -143,6 +143,13 @@ const jsonLd = {
       priceRange: "₺₺",
       paymentAccepted: ["Cash", "Credit Card", "Bank Transfer"],
       currenciesAccepted: "TRY",
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        reviewCount: "195",
+        bestRating: "5",
+        worstRating: "1",
+      },
     },
     {
       "@type": "WebSite",

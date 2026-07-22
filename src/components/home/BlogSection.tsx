@@ -153,34 +153,6 @@ export function BlogSection() {
             </Link>
           ))}
         </div>
-
-        {/* Newsletter CTA */}
-        <div className="mt-16 bg-gradient-to-r from-vag-navy to-vag-blue rounded-2xl p-8 md:p-12 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
-          
-          <div className="relative max-w-2xl mx-auto text-center">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
-              Bültenimize Abone Olun
-            </h3>
-            <p className="text-white/80 mb-6">
-              Yeni ürünler, indirimler ve faydalı içeriklerden ilk siz haberdar olun.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="E-posta adresiniz"
-                className="flex-1 h-12 px-4 rounded-xl border-0 focus:ring-2 focus:ring-white/50"
-              />
-              <button className="bg-vag-red hover:bg-red-700 text-white px-6 h-12 rounded-xl font-semibold btn-glow whitespace-nowrap">
-                Abone Ol
-              </button>
-            </div>
-            <p className="text-white/60 text-xs mt-3">
-              Spam göndermiyoruz. İstediğiniz zaman abonelikten çıkabilirsiniz.
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   )
