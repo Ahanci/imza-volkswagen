@@ -4,32 +4,32 @@
 
 ## Ana Sayfalar
 
-- [Anasayfa](https://imza-oto.vercel.app/): İmza Volkswagen — VAG Grubu yedek parça uzmanı, Ankara İvedik.
-- [Markalar](https://imza-oto.vercel.app/markalar): 6 VAG markası için orijinal + yan sanayi parça tedariği (VW, Audi, Seat, Skoda, Cupra, Porsche).
-- [Hizmetlerimiz](https://imza-oto.vercel.app/hizmetlerimiz): 7 hizmet kategorisi — motor, fren, süspansiyon, elektrik, filtre, şanzıman, egzoz.
-- [Periyodik Bakım](https://imza-oto.vercel.app/periyodik-bakim): 6 marka × 4 paket = 24 periyodik bakım paketi (Mini, Standart, Geniş, Triger).
-- [Ürünler](https://imza-oto.vercel.app/urunler): VAG Grubu için fren balata, fren diski, triger seti, debriyaj, amortisör, filtre, motor yağı.
-- [Kurumsal](https://imza-oto.vercel.app/kurumsal): 20+ yıl yolculuk, misyon, vizyon, ekip, Ankara İvedik adres.
-- [İletişim](https://imza-oto.vercel.app/iletisim): İvedik adres, kurumsal telefon, WhatsApp, çalışma saatleri.
+- [Anasayfa](https://imzayedekparca.com/): İmza Volkswagen — VAG Grubu yedek parça uzmanı, Ankara İvedik.
+- [Markalar](https://imzayedekparca.com/markalar): 6 VAG markası için orijinal + yan sanayi parça tedariği (VW, Audi, Seat, Skoda, Cupra, Porsche).
+- [Hizmetlerimiz](https://imzayedekparca.com/hizmetlerimiz): 7 hizmet kategorisi — motor, fren, süspansiyon, elektrik, filtre, şanzıman, egzoz.
+- [Periyodik Bakım](https://imzayedekparca.com/periyodik-bakim): 6 marka × 4 paket = 24 periyodik bakım paketi (Mini, Standart, Geniş, Triger).
+- [Ürünler](https://imzayedekparca.com/urunler): VAG Grubu için fren balata, fren diski, triger seti, debriyaj, amortisör, filtre, motor yağı.
+- [Kurumsal](https://imzayedekparca.com/kurumsal): 20+ yıl yolculuk, misyon, vizyon, ekip, Ankara İvedik adres.
+- [İletişim](https://imzayedekparca.com/iletisim): İvedik adres, kurumsal telefon, WhatsApp, çalışma saatleri.
 
 ## Markalar (VAG Grubu)
 
-- [Volkswagen](https://imza-oto.vercel.app/markalar/volkswagen): Golf, Passat, Polo, Tiguan, T-Roc, Transporter, Caddy, Crafter, ID. serisi.
-- [Audi](https://imza-oto.vercel.app/markalar/audi): A1, A3, A4, A5, A6, A7, A8, Q2, Q3, Q5, Q7, Q8, e-tron, TT, RS serisi.
-- [Seat](https://imza-oto.vercel.app/markalar/seat): Leon, Ibiza, Ateca, Toledo, Arona, Tarraco, Alhambra, Exeo.
-- [Skoda](https://imza-oto.vercel.app/markalar/skoda): Octavia, Fabia, Superb, Karoq, Kamiq, Enyaq, Scala, Kodiaq, Rapid, Citigo.
-- [Cupra](https://imza-oto.vercel.app/markalar/cupra): Formentor, Cupra Leon, Ateca, Born, Terramar.
-- [Porsche](https://imza-oto.vercel.app/markalar/porsche): 911, Cayenne, Macan, Panamera, Taycan, Cayman, Boxster.
+- [Volkswagen](https://imzayedekparca.com/markalar/volkswagen): Golf, Passat, Polo, Tiguan, T-Roc, Transporter, Caddy, Crafter, ID. serisi.
+- [Audi](https://imzayedekparca.com/markalar/audi): A1, A3, A4, A5, A6, A7, A8, Q2, Q3, Q5, Q7, Q8, e-tron, TT, RS serisi.
+- [Seat](https://imzayedekparca.com/markalar/seat): Leon, Ibiza, Ateca, Toledo, Arona, Tarraco, Alhambra, Exeo.
+- [Skoda](https://imzayedekparca.com/markalar/skoda): Octavia, Fabia, Superb, Karoq, Kamiq, Enyaq, Scala, Kodiaq, Rapid, Citigo.
+- [Cupra](https://imzayedekparca.com/markalar/cupra): Formentor, Cupra Leon, Ateca, Born, Terramar.
+- [Porsche](https://imzayedekparca.com/markalar/porsche): 911, Cayenne, Macan, Panamera, Taycan, Cayman, Boxster.
 
 ## Hizmetler (Akü Hariç)
 
-- [Motor Parçaları](https://imza-oto.vercel.app/hizmetlerimiz/motor): Piston, conta, triger seti, subap, kayış, motor yağı.
-- [Fren Sistemi](https://imza-oto.vercel.app/hizmetlerimiz/fren): Fren balata, fren diski, fren kaliper, ABS sensörü, fren hidroliği.
-- [Süspansiyon](https://imza-oto.vercel.app/hizmetlerimiz/suspansiyon): Amortisör, salıncak, rotil, aks, yay, körük.
-- [Elektrik](https://imza-oto.vercel.app/hizmetlerimiz/elektrik): Marş motoru, alternatör, buji, ateşleme bobini, sensör.
-- [Filtreler](https://imza-oto.vercel.app/hizmetlerimiz/filtre): Yağ, hava, polen, yakıt, şanzıman filtreleri.
-- [Şanzıman](https://imza-oto.vercel.app/hizmetlerimiz/sanziman): Debriyaj seti, volan, şanzıman yağı, DSG/PDK parçaları.
-- [Egzoz](https://imza-oto.vercel.app/hizmetlerimiz/egzoz): Egzoz manifoldu, katalizör, partikül filtresi, ses yalıtımı.
+- [Motor Parçaları](https://imzayedekparca.com/hizmetlerimiz/motor): Piston, conta, triger seti, subap, kayış, motor yağı.
+- [Fren Sistemi](https://imzayedekparca.com/hizmetlerimiz/fren): Fren balata, fren diski, fren kaliper, ABS sensörü, fren hidroliği.
+- [Süspansiyon](https://imzayedekparca.com/hizmetlerimiz/suspansiyon): Amortisör, salıncak, rotil, aks, yay, körük.
+- [Elektrik](https://imzayedekparca.com/hizmetlerimiz/elektrik): Marş motoru, alternatör, buji, ateşleme bobini, sensör.
+- [Filtreler](https://imzayedekparca.com/hizmetlerimiz/filtre): Yağ, hava, polen, yakıt, şanzıman filtreleri.
+- [Şanzıman](https://imzayedekparca.com/hizmetlerimiz/sanziman): Debriyaj seti, volan, şanzıman yağı, DSG/PDK parçaları.
+- [Egzoz](https://imzayedekparca.com/hizmetlerimiz/egzoz): Egzoz manifoldu, katalizör, partikül filtresi, ses yalıtımı.
 
 ## Tedarik Edilmeyenler
 
@@ -39,7 +39,7 @@
 
 ## Blog & Bilgi Bankası
 
-- [Blog Ana Sayfa](https://imza-oto.vercel.app/blog): VAG Grubu araç bakım rehberleri, parça karşılaştırmaları, fiyat analizleri.
+- [Blog Ana Sayfa](https://imzayedekparca.com/blog): VAG Grubu araç bakım rehberleri, parça karşılaştırmaları, fiyat analizleri.
 - 31 blog yazısı — Volkswagen, Audi, Seat, Skoda, Cupra, Porsche modelleri için pratik rehberler.
 
 ## İletişim
