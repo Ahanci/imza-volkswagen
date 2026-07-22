@@ -27,6 +27,16 @@ export const CardHoverEffect = ({
   const mouseY = useMotionValue(0);
   const [mounted, setMounted] = useState(false);
 
+  // Hook sırası korunmalı: tüm hooks return öncesi çağrılmalı
+  // useMotionTemplate'i burada çağırıp style'a bağla (her render aynı sıra)
+  const spotlightBackground = useMotionTemplate`
+    radial-gradient(
+      400px circle at ${mouseX}px ${mouseY}px,
+      ${spotlightColor},
+      transparent 80%
+    )
+  `;
+
   const handleMouseMove = useCallback(
     (e: React.MouseEvent<HTMLDivElement>) => {
       const el = cardRef.current;
@@ -61,15 +71,7 @@ export const CardHoverEffect = ({
       {mounted && (
         <motion.div
           className="pointer-events-none absolute -inset-px z-0 rounded-xl opacity-0 transition-opacity duration-300 group-hover/spotlight:opacity-100"
-          style={{
-            background: useMotionTemplate`
-              radial-gradient(
-                400px circle at ${mouseX}px ${mouseY}px,
-                ${spotlightColor},
-                transparent 80%
-              )
-            `,
-          }}
+          style={{ background: spotlightBackground }}
         />
       )}
       <div className={cn("relative z-10", className)}>{children}</div>
