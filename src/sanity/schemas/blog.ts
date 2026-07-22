@@ -1,0 +1,141 @@
+import { defineType, defineField } from "sanity";
+
+export const blog = defineType({
+  name: "blog",
+  title: "Blog Yazısı",
+  type: "document",
+  groups: [
+    { name: "content", title: "İçerik" },
+    { name: "media", title: "Görseller" },
+    { name: "details", title: "Detaylar" },
+    { name: "seo", title: "SEO" },
+  ],
+  fields: [
+    defineField({
+      name: "title",
+      title: "Başlık",
+      type: "string",
+      group: "content",
+      validation: (r) => r.required().min(10).max(140),
+    }),
+    defineField({
+      name: "slug",
+      title: "URL Slug",
+      type: "slug",
+      group: "content",
+      options: { source: "title", maxLength: 96 },
+      validation: (r) => r.required(),
+    }),
+    defineField({
+      name: "excerpt",
+      title: "Özet (Listede görünür)",
+      type: "text",
+      rows: 3,
+      group: "content",
+      validation: (r) => r.required().min(50).max(220),
+    }),
+    defineField({
+      name: "content",
+      title: "İçerik (Rich Text)",
+      type: "array",
+      of: [
+        { type: "block" },
+        {
+          type: "image",
+          options: { hotspot: true },
+          fields: [{ name: "alt", type: "string", title: "Alt Text" }],
+        },
+        {
+          type: "object",
+          name: "code",
+          title: "Kod Bloğu",
+          fields: [
+            { name: "language", type: "string", title: "Dil" },
+            { name: "code", type: "text", title: "Kod" },
+          ],
+        },
+      ],
+      group: "content",
+    }),
+    defineField({
+      name: "coverImage",
+      title: "Kapak Görseli",
+      type: "image",
+      group: "media",
+      options: { hotspot: true },
+      fields: [{ name: "alt", type: "string", title: "Alt Text" }],
+    }),
+    defineField({
+      name: "author",
+      title: "Yazar",
+      type: "string",
+      group: "details",
+      initialValue: "İmza Volkswagen Teknik Ekip",
+    }),
+    defineField({
+      name: "category",
+      title: "Kategori",
+      type: "string",
+      group: "details",
+      options: {
+        list: [
+          { title: "VAG Genel", value: "vag-genel" },
+          { title: "Motor", value: "motor" },
+          { title: "Fren", value: "fren" },
+          { title: "Süspansiyon", value: "suspansiyon" },
+          { title: "Elektrik", value: "elektrik" },
+          { title: "Şanzıman", value: "sanziman" },
+          { title: "Periyodik Bakım", value: "periyodik-bakim" },
+          { title: "Alım Rehberi", value: "alim-rehberi" },
+          { title: "Ankara", value: "ankara" },
+        ],
+      },
+    }),
+    defineField({
+      name: "tags",
+      title: "Etiketler",
+      type: "array",
+      of: [{ type: "reference", to: [{ type: "tag" }] }],
+      group: "details",
+    }),
+    defineField({
+      name: "readTime",
+      title: "Okuma Süresi (dk)",
+      type: "number",
+      group: "details",
+    }),
+    defineField({
+      name: "metaTitle",
+      title: "SEO Title",
+      type: "string",
+      group: "seo",
+      validation: (r) => r.max(60),
+    }),
+    defineField({
+      name: "metaDescription",
+      title: "SEO Description",
+      type: "text",
+      rows: 3,
+      group: "seo",
+      validation: (r) => r.max(160),
+    }),
+    defineField({
+      name: "publishedAt",
+      title: "Yayın Tarihi",
+      type: "datetime",
+      group: "details",
+      initialValue: () => new Date().toISOString(),
+    }),
+  ],
+  preview: {
+    select: {
+      title: "title",
+      subtitle: "category",
+      media: "coverImage",
+    },
+  },
+  orderings: [
+    { title: "Yayın Tarihi (Yeni)", name: "publishedAtDesc", by: [{ field: "publishedAt", direction: "desc" }] },
+    { title: "Başlık (A-Z)", name: "titleAsc", by: [{ field: "title", direction: "asc" }] },
+  ],
+});
