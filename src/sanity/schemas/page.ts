@@ -56,7 +56,7 @@ export const page = defineType({
         },
         {
           type: "object",
-          name: "text",
+          name: "textBlock",
           title: "Metin Bölümü",
           fields: [
             { name: "heading", title: "Başlık", type: "string" },
@@ -66,7 +66,7 @@ export const page = defineType({
         },
         {
           type: "object",
-          name: "image",
+          name: "imageBlock",
           title: "Görsel",
           fields: [
             { name: "image", title: "Görsel", type: "image", options: { hotspot: true } },
@@ -76,7 +76,7 @@ export const page = defineType({
         },
         {
           type: "object",
-          name: "gallery",
+          name: "galleryBlock",
           title: "Galeri",
           fields: [
             { name: "heading", title: "Başlık", type: "string" },
@@ -97,7 +97,7 @@ export const page = defineType({
         },
         {
           type: "object",
-          name: "faq",
+          name: "faqBlock",
           title: "SSS Bölümü",
           fields: [
             { name: "heading", title: "Başlık", type: "string" },
