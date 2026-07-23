@@ -117,6 +117,57 @@ export const siteSettings = defineType({
         { name: "metaPixelId", type: "string", title: "Meta Pixel ID" },
       ],
     }),
+    defineField({
+      name: "developer",
+      title: "Site Geliştirici (Footer alt bilgi)",
+      description: "Footer'da 'Bu site [şirket] tarafından geliştirilmiştir' bölümünde görünür",
+      type: "object",
+      fields: [
+        { name: "company", type: "string", title: "Geliştirici Şirket / Kişi" },
+        { name: "phone", type: "string", title: "Telefon" },
+        { name: "email", type: "string", title: "E-posta" },
+        { name: "url", type: "url", title: "Web Sitesi" },
+      ],
+    }),
+    defineField({
+      name: "whatsappTemplates",
+      title: "WhatsApp Hazır Mesaj Şablonları",
+      description: "Müşteri butona tıkladığında WhatsApp'a bu mesajı yazar",
+      type: "object",
+      fields: [
+        {
+          name: "general",
+          type: "text",
+          title: "Genel Bilgi (Footer WhatsApp)",
+          rows: 2,
+        },
+        {
+          name: "quote",
+          type: "text",
+          title: "Teklif İste (Hero CTA)",
+          rows: 2,
+        },
+        {
+          name: "product",
+          type: "text",
+          title: "Ürün Detay (ürün sayfası)",
+          rows: 2,
+        },
+      ],
+    }),
+    defineField({
+      name: "hero",
+      title: "Ana Sayfa Hero Bölümü",
+      type: "object",
+      fields: [
+        { name: "eyebrow", type: "string", title: "Üst Etiket (küçük yazı)" },
+        { name: "subtitle", type: "text", title: "Alt Başlık", rows: 2 },
+        { name: "primaryCtaLabel", type: "string", title: "Birincil Buton Metni" },
+        { name: "primaryCtaHref", type: "string", title: "Birincil Buton Linki" },
+        { name: "secondaryCtaLabel", type: "string", title: "İkincil Buton Metni" },
+        { name: "secondaryCtaHref", type: "string", title: "İkincil Buton Linki" },
+      ],
+    }),
   ],
   preview: {
     prepare() {

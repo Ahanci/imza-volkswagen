@@ -90,13 +90,17 @@ export function Header() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             {/* Logo & Company Name */}
-            <Link href="/" className="flex items-center gap-4">
-              <div className="w-14 h-14 bg-gradient-to-br from-vag-navy to-vag-blue rounded-xl flex items-center justify-center shadow-lg">
-                <Car className="text-white" size={32} />
-              </div>
+            <Link href="/" className="flex items-center gap-3">
+              <img
+                src="/images/logo.png"
+                alt="İmza Volkswagen Logo"
+                width={48}
+                height={48}
+                className="h-12 w-auto object-contain"
+              />
               <div>
-                <h1 className="text-2xl font-bold text-vag-navy leading-tight tracking-tight">İMZA VOLKSWAGEN</h1>
-                <p className="text-sm text-muted-foreground font-medium">VAG Grubu Yedek Parça Uzmanı</p>
+                <h1 className="text-xl md:text-2xl font-bold text-vag-navy leading-tight tracking-tight">İMZA VOLKSWAGEN</h1>
+                <p className="text-xs md:text-sm text-muted-foreground font-medium">VAG Grubu Yedek Parça Uzmanı</p>
               </div>
             </Link>
 
@@ -144,9 +148,13 @@ export function Header() {
                 <div className="flex flex-col h-full pt-8">
                   {/* Logo in Mobile Menu */}
                   <Link href="/" className="flex items-center gap-3 mb-8 pb-6 border-b">
-                    <div className="w-12 h-12 bg-gradient-to-br from-vag-navy to-vag-blue rounded-xl flex items-center justify-center">
-                      <Car className="text-white" size={28} />
-                    </div>
+                    <img
+                      src="/images/logo.png"
+                      alt="İmza Volkswagen Logo"
+                      width={40}
+                      height={40}
+                      className="h-10 w-auto object-contain"
+                    />
                     <div>
                       <h2 className="text-xl font-bold text-vag-navy">İMZA VOLKSWAGEN</h2>
                       <p className="text-xs text-muted-foreground">VAG Parça Uzmanı</p>

@@ -72,9 +72,13 @@ export function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-3 mb-6">
-              <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center">
-                <Car className="text-vag-navy" size={32} />
-              </div>
+              <img
+                src="/images/logo.png"
+                alt="İmza Volkswagen Logo"
+                width={56}
+                height={56}
+                className="h-14 w-auto bg-white rounded-xl p-1.5 object-contain"
+              />
               <div>
                 <h2 className="text-2xl font-bold text-white">İMZA VOLKSWAGEN</h2>
                 <p className="text-xs text-white/60">VAG Grubu Yedek Parça Uzmanı</p>
@@ -239,7 +243,7 @@ export function Footer() {
             <p className="text-white/50 text-sm text-center md:text-left">
               © 2026 İmza Volkswagen. Tüm hakları saklıdır. | VAG Grubu Yedek Parça Uzmanı
             </p>
-            
+
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <Link href="/gizlilik" className="text-white/50 hover:text-white transition-colors">
                 Gizlilik Politikası
@@ -251,6 +255,17 @@ export function Footer() {
                 KVKK
               </Link>
             </div>
+          </div>
+
+          {/* Geliştirici bilgisi */}
+          <div className="mt-4 pt-4 border-t border-white/5 text-center">
+            <a
+              href="tel:+905396540461"
+              className="inline-flex items-center gap-2 text-white/40 hover:text-white/70 text-xs transition-colors"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Bu site <strong className="text-white/60">Ahanci Studio</strong> tarafından geliştirilmiştir · 0539 654 04 61
+            </a>
           </div>
         </div>
       </div>

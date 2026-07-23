@@ -75,7 +75,7 @@ const jsonLd = {
       name: "İmza Volkswagen",
       alternateName: "İmza VAG Yedek Parça",
       url: SITE_URL,
-      logo: `${SITE_URL}/logo.svg`,
+      logo: `${SITE_URL}/images/logo.png`,
       description:
         "Türkiye'nin önde gelen VAG Grubu (Volkswagen, Audi, Seat, Skoda, Cupra, Porsche) yedek parça tedarikçisi. 20+ yıl tecrübe, orijinal ve yan sanayi parça.",
       foundingDate: "2003",
@@ -116,6 +116,7 @@ const jsonLd = {
       "@id": `${SITE_URL}/#localbusiness`,
       name: "İmza Volkswagen",
       image: `${SITE_URL}/images/hero-car.jpg`,
+      logo: `${SITE_URL}/images/logo.png`,
       url: SITE_URL,
       telephone: "+90-312-394-05-25",
       email: "info@imzavolkswagen.com.tr",
