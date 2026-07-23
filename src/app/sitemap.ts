@@ -93,3 +93,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   return [...staticPages, ...productPages, ...blogPages, ...brandPages];
 }
+
+// ISR: Yeni ürün/blog eklendikçinde 60 saniyede bir sitemap'i yenile
+export const revalidate = 60;
