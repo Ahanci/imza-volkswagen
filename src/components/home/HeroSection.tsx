@@ -3,14 +3,14 @@
 import React from 'react'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
-import { ArrowRight, Phone, MessageCircle, Shield, Truck, Award, Clock } from 'lucide-react'
+import { Phone, MessageCircle, Shield, Truck, Award, Clock } from 'lucide-react'
 import { TypewriterEffect } from '@/components/acernity/typewriter-effect'
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+    <section className="relative min-h-[60vh] md:min-h-[90vh] flex items-center overflow-hidden bg-vag-navy">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 bg-vag-navy">
         <Image
           src="/images/hero-car.jpg"
           alt="Lüks Porsche - İmza Volkswagen VAG Grubu Yedek Parça"
@@ -19,83 +19,78 @@ export function HeroSection() {
           fetchPriority="high"
           sizes="100vw"
           quality={80}
-          className="object-contain object-center"
+          className="object-cover md:object-cover object-center"
         />
-        {/* Dark Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-vag-navy/95 via-vag-navy/80 to-vag-navy/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+        {/* Dark Gradient Overlay — soldan sağa açılır, image gri kenarlarını eritir */}
+        <div className="absolute inset-0 bg-gradient-to-r from-vag-navy from-0% via-vag-navy/60 via-40% to-vag-navy/10 to-100%" />
+        <div className="absolute inset-0 bg-gradient-to-t from-vag-navy/80 from-0% via-vag-navy/20 via-50% to-transparent to-100%" />
       </div>
 
       {/* Content */}
-      <div className="relative container mx-auto px-4 py-20 md:py-24">
+      <div className="relative container mx-auto px-4 py-10 md:py-24">
         <div className="max-w-2xl">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-5 py-2.5 rounded-full text-sm font-medium mb-6 border border-white/20">
-            <Award size={16} className="text-yellow-400" />
-            <span>20+ Yıllık Tecrübe • VAG Grubu Uzmanı</span>
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-4 py-2 md:px-5 md:py-2.5 rounded-full text-xs md:text-sm font-medium mb-4 md:mb-6 border border-white/20">
+            <Award size={14} className="text-yellow-400 md:w-4 md:h-4" />
+            <span>20+ Yıllık Tecrübe • VAG Uzmanı</span>
           </div>
 
           {/* Company Name */}
-          <p className="text-vag-blue font-semibold text-lg mb-2 tracking-wide uppercase">
+          <p className="text-vag-blue font-semibold text-sm md:text-lg mb-2 tracking-wide uppercase">
             İMZA VOLKSWAGEN
           </p>
 
-          {/* Main Title (Acernity-style typewriter reveal) */}
+          {/* Main Title (kompakt — 4 kelime, mobil/desktop uyumlu) */}
           <TypewriterEffect
             as="h1"
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight"
             words={[
               { text: "VAG" },
-              { text: "Grubu" },
-              { text: "İçin" },
               {
-                text: "Premium",
-                className:
-                  "text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400",
+                text: "Grubu",
+                className: "text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400",
               },
-              { text: "Kalitede" },
               { text: "Yedek" },
               { text: "Parça" },
-              { text: "Çözümleri" },
             ]}
             cursorClassName="bg-white"
           />
 
-          {/* Subtitle */}
-          <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed max-w-xl">
-            <span className="font-semibold text-yellow-300">Ankara İvedik</span>'da 20+ yıldır Volkswagen, Audi, Seat, Skoda, Cupra ve Porsche araçlarınız için
-            <span className="font-semibold"> orijinal ve yan sanayi </span>
-            yedek parça satışı. Profesyonel hizmet, güvenilir çözümler.
+          {/* Subtitle (kısa) */}
+          <p className="text-base md:text-xl text-white/90 mb-6 md:mb-8 leading-relaxed max-w-xl">
+            <span className="font-semibold text-yellow-300">Ankara İvedik</span>'te orijinal + yan sanayi VAG yedek parça.
+            20 yılı aşkın tecrübe.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <a 
+          {/* CTA Buttons — mobilde tam genişlik, desktop'ta inline */}
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-8 md:mb-12">
+            <a
               href="https://wa.me/905439792013?text=Merhaba,%20yedek%20par%C3%A7a%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
               target="_blank"
               rel="noopener noreferrer"
+              className="w-full sm:w-auto"
             >
-              <Button 
-                size="lg" 
-                className="bg-green-500 hover:bg-green-600 text-white px-8 h-14 text-base font-semibold btn-glow gap-2 w-full sm:w-auto"
+              <Button
+                size="lg"
+                className="bg-green-500 hover:bg-green-600 text-white px-6 md:px-8 h-12 md:h-14 text-sm md:text-base font-semibold btn-glow gap-2 w-full"
               >
-                <MessageCircle size={22} />
+                <MessageCircle size={20} className="md:w-[22px] md:h-[22px]" />
                 WhatsApp ile Yazın
               </Button>
             </a>
-            <a href="tel:+905439792013">
-              <Button 
-                size="lg" 
-                className="bg-vag-blue hover:bg-blue-700 text-white px-8 h-14 text-base font-bold gap-2 w-full sm:w-auto shadow-lg shadow-vag-blue/30"
+            <a href="tel:+905439792013" className="w-full sm:w-auto">
+              <Button
+                size="lg"
+                className="bg-vag-blue hover:bg-blue-700 text-white px-6 md:px-8 h-12 md:h-14 text-sm md:text-base font-bold gap-2 w-full shadow-lg shadow-vag-blue/30"
               >
-                <Phone size={20} />
+                <Phone size={18} className="md:w-5 md:h-5" />
                 Hemen Arayın
               </Button>
             </a>
           </div>
 
-          {/* Trust Badges */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl">
+          {/* Trust Badges — sadece desktop'ta görünür (mobilde hero kompakt kalsın) */}
+          <div className="hidden md:grid grid-cols-4 gap-4 max-w-2xl">
             {[
               { icon: Shield, label: 'Orijinal + Yan Sanayi', desc: 'İkisi de stokta' },
               { icon: Truck, label: 'Ankara\'dan Kargo', desc: 'Aynı gün sevkiyat' },
@@ -115,7 +110,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* Volkswagen Badge */}
+        {/* Volkswagen Badge (sadece desktop'ta, sağ alt köşe) */}
         <div className="hidden lg:block absolute bottom-8 right-8 bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 max-w-xs">
           <div className="flex items-center gap-4 mb-3">
             <div className="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center">
