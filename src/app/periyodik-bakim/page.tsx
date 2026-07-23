@@ -67,7 +67,7 @@ export default function PeriyodikBakimPage() {
                   </button>
                 </a>
                 <a
-                  href={`https://wa.me/9054349792013?text=Merhaba, VAG periyodik bakım paketi hakkında teklif almak istiyorum.`}
+                  href={`https://wa.me/905439792013?text=Merhaba, VAG periyodik bakım paketi hakkında teklif almak istiyorum.`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -274,7 +274,7 @@ export default function PeriyodikBakimPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="https://wa.me/9054349792013?text=Merhaba, periyodik bakım paketi için teklif almak istiyorum. VIN:"
+                href="https://wa.me/905439792013?text=Merhaba, periyodik bakım paketi için teklif almak istiyorum. VIN:"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -283,7 +283,7 @@ export default function PeriyodikBakimPage() {
                   WhatsApp Teklif Al
                 </Button>
               </a>
-              <a href="tel:+9054349792013">
+              <a href="tel:+905439792013">
                 <Button variant="outline" className="bg-white/10 hover:bg-white/20 border-white/20 text-white gap-2">
                   <Phone size={18} />
                   +90 543 979 20 13
@@ -339,7 +339,7 @@ function PeriyodikPaketCard({
         </ul>
         <div className="flex gap-2">
           <a
-            href={`https://wa.me/9054349792013?text=${encodeURIComponent(brandName + ' ' + paket.ad + ' (' + paket.km + ') paketi için teklif almak istiyorum.')}`}
+            href={`https://wa.me/905439792013?text=${encodeURIComponent(brandName + ' ' + paket.ad + ' (' + paket.km + ') paketi için teklif almak istiyorum.')}`}
             target="_blank"
             rel="noopener noreferrer"
             className="flex-1"
@@ -348,7 +348,7 @@ function PeriyodikPaketCard({
               WhatsApp
             </button>
           </a>
-          <a href="tel:+9054349792013" className="flex-1">
+          <a href="tel:+905439792013" className="flex-1">
             <button className="w-full inline-flex items-center justify-center gap-1 bg-vag-blue hover:bg-blue-700 text-white px-2 py-1.5 rounded-md text-xs font-semibold transition-colors">
               Ara
             </button>

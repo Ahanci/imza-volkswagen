@@ -42,9 +42,9 @@ async function main() {
       subtitle:
         "Ankara İvedik'te 20+ yıldır Volkswagen, Audi, Seat, Skoda, Cupra ve Porsche araçlarınız için orijinal ve yan sanayi yedek parça satışı.",
       primaryCtaLabel: "WhatsApp ile Yazın",
-      primaryCtaHref: "https://wa.me/9054349792013",
+      primaryCtaHref: "https://wa.me/905439792013",
       secondaryCtaLabel: "Hemen Arayın",
-      secondaryCtaHref: "tel:+9054349792013",
+      secondaryCtaHref: "tel:+905439792013",
     },
     footerText:
       "İmza Volkswagen, Türkiye'nin önde gelen VAG Grubu (Volkswagen, Audi, Seat, Skoda, Cupra, Porsche) yedek parça tedarikçisidir. Orijinal (OEM) ve yüksek kaliteli yan sanayi (OEE) yedek parça. Çıkma parça satışımız yoktur.",

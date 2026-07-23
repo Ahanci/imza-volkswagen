@@ -19,7 +19,7 @@ export function HeroSection() {
           fetchPriority="high"
           sizes="100vw"
           quality={80}
-          className="object-cover object-center"
+          className="object-contain object-center"
         />
         {/* Dark Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-vag-navy/95 via-vag-navy/80 to-vag-navy/40" />
@@ -71,7 +71,7 @@ export function HeroSection() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
             <a 
-              href="https://wa.me/9054349792013?text=Merhaba,%20yedek%20par%C3%A7a%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+              href="https://wa.me/905439792013?text=Merhaba,%20yedek%20par%C3%A7a%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -83,7 +83,7 @@ export function HeroSection() {
                 WhatsApp ile Yazın
               </Button>
             </a>
-            <a href="tel:+9054349792013">
+            <a href="tel:+905439792013">
               <Button 
                 size="lg" 
                 className="bg-vag-blue hover:bg-blue-700 text-white px-8 h-14 text-base font-bold gap-2 w-full sm:w-auto shadow-lg shadow-vag-blue/30"

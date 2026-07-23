@@ -178,7 +178,7 @@ export default function BrandPage() {
                           </ul>
                           <div className="flex gap-2">
                             <a
-                              href={`https://wa.me/9054349792013?text=Merhaba, ${encodeURIComponent(brand.name + ' ' + paket.ad)} paketi hakkında teklif almak istiyorum.`}
+                              href={`https://wa.me/905439792013?text=Merhaba, ${encodeURIComponent(brand.name + ' ' + paket.ad)} paketi hakkında teklif almak istiyorum.`}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="flex-1"
@@ -188,7 +188,7 @@ export default function BrandPage() {
                                 WhatsApp Teklif
                               </button>
                             </a>
-                            <a href="tel:+9054349792013" className="flex-1">
+                            <a href="tel:+905439792013" className="flex-1">
                               <button className="w-full inline-flex items-center justify-center gap-1.5 bg-vag-blue hover:bg-blue-700 text-white px-3 py-2 rounded-lg text-sm font-semibold transition-colors">
                                 <Phone size={14} />
                                 Hemen Ara
@@ -254,7 +254,7 @@ export default function BrandPage() {
                         <p className="text-muted-foreground mb-4">
                           Bu marka için ürünler yakında eklenecektir.
                         </p>
-                        <a href="https://wa.me/9054349792013" target="_blank" rel="noopener noreferrer">
+                        <a href="https://wa.me/905439792013" target="_blank" rel="noopener noreferrer">
                           <Button className="bg-green-500 hover:bg-green-600">
                             İletişime Geç
                           </Button>
@@ -310,7 +310,7 @@ export default function BrandPage() {
                     </p>
                     <div className="space-y-3">
                       <a 
-                        href={`https://wa.me/9054349792013?text=Merhaba, ${brand.name} parçası hakkında bilgi almak istiyorum.`}
+                        href={`https://wa.me/905439792013?text=Merhaba, ${brand.name} parçası hakkında bilgi almak istiyorum.`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="block"
@@ -320,7 +320,7 @@ export default function BrandPage() {
                           WhatsApp ile Yazın
                         </button>
                       </a>
-                      <a href="tel:+9054349792013" className="block">
+                      <a href="tel:+905439792013" className="block">
                         <button className="w-full inline-flex items-center justify-center gap-2 bg-white/20 hover:bg-white/30 text-white px-4 py-3 rounded-xl font-semibold transition-colors">
                           <Phone size={18} />
                           Hemen Ara

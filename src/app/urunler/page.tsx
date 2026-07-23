@@ -216,7 +216,7 @@ export default function UrunlerPage() {
                   >
                     Filtreleri Temizle
                   </Button>
-                  <a href="https://wa.me/9054349792013" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/905439792013" target="_blank" rel="noopener noreferrer">
                     <Button className="bg-green-600 hover:bg-green-700">
                       WhatsApp İletişim
                     </Button>
@@ -238,12 +238,12 @@ export default function UrunlerPage() {
               fiyat ve stok durumu hakkında bilgi alabilirsiniz.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="https://wa.me/9054349792013" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/905439792013" target="_blank" rel="noopener noreferrer">
                 <button className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-xl font-semibold transition-colors">
                   WhatsApp ile Sor
                 </button>
               </a>
-              <a href="tel:+9054349792013">
+              <a href="tel:+905439792013">
                 <button className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-xl font-semibold transition-colors">
                   Hemen Ara
                 </button>

@@ -91,7 +91,7 @@ export default function IletisimPage() {
                       <div className="flex-1">
                         <h3 className="font-semibold text-vag-navy mb-1">WhatsApp</h3>
                         <a
-                          href="https://wa.me/9054349792013?text=Merhaba,%20VAG%20yedek%20par%C3%A7a%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+                          href="https://wa.me/905439792013?text=Merhaba,%20VAG%20yedek%20par%C3%A7a%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-lg font-bold text-green-600 hover:underline"
@@ -313,7 +313,7 @@ export default function IletisimPage() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <a
-                  href="https://wa.me/9054349792013?text=Merhaba,%20teklif%20almak%20istiyorum.%20VIN%20numaram:%20"
+                  href="https://wa.me/905439792013?text=Merhaba,%20teklif%20almak%20istiyorum.%20VIN%20numaram:%20"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

@@ -205,14 +205,14 @@ export function TrustSection() {
               <p className="text-white/80">Uzman ekibimiz sizin için doğru parçayı bulsun</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
-              <a href="tel:+9054349792013">
+              <a href="tel:+905439792013">
                 <button className="bg-vag-blue hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-bold transition-colors whitespace-nowrap flex items-center gap-2 shadow-lg">
                   <Phone size={18} />
                   Hemen Ara
                 </button>
               </a>
               <a 
-                href="https://wa.me/9054349792013?text=Merhaba,%20bilgi%20almak%20istiyorum."
+                href="https://wa.me/905439792013?text=Merhaba,%20bilgi%20almak%20istiyorum."
                 target="_blank"
                 rel="noopener noreferrer"
               >

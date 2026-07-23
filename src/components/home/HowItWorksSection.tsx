@@ -121,7 +121,7 @@ export default function HowItWorksSection() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
-                href="https://wa.me/9054349792013?text=Merhaba,%20arac%C4%B1m%C4%B1n%20%C5%9Fase%20numaras%C4%B1%20(VIN)%20ile%20do%C4%9Frru%20par%C3%A7ay%C4%B1%20bulmak%20istiyorum."
+                href="https://wa.me/905439792013?text=Merhaba,%20arac%C4%B1m%C4%B1n%20%C5%9Fase%20numaras%C4%B1%20(VIN)%20ile%20do%C4%9Frru%20par%C3%A7ay%C4%B1%20bulmak%20istiyorum."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl font-bold transition-colors shadow-lg"

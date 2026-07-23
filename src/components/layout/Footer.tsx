@@ -12,7 +12,6 @@ import {
   MessageCircle,
   Facebook,
   Instagram,
-  Youtube,
   Send
 } from 'lucide-react'
 
@@ -58,9 +57,18 @@ const footerLinks = {
 }
 
 const socialLinks = [
-  { icon: Facebook, href: '#', label: 'Facebook' },
-  { icon: Instagram, href: '#', label: 'Instagram' },
-  { icon: Youtube, href: '#', label: 'YouTube' }
+  {
+    icon: Instagram,
+    href: 'https://www.instagram.com/imzavolkswagen/',
+    label: 'Instagram',
+    hoverBg: 'hover:bg-gradient-to-br hover:from-purple-600 hover:via-pink-600 hover:to-orange-500',
+  },
+  {
+    icon: Facebook,
+    href: 'https://www.facebook.com/p/%C4%B0mza-Otomotiv-Yedek-Par%C3%A7a-100064134310272/',
+    label: 'Facebook',
+    hoverBg: 'hover:bg-blue-600',
+  },
 ]
 
 export function Footer() {
@@ -75,9 +83,9 @@ export function Footer() {
               <img
                 src="/images/logo.png"
                 alt="İmza Volkswagen Logo"
-                width={56}
+                width={80}
                 height={56}
-                className="h-14 w-auto bg-white rounded-xl p-1.5 object-contain"
+                className="h-20 w-auto bg-white rounded-lg p-2 object-contain"
               />
               <div>
                 <h2 className="text-2xl font-bold text-white">İMZA VOLKSWAGEN</h2>
@@ -92,7 +100,7 @@ export function Footer() {
 
             {/* Contact Info */}
             <div className="space-y-3">
-              <a href="https://wa.me/9054349792013" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
+              <a href="https://wa.me/905439792013" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
                 <MessageCircle size={16} className="text-green-400 flex-shrink-0" />
                 <span className="font-semibold text-lg">WhatsApp: +90 543 979 20 13</span>
               </a>
@@ -123,8 +131,10 @@ export function Footer() {
                 <a
                   key={social.label}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="w-10 h-10 bg-white/10 hover:bg-vag-blue rounded-lg flex items-center justify-center transition-colors"
+                  className={`w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 ${social.hoverBg}`}
                 >
                   <social.icon size={18} />
                 </a>
@@ -203,7 +213,7 @@ export function Footer() {
             </p>
             
             <a 
-              href="https://wa.me/9054349792013?text=Merhaba,%20bilgi%20almak%20istiyorum."
+              href="https://wa.me/905439792013?text=Merhaba,%20bilgi%20almak%20istiyorum."
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full bg-green-500 hover:bg-green-600 text-white text-center py-3 rounded-xl font-semibold transition-colors mb-3"
@@ -212,7 +222,7 @@ export function Footer() {
             </a>
             
             <a 
-              href="tel:+9054349792013"
+              href="tel:+905439792013"
               className="block w-full bg-white/10 hover:bg-white/20 text-white text-center py-3 rounded-xl font-semibold transition-colors"
             >
               Hemen Arayın

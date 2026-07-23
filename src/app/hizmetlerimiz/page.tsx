@@ -170,14 +170,14 @@ export default function HizmetlerimizPage() {
               doğru parçayı tespit edip size fiyat ve stok bilgisi versin.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="tel:+9054349792013">
+              <a href="tel:+905439792013">
                 <button className="inline-flex items-center gap-2 bg-vag-blue hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-bold transition-colors shadow-lg">
                   <Phone size={18} />
                   Hemen Ara
                 </button>
               </a>
               <a
-                href="https://wa.me/9054349792013?text=Merhaba,%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+                href="https://wa.me/905439792013?text=Merhaba,%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
                 target="_blank"
                 rel="noopener noreferrer"
               >

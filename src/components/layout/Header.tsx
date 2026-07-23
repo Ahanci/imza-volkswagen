@@ -15,6 +15,8 @@ import {
   Phone,
   ChevronDown,
   Car,
+  Instagram,
+  Facebook,
 } from 'lucide-react'
 
 const navItems = [
@@ -70,7 +72,7 @@ export function Header() {
       <div className="bg-vag-navy text-white py-2 hidden md:block">
         <div className="container mx-auto px-4 flex justify-between items-center text-sm">
           <div className="flex items-center gap-6">
-            <a href="tel:+9054349792013" className="flex items-center gap-2 hover:text-vag-blue transition-colors">
+            <a href="tel:+905439792013" className="flex items-center gap-2 hover:text-vag-blue transition-colors">
               <Phone size={14} />
               <span>+90 543 979 20 13</span>
             </a>
@@ -81,6 +83,25 @@ export function Header() {
             <Link href="/kurumsal" className="hover:text-vag-blue transition-colors">Hakkımızda</Link>
             <Link href="/blog" className="hover:text-vag-blue transition-colors">Blog</Link>
             <Link href="/iletisim" className="hover:text-vag-blue transition-colors">İletişim</Link>
+            <span className="text-white/30">|</span>
+            <a
+              href="https://www.instagram.com/imzavolkswagen/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="text-white/80 hover:text-pink-400 transition-colors"
+            >
+              <Instagram size={16} />
+            </a>
+            <a
+              href="https://www.facebook.com/p/%C4%B0mza-Otomotiv-Yedek-Par%C3%A7a-100064134310272/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="text-white/80 hover:text-blue-400 transition-colors"
+            >
+              <Facebook size={16} />
+            </a>
           </div>
         </div>
       </div>
@@ -94,9 +115,9 @@ export function Header() {
               <img
                 src="/images/logo.png"
                 alt="İmza Volkswagen Logo"
-                width={48}
-                height={48}
-                className="h-12 w-auto object-contain"
+                width={80}
+                height={44}
+                className="h-14 w-auto md:h-16 object-contain"
               />
               <div>
                 <h1 className="text-xl md:text-2xl font-bold text-vag-navy leading-tight tracking-tight">İMZA VOLKSWAGEN</h1>
@@ -151,9 +172,9 @@ export function Header() {
                     <img
                       src="/images/logo.png"
                       alt="İmza Volkswagen Logo"
-                      width={40}
-                      height={40}
-                      className="h-10 w-auto object-contain"
+                      width={64}
+                      height={36}
+                      className="h-12 w-auto object-contain"
                     />
                     <div>
                       <h2 className="text-xl font-bold text-vag-navy">İMZA VOLKSWAGEN</h2>
@@ -190,7 +211,7 @@ export function Header() {
 
                   {/* Contact Info in Mobile */}
                   <div className="border-t pt-4 mt-4 space-y-3">
-                    <a href="tel:+9054349792013" className="flex items-center gap-3 p-3 bg-green-50 rounded-xl text-green-700 font-semibold">
+                    <a href="tel:+905439792013" className="flex items-center gap-3 p-3 bg-green-50 rounded-xl text-green-700 font-semibold">
                       <Phone size={20} />
                       +90 543 979 20 13
                     </a>

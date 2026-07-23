@@ -102,7 +102,7 @@ ${blogList || "- [Blog Ana Sayfa](" + SITE_URL + "/blog): VAG Grubu araç bakım
 - Adres: İvedik Sanayi Bölgesi, Altındağ / Ankara
 - Kurumsal Telefon: 0312 394 05 25 (mesai saatleri içinde)
 - WhatsApp: +90 543 979 20 13 (7/24 mesaj alır)
-- WhatsApp Link: https://wa.me/9054349792013
+- WhatsApp Link: https://wa.me/905439792013
 - E-posta: info@imzavolkswagen.com.tr
 - Çalışma Saatleri: Pazartesi – Cumartesi, 09:00 – 18:00
 - Ödeme: Nakit, Banka Havalesi / EFT, Kredi Kartı
