@@ -63,6 +63,22 @@ const nextConfig: NextConfig = {
       },
     ]
   },
+
+  async redirects() {
+    return [
+      // Eski /studio URL'leri /panel'e yönlendir
+      {
+        source: '/studio',
+        destination: '/panel',
+        permanent: true,
+      },
+      {
+        source: '/studio/:path*',
+        destination: '/panel/:path*',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 export default nextConfig
