@@ -1,13 +1,10 @@
-'use client'
-
 import React from 'react'
-import { useParams } from 'next/navigation'
 import Link from 'next/link'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { ProductCard } from '@/components/products/ProductCard'
 import { getBrandBySlug, getAllBrands, brands as allBrands } from '@/lib/brands-data'
-import { getProductsByBrand } from '@/lib/products-data'
+import { getProductsByBrand } from '@/lib/sanity/queries'
 import { FloatingCTA } from '@/components/home/FloatingCTA'
 import {
   ArrowLeft,
@@ -26,9 +23,14 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
 
-export default function BrandPage() {
-  const params = useParams()
-  const slug = params.slug as string
+export const revalidate = 30
+
+export default async function BrandPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}) {
+  const { slug } = await params
   const brand = getBrandBySlug(slug)
   
   if (!brand) {
@@ -51,7 +53,7 @@ export default function BrandPage() {
     )
   }
 
-  const brandProducts = getProductsByBrand(slug)
+  const brandProducts = await getProductsByBrand(slug)
   const otherBrands = allBrands.filter(b => b.slug !== slug)
 
   return (

@@ -48,6 +48,7 @@ const navItems = [
   },
   { name: 'Periyodik Bakım', href: '/periyodik-bakim' },
   { name: 'Ürünler', href: '/urunler' },
+  { name: 'Online Sipariş', href: '/turkiye-geneli-yedek-parca' },
   { name: 'Kurumsal', href: '/kurumsal' },
   { name: 'Blog', href: '/blog' },
   { name: 'İletişim', href: '/iletisim' },

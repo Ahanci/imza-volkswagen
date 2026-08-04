@@ -1,17 +1,18 @@
 import type { MetadataRoute } from "next";
 import { blogPosts } from "@/lib/blog-data";
 import { brands } from "@/lib/brands-data";
-import { products } from "@/lib/products-data";
+import { getAllProductSlugs } from "@/lib/sanity/queries";
 
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://imzayedekparca.com";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
 
   const staticPages: MetadataRoute.Sitemap = [
     { url: `${SITE_URL}/`, lastModified: now, changeFrequency: "weekly" as const, priority: 1.0 },
     { url: `${SITE_URL}/urunler`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
+    { url: `${SITE_URL}/turkiye-geneli-yedek-parca`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/markalar`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
     { url: `${SITE_URL}/blog`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.9 },
     { url: `${SITE_URL}/hizmetlerimiz`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.7 },
@@ -41,10 +42,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     }));
 
-  const productPages: MetadataRoute.Sitemap = (products || [])
-    .filter((p): p is NonNullable<typeof p> & { slug: string } => Boolean(p && p.slug))
-    .map((p) => ({
-      url: `${SITE_URL}/urunler/${p.slug}`,
+  const productSlugs = await getAllProductSlugs();
+
+  const productPages: MetadataRoute.Sitemap = (productSlugs || [])
+    .filter((slug): slug is string => Boolean(slug))
+    .map((slug) => ({
+      url: `${SITE_URL}/urunler/${slug}`,
       lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.6,

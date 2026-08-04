@@ -1,18 +1,16 @@
-'use client'
-
 import React from 'react'
-import { useParams } from 'next/navigation'
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { ProductCard } from '@/components/products/ProductCard'
-import { getProductBySlug, getProductsByBrand, products } from '@/lib/products-data'
 import { FloatingCTA } from '@/components/home/FloatingCTA'
-import { 
-  ArrowLeft, 
-  Package, 
-  Car, 
-  CheckCircle2, 
+import { getProductBySlug, getProductsByBrand, getAllProductSlugs } from '@/lib/sanity/queries'
+import {
+  ArrowLeft,
+  Package,
+  Car,
+  CheckCircle2,
   Phone,
   MessageCircle,
   Share2,
@@ -23,11 +21,72 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
 
-export default function ProductDetailPage() {
-  const params = useParams()
-  const slug = params.slug as string
-  const product = getProductBySlug(slug)
-  
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://imzayedekparca.com";
+
+export const revalidate = 30
+
+export async function generateStaticParams() {
+  const slugs = await getAllProductSlugs()
+  return slugs.map((slug) => ({ slug }))
+}
+
+// Her ürün için benzersiz SEO meta verisi.
+// Bu olmadan tüm ürün sayfaları anasayfaya canonical edip Google'da
+// liste sayfasına yönlendiriliyordu.
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}): Promise<Metadata> {
+  const { slug } = await params
+  const product = await getProductBySlug(slug)
+  if (!product) {
+    return {
+      title: 'Ürün Bulunamadı',
+      robots: { index: false, follow: false },
+    }
+  }
+
+  const title = `${product.name} | ${product.brand} ${product.category} Yedek Parça`
+  const description =
+    (product.description?.slice(0, 155)) ||
+    `${product.brand} ${product.name} — orijinal ve yan sanayi yedek parça. Ankara İvedik stoklu, Türkiye geneli kargo.`
+  const url = `${SITE_URL}/urunler/${product.slug}`
+
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title,
+      description,
+      url,
+      type: 'website',
+      siteName: 'İmza Volkswagen',
+      locale: 'tr_TR',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: { index: true, follow: true, 'max-image-preview': 'large' },
+    },
+  }
+}
+
+export default async function ProductDetailPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}) {
+  const { slug } = await params
+  const product = await getProductBySlug(slug)
+
   if (!product) {
     return (
       <div className="min-h-screen flex flex-col">
@@ -48,16 +107,42 @@ export default function ProductDetailPage() {
     )
   }
 
-  // Get related products (same brand, different product)
-  const relatedProducts = products
-    .filter(p => p.brandSlug === product.brandSlug && p.id !== product.id)
+  // Aynı markanın diğer ürünleri
+  const relatedProducts = (await getProductsByBrand(product.brandSlug))
+    .filter(p => p.id !== product.id)
     .slice(0, 4)
+
+  // Product schema (JSON-LD) — Google zengin sonuçları için
+  const productUrl = `${SITE_URL}/urunler/${product.slug}`
+  const productJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: product.name,
+    description: product.description || `${product.brand} ${product.category} yedek parça`,
+    category: product.category,
+    brand: { '@type': 'Brand', name: product.brand },
+    url: productUrl,
+    sku: product.oemNumbers?.[0] || product.id,
+    mpn: product.oemNumbers?.[0],
+    ...(product.image ? { image: product.image } : {}),
+    offers: {
+      '@type': 'Offer',
+      availability: 'https://schema.org/InStock',
+      priceCurrency: 'TRY',
+      url: productUrl,
+      seller: { '@type': 'Organization', name: 'İmza Volkswagen' },
+    },
+  }
 
   return (
     <div className="min-h-screen flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+      />
       {/* Header */}
       <Header />
-      
+
       {/* Main Content */}
       <main className="flex-1 bg-vag-light/30">
         {/* Breadcrumb */}
@@ -72,8 +157,8 @@ export default function ProductDetailPage() {
                 Ürünler
               </Link>
               <ChevronRight size={14} className="text-muted-foreground" />
-              <Link 
-                href={`/markalar/${product.brandSlug}`} 
+              <Link
+                href={`/markalar/${product.brandSlug}`}
                 className="text-muted-foreground hover:text-vag-blue transition-colors"
               >
                 {product.brand}
@@ -91,7 +176,7 @@ export default function ProductDetailPage() {
               {/* Left Column - Main Info */}
               <div className="lg:col-span-2 space-y-6">
                 {/* Back Button */}
-                <Link 
+                <Link
                   href="/urunler"
                   className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-vag-blue transition-colors mb-4"
                 >
@@ -106,11 +191,11 @@ export default function ProductDetailPage() {
                       <Package className="text-vag-blue" size={80} />
                     </div>
                   </div>
-                  
+
                   <CardContent className="p-6 md:p-8">
                     {/* Badges */}
                     <div className="flex flex-wrap gap-2 mb-4">
-                      <Badge 
+                      <Badge
                         className="text-white"
                         style={{ backgroundColor: getBrandColor(product.brandSlug) }}
                       >
@@ -134,7 +219,7 @@ export default function ProductDetailPage() {
 
                     {/* Action Buttons */}
                     <div className="flex flex-wrap gap-4 mb-8">
-                      <a href="https://wa.me/905439792013?text=Merhaba, bu ürün hakkında bilgi almak istiyorum: %0A%0A{encodeURIComponent(product.name)}" target="_blank" rel="noopener noreferrer">
+                      <a href={`https://wa.me/905439792013?text=Merhaba, bu ürün hakkında bilgi almak istiyorum: %0A%0A${encodeURIComponent(product.name)}`} target="_blank" rel="noopener noreferrer">
                         <Button size="lg" className="bg-green-500 hover:bg-green-600 gap-2">
                           <MessageCircle size={20} />
                           WhatsApp ile Sor
@@ -181,7 +266,7 @@ export default function ProductDetailPage() {
                       <Package size={20} className="text-vag-blue" />
                       Teknik Özellikler
                     </h3>
-                    
+
                     <dl className="space-y-3">
                       {Object.entries(product.specifications).map(([key, value]) => (
                         <div key={key} className="flex justify-between py-2 border-b border-dashed last:border-0">
@@ -192,7 +277,7 @@ export default function ProductDetailPage() {
                     </dl>
 
                     {/* OEM Numbers */}
-                    {product.oemNumbers && (
+                    {product.oemNumbers && product.oemNumbers.length > 0 && (
                       <div className="mt-4 pt-4 border-t">
                         <p className="text-sm font-medium text-muted-foreground mb-2">OE Numaraları:</p>
                         <div className="flex flex-wrap gap-2">
@@ -214,10 +299,10 @@ export default function ProductDetailPage() {
                       <Car size={20} className="text-vag-blue" />
                       Uyumlu Araçlar
                     </h3>
-                    
+
                     <div className="space-y-2">
                       {product.compatibleModels.map((model) => (
-                        <div 
+                        <div
                           key={model}
                           className="flex items-center gap-3 p-3 bg-vag-light rounded-lg"
                         >
@@ -237,7 +322,7 @@ export default function ProductDetailPage() {
                       Güncel fiyat ve stok durumu için bizimle iletişime geçin.
                     </p>
                     <div className="space-y-3">
-                      <a 
+                      <a
                         href={`https://wa.me/905439792013?text=Merhaba, ${product.name} için fiyat bilgisi almak istiyorum.`}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -276,10 +361,10 @@ export default function ProductDetailPage() {
           </div>
         </section>
       </main>
-      
+
       {/* Footer */}
       <Footer />
-      
+
       {/* Floating CTA */}
       <FloatingCTA />
     </div>

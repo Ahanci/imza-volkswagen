@@ -1,17 +1,20 @@
-'use client'
-
 import React from 'react'
 import Link from 'next/link'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { getAllBrands } from '@/lib/brands-data'
-import { getProductsByBrand } from '@/lib/products-data'
+import { getAllProducts } from '@/lib/sanity/queries'
 import { FloatingCTA } from '@/components/home/FloatingCTA'
 import { Car, ChevronRight, Package } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 
-export default function MarkalarPage() {
+export const revalidate = 30
+
+export default async function MarkalarPage() {
   const brands = getAllBrands()
+  const allProducts = await getAllProducts()
+  const countForBrand = (slug: string) =>
+    allProducts.filter(p => p.brandSlug === slug).length
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -46,7 +49,7 @@ export default function MarkalarPage() {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {brands.map((brand) => {
-                const productCount = getProductsByBrand(brand.slug).length
+                const productCount = countForBrand(brand.slug)
                 return (
                   <Link key={brand.slug} href={`/markalar/${brand.slug}`}>
                     <Card className="group card-hover cursor-pointer border-2 hover:border-vag-blue/30 h-full overflow-hidden">

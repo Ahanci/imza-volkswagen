@@ -3141,6 +3141,97 @@ Güç ve performans istiyorsanız 2.0 TSI (190 HP), yakıt ekonomisi ve düşük
     readTime: 11,
     tags: ['Skoda', 'Octavia', 'Turbo', 'TSI', 'TDI', 'Orijinal', 'Yan Sanayi', 'Ankara']
   }
+,
+{
+    id: 'blog-033',
+    title: 'Türkiye Geneli VAG Yedek Parça Tedariği: Ankara’dan Kapınıza Kargo Rehberi',
+    slug: 'turkiye-geneli-vag-yedek-parca-tedarigi-kargo-rehberi',
+    excerpt: 'Ankara İvedik’ten 81 ile Volkswagen, Audi, Seat, Skoda, Cupra ve Porsche yedek parça kargosu. VIN ile doğru parça tespiti, teslimat süreleri, kargo firmaları ve sipariş adımları bu rehberde.',
+    content: `
+## Türkiye Geneli VAG Yedek Parça Tedariği
+
+**İmza Volkswagen**, Ankara İvedik Sanayi Bölgesi’nden Türkiye’nin 81 iline **VAG grubu yedek parça** tedarik ediyor. Volkswagen, Audi, Seat, Skoda, Cupra ve Porsche araçlarınız için ihtiyaç duyduğunuz orijinal (OEM) ve yüksek kaliteli yan sanayi (OEE) parçaları, stoktan aynı gün sevkiyat ile kapınıza gönderiyoruz.
+
+Bulunduğunuz şehir önemli değil; İstanbul, İzmir, Bursa, Antalya, Adana, Trabzon, Gaziantep ya da Diyarbakır — VIN numaranızla doğru parçayı tespit ettikten sonra ortalama **1-3 iş günü** içinde parçanız elinizde oluyor.
+
+### Neden Ankara’dan VAG Parçası Almalısınız?
+
+Ankara İvedik, Türkiye’nin en büyük otomotiv yedek parça merkezlerinden biridir. Avantajları:
+
+* **Geniş stok**: Tek çatı altında 20.000+ VAG parçası
+* **Rekabetçi fiyat**: Toptan depo fiyatları, aracısız tedarik
+* **Uzmanlık**: Sadece VAG grubuna odaklanan 20+ yıllık tecrübe
+* **Hızlı lojistik**: Merkezi konum sayesinde tüm bölgelere kısa teslimat
+
+## VIN ile Doğru Parça Tespiti (Ücretsiz)
+
+VAG grubu araçlarda aynı modelin farklı donanım ve motor kodları farklı parçalar gerektirir. Örneğin bir VW Golf 7’de 1.4 TSI, 2.0 TDI ve GTI için fren diskleri birbirinden farklıdır. **Yanlış parça almanın önüne geçmenin tek yolu VIN (şase numarası) ile tespittir.**
+
+VIN numaranızı bize WhatsApp üzerinden göndermeniz yeterli:
+
+1. Araç ruhsatınızda veya cam altındaki şasede 17 haneli VIN yer alır
+2. VIN’i +90 543 979 20 13 numarasına gönderin
+3. Aracınızın tam uyumlu parçasını, orijinal ve yan sanayi seçenekleriyle birlikte teklif edelim
+4. Bu hizmet **tamamen ücretsizdir**
+
+## Kargo Süreci ve Teslimat Süreleri
+
+Saat 16:00’a kadar onaylanan ve ödemesi alınan siparişler **aynı gün kargoya** verilir. Aşağıdaki kargo firmalarıyla çalışıyoruz:
+
+* Barın Kargo
+* MNG Kargo
+* Aras Kargo
+* Yurtiçi Kargo
+
+| Bölge | Örnek İller | Tahmini Teslimat |
+| --- | --- | --- |
+| Marmara | İstanbul, Bursa, Kocaeli | 1-2 iş günü |
+| Ege | İzmir, Manisa, Aydın | 1-2 iş günü |
+| İç Anadolu | Konya, Kayseri, Eskişehir | 1-2 iş günü |
+| Akdeniz | Antalya, Adana, Mersin | 2-3 iş günü |
+| Karadeniz | Trabzon, Samsun, Ordu | 2-3 iş günü |
+| Doğu & Güneydoğu | Erzurum, Gaziantep, Van | 2-4 iş günü |
+
+Kargo ücreti alıcıya aittir ve sipariş onayında netleşir. Kapıda ödeme seçeneği de mevcuttur.
+
+## Orijinal (OEM) mu Yan Sanayi (OEE) mu?
+
+Her iki seçeneği de stoktan sunuyoruz. Karar verirken şunları göz önünde bulundurun:
+
+* **Orijinal (OEM)**: Fabrika standartlarında, maksimum ömür ve ECU uyumu garantili. Fiyatı daha yüksektir.
+* **Yan Sanayi (OEE)**: Bosch, Mann, Mahle, ATE, TRW gibi markaların yüksek kaliteli alternatifleri. Performans farkı minimal, fiyat avantajı belirgin.
+
+**Dikkat:** İmza Volkswagen olarak **çıkma, hurda veya ikinci el parça satışı yapmıyoruz.** Tüm parçalar sıfır, faturalı ve garantilidir.
+
+## Sıkça Sorulan Sorular
+
+**Türkiye’nin her iline kargo gönderiyor musunuz?**
+Evet. Ankara İvedik merkez depomuzdan 81 ilin tümüne VAG grubu yedek parça kargosu yapıyoruz. Tahmini teslimat 1-4 iş günü arasındadır.
+
+**Doğru parçayı nasıl bulacağım, yanlış parça gelirse?**
+VIN (şase) numaranızı gönderin; aracınızın donanım ve motor koduna göre %100 uyumlu parçayı biz tespit edelim. Bu hizmet ücretsizdir ve yanlış parça riskini ortadan kaldırır.
+
+**Kargo ücretini kim öder?**
+Kargo ücreti alıcıya aittir. Barın, MNG, Aras ve Yurtiçi Kargo ile gönderim yapıyoruz; kapıda ödeme seçeneği de sunulabilir.
+
+**Aynı gün kargoya veriliyor mu?**
+Saat 16:00’a kadar onaylanan ve ödemesi tamamlanan siparişler aynı gün sevk edilir. Hafta sonu (Pazar) kargo çalışmadığı için pazartesi ilk sevk edilir.
+
+**Garanti ve iade nasıl işliyor?**
+Tüm parçalar faturalıdır ve parça tipine göre 1-2 yıl garantilidir. Uyum bilgisi dışında bir sorun yaşarsanız iade/değişim yapıyoruz.
+
+---
+
+*İmza Volkswagen — Ankara İvedik merkezli, 20+ yıllık VAG grubu yedek parça uzmanı. Orijinal ve yan sanayi parça, 81 il kargo. VIN teklifi için: +90 543 979 20 13 (WhatsApp) ya da [Türkiye geneli tedarik sayfamız](/turkiye-geneli-yedek-parca).*
+    `,
+    category: "Parça Rehberi",
+    categorySlug: 'parca-rehberi',
+    author: "İmza Volkswagen",
+    authorRole: "Teknik Ekip",
+    publishedAt: '2026-08-04',
+    readTime: 8,
+    tags: ['VAG Yedek Parça', 'Türkiye Kargo', 'Ankara', 'Orijinal', 'Yan Sanayi', 'VIN', 'Online Sipariş']
+  }
 ] as BlogPost[])
 
 // Yardımcı fonksiyonlar: tanımsız (undefined) elemanları filtrele
