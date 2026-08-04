@@ -186,9 +186,24 @@ export default async function ProductDetailPage({
 
                 {/* Product Header Card */}
                 <Card className="overflow-hidden">
-                  <div className="bg-gradient-to-br from-vag-light to-gray-100 p-8 md:p-12 flex items-center justify-center">
-                    <div className="w-40 h-40 rounded-3xl bg-white shadow-xl flex items-center justify-center">
-                      <Package className="text-vag-blue" size={80} />
+                  <div
+                    className="relative p-8 md:p-16 flex items-center justify-center overflow-hidden"
+                    style={{
+                      background: `linear-gradient(135deg, ${getBrandColor(product.brandSlug)}14 0%, ${getBrandColor(product.brandSlug)}05 100%)`,
+                    }}
+                  >
+                    {/* Dekoratif daireler */}
+                    <div
+                      className="absolute -top-16 -right-16 w-56 h-56 rounded-full opacity-10"
+                      style={{ backgroundColor: getBrandColor(product.brandSlug) }}
+                    />
+                    <div
+                      className="absolute -bottom-20 -left-12 w-48 h-48 rounded-full opacity-5"
+                      style={{ backgroundColor: getBrandColor(product.brandSlug) }}
+                    />
+                    {/* İkon */}
+                    <div className="relative w-44 h-44 rounded-3xl bg-white shadow-xl flex items-center justify-center">
+                      <Package style={{ color: getBrandColor(product.brandSlug) }} size={84} />
                     </div>
                   </div>
 
