@@ -8,7 +8,7 @@ import { FloatingCTA } from '@/components/home/FloatingCTA'
 import { Car, ChevronRight, Package } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 
-export const revalidate = 30
+export const dynamic = 'force-dynamic'
 
 export default async function MarkalarPage() {
   const brands = getAllBrands()

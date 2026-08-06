@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { ChevronRight, Package, Car, CheckCircle2 } from 'lucide-react'
@@ -41,23 +42,32 @@ export function ProductCard({ product }: ProductCardProps) {
   return (
     <Link href={`/urunler/${product.slug}`} className="block h-full">
       <Card className="group card-hover cursor-pointer border border-border hover:border-vag-blue/40 h-full overflow-hidden flex flex-col shadow-sm hover:shadow-xl">
-        {/* Marka renkli görsel alanı */}
-        <div
-          className="relative p-8 flex items-center justify-center overflow-hidden"
-          style={{
-            background: `linear-gradient(135deg, ${withAlpha(color, 0.10)} 0%, ${withAlpha(color, 0.03)} 100%)`,
-          }}
-        >
-          {/* Dekoratif daire */}
-          <div
-            className="absolute -top-10 -right-10 w-32 h-32 rounded-full opacity-20 transition-transform duration-500 group-hover:scale-125"
-            style={{ backgroundColor: color }}
-          />
-
-          {/* İkon */}
-          <div className="relative w-20 h-20 rounded-2xl bg-white shadow-md flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-            <Package size={36} style={{ color }} />
-          </div>
+        {/* Görsel alanı — resim varsa gerçek resim, yoksa marka renkli placeholder */}
+        <div className="relative aspect-[4/3] overflow-hidden bg-vag-light">
+          {product.image ? (
+            <Image
+              src={product.image}
+              alt={product.name}
+              fill
+              sizes="(max-width: 768px) 50vw, (max-width: 1280px) 33vw, 25vw"
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+          ) : (
+            <div
+              className="absolute inset-0 flex items-center justify-center"
+              style={{
+                background: `linear-gradient(135deg, ${withAlpha(color, 0.10)} 0%, ${withAlpha(color, 0.03)} 100%)`,
+              }}
+            >
+              <div
+                className="absolute -top-10 -right-10 w-32 h-32 rounded-full opacity-20 transition-transform duration-500 group-hover:scale-125"
+                style={{ backgroundColor: color }}
+              />
+              <div className="relative w-20 h-20 rounded-2xl bg-white shadow-md flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Package size={36} style={{ color }} />
+              </div>
+            </div>
+          )}
 
           {/* Marka rozeti */}
           <Badge

@@ -1,11 +1,12 @@
 import React from 'react'
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { ProductCard } from '@/components/products/ProductCard'
 import { FloatingCTA } from '@/components/home/FloatingCTA'
-import { getProductBySlug, getProductsByBrand, getAllProductSlugs } from '@/lib/sanity/queries'
+import { getProductBySlug, getProductsByBrand } from '@/lib/sanity/queries'
 import {
   ArrowLeft,
   Package,
@@ -24,12 +25,7 @@ import { Card, CardContent } from '@/components/ui/card'
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://imzayedekparca.com";
 
-export const revalidate = 30
-
-export async function generateStaticParams() {
-  const slugs = await getAllProductSlugs()
-  return slugs.map((slug) => ({ slug }))
-}
+export const dynamic = 'force-dynamic'
 
 // Her ürün için benzersiz SEO meta verisi.
 // Bu olmadan tüm ürün sayfaları anasayfaya canonical edip Google'da
@@ -186,26 +182,39 @@ export default async function ProductDetailPage({
 
                 {/* Product Header Card */}
                 <Card className="overflow-hidden">
-                  <div
-                    className="relative p-8 md:p-16 flex items-center justify-center overflow-hidden"
-                    style={{
-                      background: `linear-gradient(135deg, ${getBrandColor(product.brandSlug)}14 0%, ${getBrandColor(product.brandSlug)}05 100%)`,
-                    }}
-                  >
-                    {/* Dekoratif daireler */}
-                    <div
-                      className="absolute -top-16 -right-16 w-56 h-56 rounded-full opacity-10"
-                      style={{ backgroundColor: getBrandColor(product.brandSlug) }}
-                    />
-                    <div
-                      className="absolute -bottom-20 -left-12 w-48 h-48 rounded-full opacity-5"
-                      style={{ backgroundColor: getBrandColor(product.brandSlug) }}
-                    />
-                    {/* İkon */}
-                    <div className="relative w-44 h-44 rounded-3xl bg-white shadow-xl flex items-center justify-center">
-                      <Package style={{ color: getBrandColor(product.brandSlug) }} size={84} />
+                  {product.image ? (
+                    <div className="relative aspect-[16/10] bg-vag-light">
+                      <Image
+                        src={product.image}
+                        alt={product.name}
+                        fill
+                        priority
+                        sizes="(max-width: 1024px) 100vw, 66vw"
+                        className="object-cover"
+                      />
                     </div>
-                  </div>
+                  ) : (
+                    <div
+                      className="relative p-8 md:p-16 flex items-center justify-center overflow-hidden"
+                      style={{
+                        background: `linear-gradient(135deg, ${getBrandColor(product.brandSlug)}14 0%, ${getBrandColor(product.brandSlug)}05 100%)`,
+                      }}
+                    >
+                      {/* Dekoratif daireler */}
+                      <div
+                        className="absolute -top-16 -right-16 w-56 h-56 rounded-full opacity-10"
+                        style={{ backgroundColor: getBrandColor(product.brandSlug) }}
+                      />
+                      <div
+                        className="absolute -bottom-20 -left-12 w-48 h-48 rounded-full opacity-5"
+                        style={{ backgroundColor: getBrandColor(product.brandSlug) }}
+                      />
+                      {/* İkon */}
+                      <div className="relative w-44 h-44 rounded-3xl bg-white shadow-xl flex items-center justify-center">
+                        <Package style={{ color: getBrandColor(product.brandSlug) }} size={84} />
+                      </div>
+                    </div>
+                  )}
 
                   <CardContent className="p-6 md:p-8">
                     {/* Badges */}

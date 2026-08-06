@@ -4,13 +4,15 @@
  * Tüm ürün listesi/detay sayfaları artık Sanity CMS'den okuyor.
  * `src/lib/products-data.ts` sadece seed kaynağı ve `Product` tipi için kullanılır.
  *
- * Yenileme: ISR `revalidate: 30` (otomatik) + on-demand `revalidatePath`
- * (/api/revalidate üzerinden Sanity webhook'u ile, anlık).
+ * Yenileme: sayfalar `force-dynamic` + fetch `no-store` → her istekte
+ * Sanity'den taze veri. Panelde eklenen ürün Vercel'de anında görünür.
+ * (On-demand /api/revalidate webhook'u da mevcut.)
  */
 import { sanityClient } from "@/sanity/lib/client";
 import type { Product } from "@/lib/products-data";
 
-const FETCH_OPTIONS = { next: { revalidate: 30 } };
+// Önbellek yok — her istekte taze (Vercel'de yeni ürünler anında görünür)
+const FETCH_OPTIONS = { cache: 'no-store' as const };
 
 const productProjection = `{
   "id": _id,
