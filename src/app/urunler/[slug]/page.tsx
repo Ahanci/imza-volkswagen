@@ -183,14 +183,14 @@ export default async function ProductDetailPage({
                 {/* Product Header Card */}
                 <Card className="overflow-hidden">
                   {product.image ? (
-                    <div className="relative aspect-[16/10] bg-vag-light">
+                    <div className="relative aspect-[4/3] bg-vag-light overflow-hidden">
                       <Image
                         src={product.image}
                         alt={product.name}
                         fill
                         priority
                         sizes="(max-width: 1024px) 100vw, 66vw"
-                        className="object-cover"
+                        className="object-contain"
                       />
                     </div>
                   ) : (

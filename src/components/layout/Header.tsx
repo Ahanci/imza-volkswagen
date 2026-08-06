@@ -20,7 +20,6 @@ import {
 } from 'lucide-react'
 
 const navItems = [
-  { name: 'Ana Sayfa', href: '/' },
   {
     name: 'Hizmetlerimiz',
     href: '/hizmetlerimiz',
@@ -127,7 +126,7 @@ export function Header() {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-1">
+            <nav className="hidden xl:flex items-center gap-1 flex-nowrap">
               {navItems.map((item) => (
                 <div key={item.name}>
                   {item.children ? (
@@ -160,7 +159,7 @@ export function Header() {
 
             {/* Mobile Menu Button */}
             <Sheet>
-              <SheetTrigger asChild className="lg:hidden">
+              <SheetTrigger asChild className="xl:hidden">
                 <Button variant="ghost" size="icon" aria-label="Menüyü aç">
                   <Menu size={26} />
                 </Button>
@@ -228,9 +227,9 @@ export function Header() {
       </div>
 
       {/* Category Navigation Bar */}
-      <div className="hidden lg:block bg-vag-navy">
+      <div className="hidden xl:block bg-vag-navy">
         <div className="container mx-auto px-4">
-          <nav className="flex items-center gap-1">
+          <nav className="flex items-center gap-1 flex-nowrap">
             {navItems.map((item) => (
               <div key={item.name}>
                 {item.children ? (
