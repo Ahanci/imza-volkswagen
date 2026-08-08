@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
-import { blogPosts } from "@/lib/blog-data";
 import { brands } from "@/lib/brands-data";
 import { getAllProductSlugs } from "@/lib/sanity/queries";
+import { getAllBlogPosts } from "@/lib/sanity/blog-queries";
 
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://www.imzayedekparca.com";
@@ -21,11 +21,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${SITE_URL}/iletisim`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.6 },
   ];
 
+  const blogPosts = await getAllBlogPosts();
+
   const blogPages: MetadataRoute.Sitemap = (blogPosts || [])
-    .filter(
-      (p): p is NonNullable<typeof p> & { slug: string; publishedAt: string } =>
-        Boolean(p && p.slug && p.publishedAt)
-    )
+    .filter((p) => Boolean(p && p.slug && p.publishedAt))
     .map((p) => ({
       url: `${SITE_URL}/blog/${p.slug}`,
       lastModified: new Date(p.publishedAt),

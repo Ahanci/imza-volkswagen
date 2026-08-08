@@ -3,7 +3,8 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
-import { getBlogPostBySlug, blogPosts } from '@/lib/blog-data'
+import type { Metadata } from 'next'
+import { getBlogPostBySlug, getAllBlogPosts } from '@/lib/sanity/blog-queries'
 import { FloatingCTA } from '@/components/home/FloatingCTA'
 import {
   ArrowLeft,
@@ -77,23 +78,53 @@ function formatContent(content: string): string {
     .replace(/---/g, '<hr class="my-8 border-t border-gray-200" />')
 }
 
+// Her yazı için benzersiz SEO meta verisi
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}): Promise<Metadata> {
+  const { slug } = await params
+  const post = await getBlogPostBySlug(slug)
+  if (!post) return {}
+  const title = post.title
+  const description = post.excerpt
+  const url = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.imzayedekparca.com'}/blog/${post.slug}`
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title,
+      description,
+      url,
+      type: 'article',
+      publishedTime: post.publishedAt,
+      authors: [post.author],
+      siteName: 'İmza Volkswagen',
+      locale: 'tr_TR',
+    },
+    twitter: { card: 'summary_large_image', title, description },
+  }
+}
+
 export default async function BlogPostPage({
   params,
 }: {
   params: Promise<{ slug: string }>
 }) {
   const { slug } = await params
-  const post = getBlogPostBySlug(slug)
+  const post = await getBlogPostBySlug(slug)
 
   if (!post) {
     notFound()
   }
 
-  const relatedPosts = blogPosts
+  const relatedPosts = (await getAllBlogPosts())
     .filter((p) => p.categorySlug === post.categorySlug && p.id !== post.id)
     .slice(0, 3)
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://imza-oto.vercel.app'
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.imzayedekparca.com'
   const articleUrl = `${siteUrl}/blog/${post.slug}`
   const faqs = extractFaqs(post.content)
 
