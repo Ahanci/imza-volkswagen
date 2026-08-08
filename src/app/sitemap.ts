@@ -53,5 +53,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.6,
     }));
 
-  return [...staticPages, ...blogPages, ...brandPages, ...productPages];
+  // Hizmet detay sayfaları (statik, 7 kategori)
+  const serviceSlugs = ["motor", "fren", "suspansiyon", "elektrik", "filtre", "sanziman", "egzoz"];
+  const servicePages: MetadataRoute.Sitemap = serviceSlugs.map((slug) => ({
+    url: `${SITE_URL}/hizmetlerimiz/${slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  return [...staticPages, ...servicePages, ...blogPages, ...brandPages, ...productPages];
 }
