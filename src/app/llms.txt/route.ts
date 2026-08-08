@@ -63,6 +63,8 @@ export async function GET() {
 
 > Türkiye'nin önde gelen VAG Grubu (Volkswagen, Audi, Seat, Skoda, Cupra, Porsche) yedek parça tedarikçisi. Orijinal (OEM) ve yüksek kaliteli yan sanayi (OEE) yedek parça. Çıkma / hurda parça satışımız yoktur. Ankara İvedik Sanayi Bölgesi, 20+ yıl tecrübe.
 
+> Kapsamlı içerik (AI için detaylı bilgi tabanı): ${SITE_URL}/llms-full.txt
+
 ## Ana Sayfalar
 
 - [Anasayfa](${SITE_URL}/): İmza Volkswagen — VAG Grubu yedek parça uzmanı, Ankara İvedik.

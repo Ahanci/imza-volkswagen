@@ -28,6 +28,7 @@ const productProjection = `{
   "oemNumbers": coalesce(oemNumbers, []),
   "compatibleModels": coalesce(compatibleModels, []),
   "imageUrl": images[0].asset->url,
+  "price": price,
   "isFeatured": coalesce(isFeatured, false),
   "publishedAt": publishedAt
 }`;
@@ -46,6 +47,7 @@ interface RawProduct {
   oemNumbers?: string[];
   compatibleModels: string[];
   imageUrl?: string | null;
+  price?: number | null;
   isFeatured?: boolean;
   publishedAt?: string | null;
 }
@@ -69,6 +71,7 @@ function mapProduct(p: RawProduct): Product {
     oemNumbers: p.oemNumbers,
     compatibleModels: p.compatibleModels ?? [],
     image: p.imageUrl ?? undefined,
+    price: p.price ?? undefined,
   };
 }
 

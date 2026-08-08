@@ -14,6 +14,7 @@ export interface Product {
   oemNumbers?: string[]
   compatibleModels: string[]
   image?: string
+  price?: number
 }
 
 export const products: Product[] = [

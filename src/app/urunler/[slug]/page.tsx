@@ -125,8 +125,11 @@ export default async function ProductDetailPage({
       '@type': 'Offer',
       availability: 'https://schema.org/InStock',
       priceCurrency: 'TRY',
+      // Fiyat opsiyonel — yoksa teklif üzerine (itemCondition/seller yeterli)
+      ...(product.price ? { price: String(product.price) } : {}),
       url: productUrl,
-      seller: { '@type': 'Organization', name: 'İmza Volkswagen' },
+      itemCondition: 'https://schema.org/NewCondition',
+      seller: { '@type': 'AutoPartsStore', name: 'İmza Volkswagen' },
     },
   }
 
