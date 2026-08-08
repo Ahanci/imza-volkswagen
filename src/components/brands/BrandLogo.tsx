@@ -1,47 +1,44 @@
-import React from 'react'
+'use client'
+
+import { useState } from 'react'
 
 /**
- * Marka logosu (SVG). /public/images/brands/{slug}.svg dosyalarını kullanır.
- * Tüm logolar beyazdır → koyu marka arka planlarında görünür.
- * Bilinmeyen slug'da harf kısaltmasına (initials) döner.
+ * Marka logosu. /public/images/brands/{slug}.svg varsa onu gösterir;
+ * dosya yoksa (veya yüklenemezse) temiz harf kısaltmasına döner.
+ *
+ * Gerçek logo eklemek için: /public/images/brands/{slug}.svg koy, hepsi bu.
+ * (slug: volkswagen, audi, seat, skoda, cupra, porsche)
  */
-const LOGOS: Record<string, string> = {
-  volkswagen: '/images/brands/volkswagen.svg',
-  audi: '/images/brands/audi.svg',
-  seat: '/images/brands/seat.svg',
-  skoda: '/images/brands/skoda.svg',
-  cupra: '/images/brands/cupra.svg',
-  porsche: '/images/brands/porsche.svg',
+const INITIALS: Record<string, string> = {
+  volkswagen: 'VW',
+  audi: 'AU',
+  seat: 'SE',
+  skoda: 'SK',
+  cupra: 'CU',
+  porsche: 'P',
 }
 
 interface BrandLogoProps {
   slug: string
   name?: string
-  /** Harf fallback'i (logo dosyası yoksa) */
-  initials?: string
+  /** Sadece logo <img> için boyut. Harf fallback'i parent kutudan stil alır. */
   className?: string
 }
 
-export function BrandLogo({
-  slug,
-  name,
-  initials,
-  className = 'h-8 w-8',
-}: BrandLogoProps) {
-  const src = LOGOS[slug]
-  if (!src) {
-    return (
-      <span className={`font-bold leading-none text-white ${className}`}>
-        {initials ?? name?.slice(0, 2).toUpperCase() ?? ''}
-      </span>
-    )
+export function BrandLogo({ slug, name, className = 'h-8 w-8' }: BrandLogoProps) {
+  const [failed, setFailed] = useState(false)
+
+  if (failed) {
+    // Parent kutunun font/renk stilini miras alır (text-white font-bold text-2xl vb.)
+    return <>{INITIALS[slug] ?? name?.slice(0, 2).toUpperCase() ?? ''}</>
   }
+
   return (
     <img
-      src={src}
+      src={`/images/brands/${slug}.svg`}
       alt={name ? `${name} logosu` : 'Marka logosu'}
       className={`object-contain ${className}`}
-      loading="lazy"
+      onError={() => setFailed(true)}
     />
   )
 }
