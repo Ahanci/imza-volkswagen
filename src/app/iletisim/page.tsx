@@ -162,12 +162,8 @@ export default function IletisimPage() {
                         <h3 className="font-semibold text-vag-navy mb-2">Çalışma Saatleri</h3>
                         <ul className="space-y-1 text-sm">
                           <li className="flex justify-between">
-                            <span className="text-muted-foreground">Pazartesi – Cuma</span>
+                            <span className="text-muted-foreground">Pazartesi – Cumartesi</span>
                             <span className="font-medium text-vag-navy">09:00 – 18:00</span>
-                          </li>
-                          <li className="flex justify-between">
-                            <span className="text-muted-foreground">Cumartesi</span>
-                            <span className="font-medium text-vag-navy">10:00 – 15:00</span>
                           </li>
                           <li className="flex justify-between">
                             <span className="text-muted-foreground">Pazar</span>
