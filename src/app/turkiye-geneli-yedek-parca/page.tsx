@@ -6,6 +6,7 @@ import { FloatingCTA } from '@/components/home/FloatingCTA'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { brands } from '@/lib/brands-data'
+import { BrandLogo } from '@/components/brands/BrandLogo'
 import {
   Truck, MapPin, MessageCircle, Phone, CheckCircle2, ShieldCheck,
   Clock, Package, Search, ClipboardCheck, Store,
@@ -268,7 +269,7 @@ export default function TurkiyeGeneliPage() {
                             className="w-16 h-16 rounded-2xl flex items-center justify-center font-bold text-2xl shadow-lg group-hover:scale-110 transition-transform"
                             style={{ backgroundColor: 'rgba(255,255,255,0.15)', color: '#FFFFFF' }}
                           >
-                            {brand.logo}
+                            <BrandLogo slug={brand.slug} name={brand.name} className="h-10 w-10" />
                           </div>
                           <div>
                             <h3 className="text-xl font-bold text-white">{brand.name}</h3>

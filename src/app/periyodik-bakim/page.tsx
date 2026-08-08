@@ -11,6 +11,7 @@ import {
   Calendar, AlertCircle, Award, Truck, Sparkles, Car, Package,
 } from 'lucide-react'
 import { brands, getAllBrands, type PeriyodikPaket } from '@/lib/brands-data'
+import { BrandLogo } from '@/components/brands/BrandLogo'
 
 export const metadata: Metadata = {
   title: 'VAG Periyodik Bakım Paketleri | İmza Volkswagen - Ankara İvedik',
@@ -146,7 +147,7 @@ export default function PeriyodikBakimPage() {
                     className="w-14 h-14 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-md"
                     style={{ backgroundColor: brand.bgColor }}
                   >
-                    {brand.logo}
+                    <BrandLogo slug={brand.slug} name={brand.name} className="h-9 w-9" />
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-vag-navy">{brand.name} Bakım Paketleri</h3>

@@ -5,6 +5,7 @@ import { Footer } from '@/components/layout/Footer'
 import { ProductCard } from '@/components/products/ProductCard'
 import { getBrandBySlug, getAllBrands, brands as allBrands } from '@/lib/brands-data'
 import { getProductsByBrand } from '@/lib/sanity/queries'
+import { BrandLogo } from '@/components/brands/BrandLogo'
 import { FloatingCTA } from '@/components/home/FloatingCTA'
 import {
   ArrowLeft,
@@ -93,7 +94,7 @@ export default async function BrandPage({
                   className="w-24 h-24 rounded-2xl flex items-center justify-center text-white font-bold text-3xl shadow-2xl"
                   style={{ backgroundColor: 'rgba(255,255,255,0.15)', backdropFilter: 'blur(10px)' }}
                 >
-                  {brand.logo}
+                  <BrandLogo slug={brand.slug} name={brand.name} className="h-16 w-16" />
                 </div>
                 <div>
                   <h1 className="text-4xl md:text-5xl font-bold mb-2">{brand.name}</h1>
@@ -347,7 +348,7 @@ export default async function BrandPage({
                             className="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-sm"
                             style={{ backgroundColor: b.bgColor }}
                           >
-                            {b.logo}
+                            <BrandLogo slug={b.slug} name={b.name} className="h-6 w-6" />
                           </div>
                           <span className="font-medium text-vag-navy group-hover:text-vag-blue transition-colors">
                             {b.name}

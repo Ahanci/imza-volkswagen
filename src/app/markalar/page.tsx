@@ -4,6 +4,7 @@ import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { getAllBrands } from '@/lib/brands-data'
 import { getAllProducts } from '@/lib/sanity/queries'
+import { BrandLogo } from '@/components/brands/BrandLogo'
 import { FloatingCTA } from '@/components/home/FloatingCTA'
 import { Car, ChevronRight, Package } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
@@ -64,7 +65,7 @@ export default async function MarkalarPage() {
                             className="w-20 h-20 rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg group-hover:scale-110 transition-transform duration-300"
                             style={{ backgroundColor: brand.bgColor }}
                           >
-                            {brand.logo}
+                            <BrandLogo slug={brand.slug} name={brand.name} className="h-12 w-12" />
                           </div>
                           <div>
                             <h2 className="text-2xl font-bold text-vag-navy group-hover:text-vag-blue transition-colors">

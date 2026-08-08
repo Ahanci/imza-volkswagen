@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { Card, CardContent } from '@/components/ui/card'
 import { ChevronRight } from 'lucide-react'
 import { CardHoverEffect } from '@/components/acernity/card-hover-effect'
+import { BrandLogo } from '@/components/brands/BrandLogo'
 
 const brands = [
   {
@@ -92,7 +93,7 @@ export function BrandSection() {
                         className="w-16 h-16 rounded-2xl flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:scale-110 transition-transform"
                         style={{ backgroundColor: brand.bgColor }}
                       >
-                        {brand.logo}
+                        <BrandLogo slug={brand.slug} name={brand.name} className="h-10 w-10" />
                       </div>
                       <div>
                         <h3 className="text-xl font-bold text-vag-navy group-hover:text-vag-blue transition-colors">
