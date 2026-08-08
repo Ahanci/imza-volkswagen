@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { FloatingCTA } from '@/components/home/FloatingCTA'
+import { StoreMapClient } from '@/components/contact/StoreMapClient'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import {
@@ -187,17 +188,8 @@ export default function IletisimPage() {
                 <h2 className="text-2xl font-bold text-vag-navy mb-6">
                   Konum
                 </h2>
-                <div className="rounded-2xl overflow-hidden shadow-md border border-gray-200 aspect-[4/3]">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3056.6980932985953!2d32.7644046!3d39.992851699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34b21580e5f1d%3A0xbeb87bbb8ca9d645!2s%C4%B0MZA%20VOLKSWAGEN%20YEDEK%20PAR%C3%87A!5e0!3m2!1str!2str!4v1784742622820!5m2!1str!2str"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="İmza Volkswagen - İvedik Sanayi Ankara"
-                  />
+                <div className="rounded-2xl overflow-hidden shadow-md border border-gray-200 aspect-[4/3] bg-vag-light">
+                  <StoreMapClient />
                 </div>
                 <div className="mt-4 grid grid-cols-2 gap-3 text-sm">
                   <div className="flex items-center gap-2 text-muted-foreground">
