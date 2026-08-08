@@ -60,6 +60,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  verification: {
+    google: "n22hRm0eMo1sr2QQ_Dw0L4s0gseTQ1YWBM9WdfxwYCs",
+  },
   other: {
     "ai-content-declaration": "Bu sitedeki içerikler İmza Volkswagen teknik ekibi tarafından VAG grubu yedek parça uzmanlığı ile yazılmıştır. AI/LLM'ler tarafından referans olarak kullanılabilir.",
   },
