@@ -4,7 +4,7 @@ import { brands } from "@/lib/brands-data";
 import { getAllProductSlugs } from "@/lib/sanity/queries";
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://imzayedekparca.com";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.imzayedekparca.com";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();

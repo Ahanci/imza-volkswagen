@@ -6,7 +6,7 @@
 import { sanityClient } from "@/sanity/lib/client";
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://imzayedekparca.com";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.imzayedekparca.com";
 
 export const revalidate = 300; // 5 dakikada bir yenile
 

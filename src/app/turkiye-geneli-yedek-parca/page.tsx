@@ -14,7 +14,7 @@ import {
 } from 'lucide-react'
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://imzayedekparca.com'
+  process.env.NEXT_PUBLIC_SITE_URL || 'https://www.imzayedekparca.com'
 
 const title = 'VAG Yedek Parça: Türkiye Geneli Kargo & Mağazadan Teslim | İmza Volkswagen'
 const description =

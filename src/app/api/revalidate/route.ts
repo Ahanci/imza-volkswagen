@@ -6,7 +6,7 @@
  * production'da birkaç saniye içinde sitede görünür.
  *
  * Sanity (manage.sanity.io → project → API → Webhooks) ayarı:
- *   URL:        https://imzayedekparca.com/api/revalidate
+ *   URL:        https://www.imzayedekparca.com/api/revalidate
  *   Projection: {_type, _id}
  *   Trigger:    Create, Update, Delete
  *   HTTP:       POST

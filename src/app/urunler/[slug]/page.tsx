@@ -23,7 +23,7 @@ import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://imzayedekparca.com";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.imzayedekparca.com";
 
 export const dynamic = 'force-dynamic'
 
