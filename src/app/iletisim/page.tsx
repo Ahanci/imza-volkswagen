@@ -202,7 +202,7 @@ export default function IletisimPage() {
                   </div>
                 </div>
                 <a
-                  href="https://www.google.com/maps/dir/?api=1&destination=İmza+Volkswagen+İvedik+Ankara"
+                  href="https://www.google.com/maps/dir/?api=1&destination=39.99285,32.76440"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-4 block"
@@ -212,6 +212,33 @@ export default function IletisimPage() {
                     Yol Tarifi Al (Google Maps)
                   </Button>
                 </a>
+                {/* Google kullanmayanlar için alternatifler (hepsi bedava yön linki) */}
+                <p className="text-xs text-muted-foreground mt-3 mb-2 text-center">
+                  Başka harita kullanıyorsanız:
+                </p>
+                <div className="grid grid-cols-3 gap-2">
+                  <a
+                    href="https://yandex.com/maps/?rtext=~39.99285%2C32.76440&rtt=auto"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="outline" size="sm" className="w-full">Yandex</Button>
+                  </a>
+                  <a
+                    href="https://maps.apple.com/?daddr=39.99285,32.76440&dirflg=d"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="outline" size="sm" className="w-full">Apple</Button>
+                  </a>
+                  <a
+                    href="https://www.openstreetmap.org/directions?from=&to=39.99285%2C32.76440"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="outline" size="sm" className="w-full">OpenStreetMap</Button>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
